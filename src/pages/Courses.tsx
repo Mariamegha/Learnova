@@ -37,6 +37,8 @@ import {
   type Course,
   type ExternalCourse,
 } from '@/services/courseService';
+import { isSupabaseConfigured } from '@/lib/supabase';
+import { MOCK_COURSES } from '@/mocks/courses';
 import IDE from '@/components/IDE';
 import {
   generatePersonalizedCourse,
@@ -49,6 +51,21 @@ const difficultyColors = {
   intermediate: 'bg-accent text-accent-foreground',
   advanced: 'bg-destructive text-destructive-foreground',
 };
+
+const localCatalogCourses: ExternalCourse[] = MOCK_COURSES.map((course) => ({
+  id: course.id,
+  title: course.title,
+  description: course.description,
+  provider: 'Udemy',
+  url: '#',
+  rating: course.rating,
+  students: course.enrolled,
+  image: course.thumbnail,
+  instructor: course.instructor,
+  category: course.category.toLowerCase(),
+  level: course.difficulty,
+  is_tech: !['language', 'arts'].includes(course.category.toLowerCase()),
+}));
 
 const categories = [
   { value: 'tech', label: 'Technology', icon: Code },
@@ -164,6 +181,23 @@ export default function Courses() {
     if (!generatedCourse?.title) return 'ai-course-draft';
     return `ai-${slugify(generatedCourse.title)}`;
   }, [generatedCourse?.title]);
+  const visibleExternalCourses = useMemo(() => {
+    const query = searchQuery.trim().toLowerCase();
+    return externalCourses.filter((course) => {
+      const matchesSearch =
+        !query ||
+        course.title.toLowerCase().includes(query) ||
+        course.description.toLowerCase().includes(query) ||
+        course.instructor.toLowerCase().includes(query);
+      const matchesLevel = filters.level === 'all' || course.level === filters.level;
+      const category = course.category?.toLowerCase() || '';
+      const matchesCategory =
+        filters.category === 'all' ||
+        category === filters.category ||
+        (filters.category === 'tech' && course.is_tech === true);
+      return matchesSearch && matchesLevel && matchesCategory;
+    });
+  }, [externalCourses, filters.category, filters.level, searchQuery]);
 
   // Load courses
   useEffect(() => {
@@ -184,6 +218,13 @@ export default function Courses() {
 
   const loadCourses = async () => {
     setIsLoading(true);
+    if (!isSupabaseConfigured) {
+      setPublishedCourses([]);
+      setMyCourses([]);
+      setIsLoading(false);
+      return;
+    }
+
     try {
       const [publishedResult, myCoursesResult] = await Promise.all([
         getPublishedCourses(),
@@ -241,22 +282,13 @@ export default function Courses() {
     setIsLoadingExternal(true);
     try {
       const result = await getExternalCourses();
-      if (result.courses && result.courses.length > 0) {
-        // Display all static courses
-        setExternalCourses(result.courses);
-
-      } else if (result.error) {
-
-        // Set empty array to prevent retries
-        setExternalCourses([]);
-      } else {
-        // No courses returned, set empty array
-        setExternalCourses([]);
-      }
-    } catch (error: any) {
-      console.error('Error loading external courses:', error);
-      // Set empty array on error
-      setExternalCourses([]);
+      setExternalCourses(
+        result.courses && result.courses.length > 0
+          ? result.courses
+          : localCatalogCourses
+      );
+    } catch {
+      setExternalCourses(localCatalogCourses);
     } finally {
       setIsLoadingExternal(false);
     }
@@ -407,9 +439,28 @@ export default function Courses() {
   return (
     <div className="container mx-auto px-4 py-8">
       <motion.div initial={{ opacity: 0, y: -20 }} animate={{ opacity: 1, y: 0 }}>
-        <div className="mb-8 flex items-center gap-3">
-          <BookOpen className="h-8 w-8 text-primary" />
-          <h1 className="text-3xl font-bold"><TranslatedText text="Courses" /></h1>
+        <div className="mb-7 flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
+          <div className="flex items-center gap-4">
+            <div className="rounded-2xl bg-primary/10 p-3.5 text-primary">
+              <BookOpen className="h-7 w-7" />
+            </div>
+            <div>
+              <p className="mb-1 text-xs font-semibold uppercase tracking-[0.18em] text-primary">
+                Learn · Grow · Build
+              </p>
+              <h1 className="text-3xl font-bold tracking-tight sm:text-4xl">
+                <TranslatedText text="Courses" />
+              </h1>
+              <p className="mt-1 text-sm text-muted-foreground">
+                Explore practical courses and find your next skill to master.
+              </p>
+            </div>
+          </div>
+          {externalCourses.length > 0 && (
+            <div className="w-fit rounded-full border border-border/70 bg-card px-4 py-2 text-sm text-muted-foreground shadow-sm">
+              <span className="font-semibold text-foreground">{externalCourses.length}</span> courses to explore
+            </div>
+          )}
         </div>
       </motion.div>
 
@@ -433,16 +484,16 @@ export default function Courses() {
         {/* Course Library Tab */}
         <TabsContent value="library" className="mt-6">
           {/* Search and Filters */}
-          <Card className="mb-6">
-            <CardContent className="pt-6">
-              <div className="space-y-4">
-                <div className="relative">
+          <Card className="mb-7 overflow-hidden rounded-2xl border-border/70 shadow-sm">
+            <CardContent className="p-4 sm:p-5">
+              <div className="flex flex-col gap-3 md:flex-row">
+                <div className="relative min-w-0 flex-1">
                   <Search className="absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-muted-foreground" />
                   <Input
                     placeholder="Search courses..."
                     value={searchQuery}
                     onChange={(e) => setSearchQuery(e.target.value)}
-                    className="pl-10"
+                    className="h-11 rounded-xl border-border/70 bg-background/70 pl-10"
                   />
                 </div>
                 <div className="flex flex-wrap gap-2">
@@ -450,7 +501,7 @@ export default function Courses() {
                     value={filters.level}
                     onValueChange={(value: any) => setFilters({ ...filters, level: value })}
                   >
-                    <SelectTrigger className="w-32">
+                    <SelectTrigger className="h-11 w-full rounded-xl md:w-40">
                       <SelectValue />
                     </SelectTrigger>
                     <SelectContent>
@@ -465,7 +516,7 @@ export default function Courses() {
                     value={filters.category}
                     onValueChange={(value) => setFilters({ ...filters, category: value })}
                   >
-                    <SelectTrigger className="w-40">
+                    <SelectTrigger className="h-11 w-full rounded-xl md:w-48">
                       <SelectValue placeholder="Category" />
                     </SelectTrigger>
                     <SelectContent>
@@ -487,7 +538,7 @@ export default function Courses() {
             <div className="flex items-center justify-center py-12">
               <Loader2 className="h-8 w-8 animate-spin text-primary" />
             </div>
-          ) : filteredCourses.length === 0 && externalCourses.length === 0 && !isLoadingExternal ? (
+          ) : filteredCourses.length === 0 && visibleExternalCourses.length === 0 && !isLoadingExternal ? (
             <Card>
               <CardContent className="p-12 text-center">
                 <p className="text-muted-foreground">
@@ -496,7 +547,7 @@ export default function Courses() {
               </CardContent>
             </Card>
           ) : (
-            <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+            <div className="grid items-stretch gap-4 sm:grid-cols-2 xl:grid-cols-3">
               {/* Published Courses */}
               {filteredCourses.map((course, index) => (
                 <motion.div
@@ -556,52 +607,77 @@ export default function Courses() {
                   </span>
                 </div>
               )}
-              {externalCourses.map((course, index) => (
+              {visibleExternalCourses.map((course, index) => (
                 <motion.div
                   key={course.id || `external-${index}`}
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: (filteredCourses.length + index) * 0.05 }}
                 >
-                  <Card className="h-full transition-all hover:shadow-lg">
-                    <CardHeader>
-                      <div className="mb-2 flex items-start justify-between">
-                        {course.level && (
-                          <Badge className={difficultyColors[course.level] || 'bg-accent text-accent-foreground'}>
-                            <TranslatedText text={course.level} />
-                          </Badge>
-                        )}
+                  <Card className="group flex h-full flex-col overflow-hidden rounded-2xl border-border/70 bg-card shadow-sm transition-all duration-200 hover:-translate-y-1 hover:border-primary/30 hover:shadow-xl hover:shadow-primary/5">
+                    <div className="h-1 bg-gradient-to-r from-primary via-primary/60 to-accent" />
+                    <CardHeader className="space-y-4 p-5 pb-3">
+                      <div className="flex items-start justify-between gap-3">
+                        <div className="flex min-w-0 items-center gap-3">
+                          <div className="shrink-0 rounded-xl bg-primary/10 p-3 text-primary transition-colors group-hover:bg-primary/15">
+                            <BookOpen className="h-5 w-5" />
+                          </div>
+                          {course.level && (
+                            <Badge
+                              className={`${difficultyColors[course.level]} rounded-full px-2.5 py-1 text-[11px] font-semibold uppercase tracking-wide`}
+                            >
+                              {course.level}
+                            </Badge>
+                          )}
+                        </div>
                         {course.rating > 0 && (
-                          <div className="flex items-center gap-1 text-sm">
-                            <Star className="h-4 w-4 fill-yellow-400 text-yellow-400" />
+                          <div className="flex shrink-0 items-center gap-1 rounded-full bg-primary/5 px-2.5 py-1 text-sm font-semibold text-foreground">
+                            <Star className="h-4 w-4 fill-primary/70 text-primary/70" />
                             <span>{course.rating.toFixed(1)}</span>
                           </div>
                         )}
                       </div>
-                      <CardTitle className="line-clamp-2">{course.title}</CardTitle>
-                      <CardDescription className="line-clamp-3">
-                        {course.description}
-                      </CardDescription>
-                    </CardHeader>
-                    <CardContent className="space-y-4">
-                      <div className="flex items-center gap-2 text-sm text-muted-foreground">
-                        <Users className="h-4 w-4" />
-                        <span>{course.instructor}</span>
+                      <div className="space-y-2">
+                        <CardTitle className="line-clamp-2 text-lg leading-snug tracking-tight">
+                          {course.title}
+                        </CardTitle>
+                        <CardDescription className="line-clamp-3 min-h-[4.25rem] text-sm leading-relaxed">
+                          {course.description}
+                        </CardDescription>
                       </div>
-                      {course.students && (
-                        <div className="text-sm text-muted-foreground">
-                          {typeof course.students === 'number' 
-                            ? `${course.students.toLocaleString()} students`
-                            : course.students}
+                    </CardHeader>
+                    <CardContent className="mt-auto space-y-4 p-5 pt-3">
+                      <div className="flex items-center justify-between gap-3 border-t border-border/60 pt-4">
+                        <div className="flex min-w-0 items-center gap-2.5">
+                          <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-secondary text-xs font-semibold text-secondary-foreground">
+                            {course.instructor.split(/\s+/).map((part) => part[0]).slice(0, 2).join('').toUpperCase()}
+                          </div>
+                          <div className="min-w-0">
+                            <p className="text-[11px] font-medium uppercase tracking-wide text-muted-foreground">
+                              Instructor
+                            </p>
+                            <p className="truncate text-sm font-medium">{course.instructor}</p>
+                          </div>
                         </div>
-                      )}
+                        {course.students && (
+                          <div className="flex shrink-0 items-center gap-1.5 text-xs text-muted-foreground">
+                            <Users className="h-3.5 w-3.5" />
+                            <span>
+                              {typeof course.students === 'number'
+                                ? `${course.students.toLocaleString()} learners`
+                                : course.students}
+                            </span>
+                          </div>
+                        )}
+                      </div>
                       <Button
                         size="sm"
-                        className="w-full"
+                        className="h-10 w-full rounded-xl"
                         asChild
                       >
-                        <Link to={`/courses/${course.id}`}>
+                        <Link to={`/courses/${course.id}`} className="flex items-center justify-center gap-2">
                           <TranslatedText text="View Course" />
+                          <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5" />
                         </Link>
                       </Button>
                     </CardContent>
