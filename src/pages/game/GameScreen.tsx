@@ -103,7 +103,7 @@ const GameScreen = () => {
     <div className="fixed inset-0 bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 overflow-hidden">
       {/* Background Effects */}
       <div className="absolute inset-0 opacity-20">
-        <div className="absolute top-0 left-0 w-96 h-96 bg-[#C9B458] rounded-full blur-3xl" />
+        <div className="absolute top-0 left-0 w-96 h-96 bg-[#9586F2] rounded-full blur-3xl" />
         <div className="absolute bottom-0 right-0 w-96 h-96 bg-[#C27BA0] rounded-full blur-3xl" />
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-[#6DAEDB] rounded-full blur-3xl" />
       </div>
@@ -120,14 +120,14 @@ const GameScreen = () => {
             <Button
               variant="ghost"
               onClick={() => navigate('/dashboard')}
-              className="text-white hover:text-[#C9B458]"
+              className="text-white hover:text-[#9586F2]"
             >
               <ArrowLeft className="w-5 h-5 mr-2" />
               Exit Game
             </Button>
             
             <div className="flex items-center gap-2">
-              <Gamepad2 className="w-6 h-6 text-[#C9B458]" />
+              <Gamepad2 className="w-6 h-6 text-[#9586F2]" />
               <h1 className="text-2xl font-bold text-white">EDUMITE Game Center</h1>
             </div>
             
@@ -215,16 +215,16 @@ const GameScreen = () => {
                   </CardContent>
                 </Card>
 
-                <Card className="bg-gradient-to-r from-[#C9B458]/10 to-[#C27BA0]/10 border-[#C9B458]/30">
+                <Card className="bg-gradient-to-r from-[#9586F2]/10 to-[#C27BA0]/10 border-[#9586F2]/30">
                   <CardContent className="pt-6">
                     <h4 className="font-semibold text-white mb-3 flex items-center gap-2">
-                      <Trophy className="w-5 h-5 text-[#C9B458]" />
+                      <Trophy className="w-5 h-5 text-[#9586F2]" />
                       How to Play
                     </h4>
                     <ul className="space-y-2 text-sm text-gray-300">
                       <li className="flex items-start gap-2">
-                        <span className="text-[#C9B458]">•</span>
-                        Start with <strong className="text-[#C9B458]">50 energy points</strong>
+                        <span className="text-[#9586F2]">•</span>
+                        Start with <strong className="text-[#9586F2]">50 energy points</strong>
                       </li>
                       <li className="flex items-start gap-2">
                         <span className="text-green-400">•</span>
@@ -315,7 +315,7 @@ const GameScreen = () => {
                   <Button
                     variant="outline"
                     onClick={backToMenu}
-                    className="text-white border-gray-700 hover:border-[#C9B458] hover:text-[#C9B458]"
+                    className="text-white border-gray-700 hover:border-[#9586F2] hover:text-[#9586F2]"
                   >
                     Exit to Menu
                   </Button>
@@ -337,7 +337,7 @@ const GameScreen = () => {
                       initial={{ scale: 0 }}
                       animate={{ scale: 1 }}
                       transition={{ type: 'spring', stiffness: 200 }}
-                      className="w-20 h-20 mx-auto mb-4 rounded-full bg-gradient-to-br from-[#C9B458] to-[#C27BA0] flex items-center justify-center"
+                      className="w-20 h-20 mx-auto mb-4 rounded-full bg-gradient-to-br from-[#9586F2] to-[#C27BA0] flex items-center justify-center"
                     >
                       <Trophy className="w-10 h-10 text-white" />
                     </motion.div>
@@ -350,7 +350,7 @@ const GameScreen = () => {
                   <CardContent className="space-y-6">
                     <div className="grid grid-cols-2 gap-4">
                       <div className="p-4 rounded-lg bg-gray-800/50 text-center">
-                        <div className="text-3xl font-bold text-[#C9B458] mb-1">{correctAnswers}</div>
+                        <div className="text-3xl font-bold text-[#9586F2] mb-1">{correctAnswers}</div>
                         <div className="text-sm text-gray-400">Correct Answers</div>
                       </div>
                       <div className="p-4 rounded-lg bg-gray-800/50 text-center">
@@ -372,7 +372,7 @@ const GameScreen = () => {
                     <div className="flex gap-3">
                       <Button
                         onClick={restartGame}
-                        className="flex-1 bg-gradient-to-r from-[#C9B458] to-[#C27BA0] hover:opacity-90"
+                        className="flex-1 bg-gradient-to-r from-[#9586F2] to-[#C27BA0] hover:opacity-90"
                       >
                         <RotateCcw className="w-4 h-4 mr-2" />
                         Play Again
@@ -380,7 +380,7 @@ const GameScreen = () => {
                       <Button
                         variant="outline"
                         onClick={backToMenu}
-                        className="flex-1 border-gray-700 text-white hover:border-[#C9B458] hover:text-[#C9B458]"
+                        className="flex-1 border-gray-700 text-white hover:border-[#9586F2] hover:text-[#9586F2]"
                       >
                         Back to Menu
                       </Button>

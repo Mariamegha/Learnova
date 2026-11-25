@@ -42,7 +42,7 @@ export function ExamCountdownWidget() {
         
         <Link
           to="/study-planner"
-          className="flex items-center justify-center gap-2 mt-4 px-4 py-2 bg-gradient-to-r from-[#C9B458] to-[#C27BA0] text-white font-bold uppercase text-sm hover:opacity-90 transition-opacity"
+          className="flex items-center justify-center gap-2 mt-4 px-4 py-2 bg-gradient-to-r from-[#9586F2] to-[#C27BA0] text-white font-bold uppercase text-sm hover:opacity-90 transition-opacity"
         >
           <span>Add Exams</span>
           <ArrowRight className="w-4 h-4" />
@@ -77,10 +77,10 @@ export function ExamCountdownWidget() {
         };
       default:
         return {
-          bg: 'bg-gradient-to-br from-[#C9B458]/20 to-[#C27BA0]/20',
-          border: 'border-[#C9B458]',
-          badge: 'bg-[#C9B458]',
-          icon: 'text-[#C9B458]',
+          bg: 'bg-gradient-to-br from-[#9586F2]/20 to-[#C27BA0]/20',
+          border: 'border-[#9586F2]',
+          badge: 'bg-[#9586F2]',
+          icon: 'text-[#9586F2]',
         };
     }
   };

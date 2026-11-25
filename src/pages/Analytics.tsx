@@ -320,7 +320,7 @@ export default function Analytics() {
                     <Line 
                       type="monotone" 
                       dataKey="xp" 
-                      stroke="#C9B458" 
+                      stroke="#9586F2" 
                       strokeWidth={2}
                       dot={{ r: 4 }}
                       name="XP Earned"

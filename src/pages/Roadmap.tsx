@@ -1,4 +1,4 @@
-﻿import { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
@@ -219,9 +219,9 @@ export default function Roadmap() {
       className="min-h-screen bg-background"
     >
       {/* Hero Header */}
-      <div className="relative border-b-4 border-black bg-gradient-to-br from-[#C9B458]/10 via-[#C27BA0]/10 to-[#6DAEDB]/10 overflow-hidden">
+      <div className="relative border-b-4 border-black bg-gradient-to-br from-[#9586F2]/10 via-[#C27BA0]/10 to-[#6DAEDB]/10 overflow-hidden">
         <div className="absolute inset-0 opacity-30">
-          <ThreeDFallback fallbackColor="from-[#C9B458]/5 to-[#C27BA0]/5">
+          <ThreeDFallback fallbackColor="from-[#9586F2]/5 to-[#C27BA0]/5">
             <GridScan />
           </ThreeDFallback>
         </div>
@@ -262,8 +262,8 @@ export default function Roadmap() {
                 <Card className="border-4 border-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]">
                   <CardContent className="p-4">
                     <div className="flex items-center gap-3">
-                      <div className="h-10 w-10 rounded-lg bg-[#C9B458]/10 border-2 border-black flex items-center justify-center">
-                        <Target className="h-5 w-5 text-[#C9B458]" />
+                      <div className="h-10 w-10 rounded-lg bg-[#9586F2]/10 border-2 border-black flex items-center justify-center">
+                        <Target className="h-5 w-5 text-[#9586F2]" />
                       </div>
                       <div>
                         <p className="text-sm text-muted-foreground">Active Roadmaps</p>
@@ -298,7 +298,7 @@ export default function Roadmap() {
                       </div>
                       <div>
                         <p className="text-sm text-muted-foreground">Total XP</p>
-                        <p className="text-2xl font-bold text-[#C9B458]">
+                        <p className="text-2xl font-bold text-[#9586F2]">
                           {selectedRoadmapObjects.reduce((acc, r) => acc + getCompletedMilestones(r.id).size * 100, 0)}
                         </p>
                       </div>
@@ -341,7 +341,7 @@ export default function Roadmap() {
                   >
                     <Card className={`border-4 border-black transition-all ${
                       isSelected
-                        ? 'shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] bg-gradient-to-br from-[#C9B458]/5 to-[#C27BA0]/5'
+                        ? 'shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] bg-gradient-to-br from-[#9586F2]/5 to-[#C27BA0]/5'
                         : 'shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] hover:shadow-[6px_6px_0px_0px_rgba(0,0,0,1)]'
                     }`}>
                       <CardHeader>
@@ -349,7 +349,7 @@ export default function Roadmap() {
                           <Checkbox
                             checked={isSelected}
                             onCheckedChange={() => handleToggleRoadmap(roadmap.id)}
-                            className="mt-1 border-2 border-black data-[state=checked]:bg-[#C9B458] data-[state=checked]:border-[#C9B458]"
+                            className="mt-1 border-2 border-black data-[state=checked]:bg-[#9586F2] data-[state=checked]:border-[#9586F2]"
                           />
                           <div className="flex-1">
                             <div className="flex items-center gap-2 mb-2">
@@ -371,11 +371,11 @@ export default function Roadmap() {
                         <div className="space-y-2">
                           <div className="flex justify-between text-sm">
                             <span className="text-muted-foreground">Progress</span>
-                            <span className="font-bold text-[#C9B458]">{Math.round(progress)}%</span>
+                            <span className="font-bold text-[#9586F2]">{Math.round(progress)}%</span>
                           </div>
                           <div className="h-2 bg-muted border-2 border-black rounded-full overflow-hidden">
                             <div
-                              className="h-full bg-gradient-to-r from-[#C9B458] to-[#C27BA0] transition-all duration-500"
+                              className="h-full bg-gradient-to-r from-[#9586F2] to-[#C27BA0] transition-all duration-500"
                               style={{ width: `${progress}%` }}
                             />
                           </div>
@@ -404,7 +404,7 @@ export default function Roadmap() {
                         {/* Action Button */}
                         <Button
                           onClick={() => handleViewRoadmap(roadmap)}
-                          className="w-full bg-[#C9B458] hover:bg-[#B8A347] text-white border-4 border-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] hover:shadow-[2px_2px_0px_0px_rgba(0,0,0,1)]"
+                          className="w-full bg-[#9586F2] hover:bg-[#AA9DF8] text-white border-4 border-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] hover:shadow-[2px_2px_0px_0px_rgba(0,0,0,1)]"
                           disabled={!isSelected}
                         >
                           {isSelected ? (
@@ -436,7 +436,7 @@ export default function Roadmap() {
               <Card className="border-4 border-black shadow-[8px_8px_0px_0px_rgba(0,0,0,1)]">
                 <CardHeader>
                   <CardTitle className="flex items-center gap-2">
-                    <Target className="h-5 w-5 text-[#C9B458]" />
+                    <Target className="h-5 w-5 text-[#9586F2]" />
                     Your Progress
                   </CardTitle>
                 </CardHeader>
@@ -458,7 +458,7 @@ export default function Roadmap() {
                           cx="64"
                           cy="64"
                           r="56"
-                          stroke="#C9B458"
+                          stroke="#9586F2"
                           strokeWidth="8"
                           fill="none"
                           strokeLinecap="round"
@@ -490,7 +490,7 @@ export default function Roadmap() {
                         <Zap className="h-4 w-4" />
                         <span>XP Earned</span>
                       </div>
-                      <p className="text-2xl font-bold text-[#C9B458]">{activeRoadmapStats.completedCount * 100}</p>
+                      <p className="text-2xl font-bold text-[#9586F2]">{activeRoadmapStats.completedCount * 100}</p>
                     </div>
                   </div>
 
@@ -518,10 +518,10 @@ export default function Roadmap() {
 
               {/* Next Milestone Card */}
               {activeRoadmapStats.nextMilestone && (
-                <Card className="border-4 border-black shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] bg-gradient-to-br from-[#C9B458]/5 to-[#C27BA0]/5">
+                <Card className="border-4 border-black shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] bg-gradient-to-br from-[#9586F2]/5 to-[#C27BA0]/5">
                   <CardHeader>
                     <CardTitle className="text-lg flex items-center gap-2">
-                      <Sparkles className="h-5 w-5 text-[#C9B458]" />
+                      <Sparkles className="h-5 w-5 text-[#9586F2]" />
                       Next Milestone
                     </CardTitle>
                   </CardHeader>
@@ -540,7 +540,7 @@ export default function Roadmap() {
                       </Badge>
                     </div>
                     <Button
-                      className="w-full bg-[#C9B458] hover:bg-[#B8A347] text-white border-4 border-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] hover:shadow-[2px_2px_0px_0px_rgba(0,0,0,1)]"
+                      className="w-full bg-[#9586F2] hover:bg-[#AA9DF8] text-white border-4 border-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] hover:shadow-[2px_2px_0px_0px_rgba(0,0,0,1)]"
                       onClick={() => handleMilestoneClick(activeRoadmapStats.nextMilestone!)}
                     >
                       Start Learning
@@ -608,7 +608,7 @@ export default function Roadmap() {
                               <motion.div
                                 animate={{ scale: [1, 1.1, 1] }}
                                 transition={{ duration: 2, repeat: Infinity }}
-                                className="h-8 w-8 rounded-full bg-[#C9B458] border-4 border-black shadow-[2px_2px_0px_0px_rgba(0,0,0,1)]"
+                                className="h-8 w-8 rounded-full bg-[#9586F2] border-4 border-black shadow-[2px_2px_0px_0px_rgba(0,0,0,1)]"
                               />
                             ) : isLocked ? (
                               <div className="h-8 w-8 rounded-full bg-muted border-4 border-black flex items-center justify-center shadow-[2px_2px_0px_0px_rgba(0,0,0,1)]">
@@ -627,7 +627,7 @@ export default function Roadmap() {
                               isLocked
                                 ? 'bg-muted opacity-60 cursor-not-allowed'
                                 : isNext
-                                ? 'bg-gradient-to-br from-[#C9B458]/10 to-[#C27BA0]/10 hover:shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]'
+                                ? 'bg-gradient-to-br from-[#9586F2]/10 to-[#C27BA0]/10 hover:shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]'
                                 : isCompleted
                                 ? 'bg-green-500/5 hover:shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]'
                                 : 'bg-white hover:shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]'
@@ -646,7 +646,7 @@ export default function Roadmap() {
                                       </Badge>
                                     )}
                                     {isNext && (
-                                      <Badge className="bg-[#C9B458] text-white border-2 border-black text-xs">
+                                      <Badge className="bg-[#9586F2] text-white border-2 border-black text-xs">
                                         Current
                                       </Badge>
                                     )}
@@ -710,7 +710,7 @@ export default function Roadmap() {
                 </p>
                 <Button
                   onClick={handleBackToGrid}
-                  className="bg-[#C9B458] hover:bg-[#B8A347] text-white border-4 border-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]"
+                  className="bg-[#9586F2] hover:bg-[#AA9DF8] text-white border-4 border-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]"
                 >
                   <LayoutGrid className="mr-2 h-4 w-4" />
                   View All Roadmaps
@@ -763,7 +763,7 @@ export default function Roadmap() {
                 {/* Skills */}
                 <div>
                   <h3 className="text-lg font-bold mb-3 flex items-center gap-2">
-                    <Star className="h-5 w-5 text-[#C9B458]" />
+                    <Star className="h-5 w-5 text-[#9586F2]" />
                     Skills You'll Learn
                   </h3>
                   <div className="flex flex-wrap gap-2">

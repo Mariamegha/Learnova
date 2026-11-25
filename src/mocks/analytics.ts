@@ -87,7 +87,7 @@ export const MOCK_ANALYTICS: MockAnalytics = {
     { name: 'Python', hours: 6.2, color: '#3776AB' },
     { name: 'UI/UX', hours: 4.8, color: '#FF6B6B' },
     { name: 'DevOps', hours: 3.0, color: '#326CE5' },
-    { name: 'Algorithms', hours: 1.0, color: '#FFD700' },
+    { name: 'Algorithms', hours: 1.0, color: '#9586F2' },
   ],
   timeBlocks: [
     { label: 'Morning (6-12)', hours: 8.5 },

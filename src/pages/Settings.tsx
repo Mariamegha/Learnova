@@ -58,7 +58,7 @@ export default function Settings() {
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-[#C9B458]/10 via-[#C27BA0]/10 to-[#6DAEDB]/10 p-6">
+    <div className="min-h-screen bg-gradient-to-br from-[#9586F2]/10 via-[#C27BA0]/10 to-[#6DAEDB]/10 p-6">
       <div className="max-w-6xl mx-auto">
         {/* Header */}
         <motion.div
@@ -81,7 +81,7 @@ export default function Settings() {
                 onClick={() => setActiveTab(tab.id as any)}
                 className={`flex items-center gap-2 border-4 border-black whitespace-nowrap ${
                   activeTab === tab.id
-                    ? 'bg-[#C9B458] hover:bg-[#B8A347] shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]'
+                    ? 'bg-[#9586F2] hover:bg-[#AA9DF8] shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]'
                     : 'shadow-[2px_2px_0px_0px_rgba(0,0,0,1)]'
                 }`}
               >
@@ -103,7 +103,7 @@ export default function Settings() {
             {/* Visual Accessibility */}
             <Card className="p-6 border-4 border-black shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] bg-obsidian">
               <div className="flex items-center gap-3 mb-6">
-                <Eye className="w-6 h-6 text-[#C9B458]" />
+                <Eye className="w-6 h-6 text-[#9586F2]" />
                 <h2 className="text-2xl font-black text-white">Visual Accessibility</h2>
               </div>
 
@@ -192,7 +192,7 @@ export default function Settings() {
                         onClick={() => setColorblindMode(mode.mode)}
                         className={`p-4 rounded-lg border-4 border-black text-left transition-all font-bold ${
                           colorblindMode === mode.mode
-                            ? 'bg-[#C9B458] text-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]'
+                            ? 'bg-[#9586F2] text-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]'
                             : 'bg-black/50 text-white shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-none'
                         }`}
                       >
@@ -228,7 +228,7 @@ export default function Settings() {
                   <motion.div
                     initial={{ opacity: 0, height: 0 }}
                     animate={{ opacity: 1, height: 'auto' }}
-                    className="p-4 bg-black/50 rounded-lg border-4 border-[#C9B458]"
+                    className="p-4 bg-black/50 rounded-lg border-4 border-[#9586F2]"
                   >
                     <p className="text-sm font-mono text-white">
                       [Live captions will appear here during video lectures and discussions]

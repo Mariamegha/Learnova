@@ -68,7 +68,7 @@ export const CaptionBar: React.FC = () => {
             <div className="bg-black/90 backdrop-blur-lg border-4 border-white rounded-lg shadow-[8px_8px_0px_0px_rgba(255,255,255,0.3)] p-4">
               <div className="flex items-start gap-3">
                 <div className="flex-shrink-0 mt-1">
-                  <Type className="w-5 h-5 text-[#C9B458]" />
+                  <Type className="w-5 h-5 text-[#9586F2]" />
                 </div>
                 
                 <div className="flex-1 min-h-[60px]">
@@ -77,7 +77,7 @@ export const CaptionBar: React.FC = () => {
                     <motion.span
                       animate={{ opacity: [1, 0, 1] }}
                       transition={{ duration: 0.8, repeat: Infinity }}
-                      className="inline-block w-1 h-5 bg-[#C9B458] ml-1"
+                      className="inline-block w-1 h-5 bg-[#9586F2] ml-1"
                     />
                   </p>
                 </div>

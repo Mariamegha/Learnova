@@ -13,7 +13,7 @@ export const PaceSuggestionCard: React.FC<PaceSuggestionCardProps> = ({ suggesti
   const topSuggestions = suggestions.slice(0, 3);
 
   const getConfidenceColor = (confidence: number) => {
-    if (confidence >= 85) return '#C9B458'; // Gold
+    if (confidence >= 85) return '#9586F2'; // Gold
     if (confidence >= 70) return '#C27BA0'; // Pink
     return '#6DAEDB'; // Blue
   };
@@ -76,7 +76,7 @@ export const PaceSuggestionCard: React.FC<PaceSuggestionCardProps> = ({ suggesti
 
                   <div className="grid grid-cols-2 gap-2 text-xs">
                     <div className="flex items-center gap-1 text-white/70">
-                      <Calendar className="w-3 h-3 text-[#C9B458]" />
+                      <Calendar className="w-3 h-3 text-[#9586F2]" />
                       <span className="font-bold">Start: {formatDate(suggestion.idealStartDate)}</span>
                     </div>
                     <div className="flex items-center gap-1 text-white/70">
@@ -108,7 +108,7 @@ export const PaceSuggestionCard: React.FC<PaceSuggestionCardProps> = ({ suggesti
                       <TrendingUp className="w-3 h-3" />
                       Why this suggestion?
                     </summary>
-                    <p className="text-xs text-white/80 mt-2 pl-4 italic border-l-2 border-[#C9B458]">
+                    <p className="text-xs text-white/80 mt-2 pl-4 italic border-l-2 border-[#9586F2]">
                       {suggestion.reasoning}
                     </p>
                   </details>

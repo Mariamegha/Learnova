@@ -34,7 +34,7 @@ try {
   document.body.innerHTML = `
     <div style="padding: 40px; font-family: system-ui, -apple-system, sans-serif; background: #0F1115; min-height: 100vh; color: #E6E8ED;">
       <div style="max-width: 800px; margin: 0 auto;">
-        <h1 style="color: #C9B458; font-size: 3rem; font-weight: 900; margin-bottom: 1rem;">
+        <h1 style="color: #9586F2; font-size: 3rem; font-weight: 900; margin-bottom: 1rem;">
           ⚠️ EDUMITE Failed to Load
         </h1>
         
@@ -42,7 +42,7 @@ try {
           The application encountered a critical error during initialization.
         </p>
         
-        <div style="background: #151823; border: 4px solid #C9B458; border-radius: 8px; padding: 24px; margin-bottom: 2rem;">
+        <div style="background: #151823; border: 4px solid #9586F2; border-radius: 8px; padding: 24px; margin-bottom: 2rem;">
           <h2 style="color: #6DAEDB; font-size: 1.5rem; margin-bottom: 1rem;">Error Details:</h2>
           <pre style="background: #1B1F2E; padding: 16px; border-radius: 4px; color: #C27BA0; overflow-x: auto; font-family: 'Courier New', monospace;">${error instanceof Error ? error.message : String(error)}</pre>
           ${error instanceof Error && error.stack ? `
@@ -56,7 +56,7 @@ try {
         <div style="background: #1B1F2E; border: 2px solid #6DAEDB; border-radius: 8px; padding: 24px; margin-bottom: 2rem;">
           <h3 style="color: #6DAEDB; margin-bottom: 1rem;">💡 Quick Fixes:</h3>
           <ol style="color: #E6E8ED; line-height: 1.8; margin-left: 20px;">
-            <li><strong>Hard Refresh:</strong> Press <code style="background: #151823; padding: 2px 8px; border-radius: 4px; color: #C9B458;">Ctrl + Shift + R</code> (Windows) or <code style="background: #151823; padding: 2px 8px; border-radius: 4px; color: #C9B458;">Cmd + Shift + R</code> (Mac)</li>
+            <li><strong>Hard Refresh:</strong> Press <code style="background: #151823; padding: 2px 8px; border-radius: 4px; color: #9586F2;">Ctrl + Shift + R</code> (Windows) or <code style="background: #151823; padding: 2px 8px; border-radius: 4px; color: #9586F2;">Cmd + Shift + R</code> (Mac)</li>
             <li><strong>Clear Cache:</strong> Open DevTools (F12) → Application → Clear Storage → Clear site data</li>
             <li><strong>Check Console:</strong> Open DevTools (F12) → Console tab for more details</li>
             <li><strong>Restart Server:</strong> If running locally, restart the development server</li>
@@ -66,7 +66,7 @@ try {
         <div style="display: flex; gap: 16px;">
           <button 
             onclick="location.reload(true)" 
-            style="flex: 1; padding: 16px 32px; background: #C9B458; color: #000; border: 4px solid #000; border-radius: 8px; font-weight: 900; font-size: 1.125rem; cursor: pointer; box-shadow: 4px 4px 0px rgba(0,0,0,0.5);"
+            style="flex: 1; padding: 16px 32px; background: #9586F2; color: #000; border: 4px solid #000; border-radius: 8px; font-weight: 900; font-size: 1.125rem; cursor: pointer; box-shadow: 4px 4px 0px rgba(0,0,0,0.5);"
             onmouseover="this.style.transform='translateY(-2px)'; this.style.boxShadow='6px 6px 0px rgba(0,0,0,0.5)'"
             onmouseout="this.style.transform=''; this.style.boxShadow='4px 4px 0px rgba(0,0,0,0.5)'"
           >
@@ -75,8 +75,8 @@ try {
           
           <button 
             onclick="window.location.href='/'" 
-            style="flex: 1; padding: 16px 32px; background: transparent; color: #C9B458; border: 4px solid #C9B458; border-radius: 8px; font-weight: 900; font-size: 1.125rem; cursor: pointer;"
-            onmouseover="this.style.background='rgba(201, 180, 88, 0.1)'"
+            style="flex: 1; padding: 16px 32px; background: transparent; color: #9586F2; border: 4px solid #9586F2; border-radius: 8px; font-weight: 900; font-size: 1.125rem; cursor: pointer;"
+            onmouseover="this.style.background='rgba(149, 134, 242, 0.1)'"
             onmouseout="this.style.background='transparent'"
           >
             🏠 Go Home

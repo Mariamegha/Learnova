@@ -69,7 +69,7 @@ export default function PerformanceTiers() {
                   onClick={() => setViewMode('overview')}
                   className={`px-4 py-2 rounded-lg text-sm font-bold transition-all ${
                     viewMode === 'overview'
-                      ? 'bg-[#C9B458] text-black'
+                      ? 'bg-[#9586F2] text-black'
                       : 'bg-white/10 text-gray-400 hover:bg-white/20'
                   }`}
                 >
@@ -79,7 +79,7 @@ export default function PerformanceTiers() {
                   onClick={() => setViewMode('monitoring')}
                   className={`px-4 py-2 rounded-lg text-sm font-bold transition-all ${
                     viewMode === 'monitoring'
-                      ? 'bg-[#C9B458] text-black'
+                      ? 'bg-[#9586F2] text-black'
                       : 'bg-white/10 text-gray-400 hover:bg-white/20'
                   }`}
                 >
@@ -105,7 +105,7 @@ export default function PerformanceTiers() {
             {/* Best Tier Students Spotlight */}
             <div>
               <div className="flex items-center gap-3 mb-4">
-                <Trophy className="w-6 h-6 text-[#C9B458]" />
+                <Trophy className="w-6 h-6 text-[#9586F2]" />
                 <h2 className="text-2xl font-black text-white">Top Performers</h2>
               </div>
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">

@@ -40,7 +40,7 @@ export default function ClassroomWorkspace() {
     <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-black text-white relative overflow-hidden">
       {/* Animated Background */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        <div className="absolute top-0 left-1/4 w-96 h-96 bg-[#C9B458]/10 rounded-full blur-3xl animate-pulse" />
+        <div className="absolute top-0 left-1/4 w-96 h-96 bg-[#9586F2]/10 rounded-full blur-3xl animate-pulse" />
         <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-[#C27BA0]/10 rounded-full blur-3xl animate-pulse delay-700" />
       </div>
 
@@ -48,7 +48,7 @@ export default function ClassroomWorkspace() {
       <motion.div
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
-        className="relative z-10 border-b-4 border-[#C9B458] bg-black/50 backdrop-blur-md"
+        className="relative z-10 border-b-4 border-[#9586F2] bg-black/50 backdrop-blur-md"
       >
         <div className="max-w-7xl mx-auto px-6 py-4">
           <div className="flex items-center justify-between">
@@ -56,18 +56,18 @@ export default function ClassroomWorkspace() {
               <Button
                 onClick={() => navigate('/workspace-view')}
                 variant="ghost"
-                className="text-white hover:text-[#C9B458]"
+                className="text-white hover:text-[#9586F2]"
               >
                 <ArrowLeft className="w-5 h-5 mr-2" />
                 <TranslatedText text="Back to Workspaces" />
               </Button>
-              <div className="h-8 w-px bg-[#C9B458]/30" />
+              <div className="h-8 w-px bg-[#9586F2]/30" />
               <div className="flex items-center gap-3">
-                <div className="w-12 h-12 bg-gradient-to-r from-[#C9B458] to-[#C27BA0] rounded-lg flex items-center justify-center border-4 border-black">
+                <div className="w-12 h-12 bg-gradient-to-r from-[#9586F2] to-[#C27BA0] rounded-lg flex items-center justify-center border-4 border-black">
                   <GraduationCap className="w-7 h-7 text-black" />
                 </div>
                 <div>
-                  <h1 className="text-2xl font-black text-transparent bg-clip-text bg-gradient-to-r from-[#C9B458] to-[#C27BA0]">
+                  <h1 className="text-2xl font-black text-transparent bg-clip-text bg-gradient-to-r from-[#9586F2] to-[#C27BA0]">
                     <TranslatedText text="SCHOOL WORKLIST" />
                   </h1>
                   <p className="text-sm text-white/60 font-bold">
@@ -81,7 +81,7 @@ export default function ClassroomWorkspace() {
               <div className="flex items-center gap-2">
                 <Button
                   onClick={() => setShowAllAssignments(!showAllAssignments)}
-                  className="bg-[#C9B458] text-black font-black border-4 border-black hover:shadow-[4px_4px_0_0_rgba(0,0,0,1)] transition-all"
+                  className="bg-[#9586F2] text-black font-black border-4 border-black hover:shadow-[4px_4px_0_0_rgba(0,0,0,1)] transition-all"
                 >
                   <Split className="w-4 h-4 mr-2" />
                   <TranslatedText text={showAllAssignments ? 'Classes' : 'Assignments'} />
@@ -144,16 +144,16 @@ export default function ClassroomWorkspace() {
               exit={{ opacity: 0, scale: 0.95 }}
               className="max-w-2xl mx-auto"
             >
-              <Card className="border-4 border-[#C9B458] shadow-[8px_8px_0_0_rgba(201,180,88,0.3)] bg-gradient-to-br from-black to-gray-900">
+              <Card className="border-4 border-[#9586F2] shadow-[8px_8px_0_0_rgba(149,134,242,0.3)] bg-gradient-to-br from-black to-gray-900">
                 <CardContent className="p-12 text-center">
                   <motion.div
                     animate={{ rotate: [0, 5, -5, 0] }}
                     transition={{ repeat: Infinity, duration: 3 }}
-                    className="w-24 h-24 bg-gradient-to-r from-[#C9B458] to-[#C27BA0] rounded-full mx-auto mb-6 flex items-center justify-center border-4 border-black"
+                    className="w-24 h-24 bg-gradient-to-r from-[#9586F2] to-[#C27BA0] rounded-full mx-auto mb-6 flex items-center justify-center border-4 border-black"
                   >
                     <GraduationCap className="w-14 h-14 text-black" />
                   </motion.div>
-                  <h3 className="text-3xl font-black text-transparent bg-clip-text bg-gradient-to-r from-[#C9B458] to-[#C27BA0] mb-3">
+                  <h3 className="text-3xl font-black text-transparent bg-clip-text bg-gradient-to-r from-[#9586F2] to-[#C27BA0] mb-3">
                     <TranslatedText text="Connect Google Classroom" />
                   </h3>
                   <p className="text-white/70 font-bold text-lg mb-8">
@@ -162,7 +162,7 @@ export default function ClassroomWorkspace() {
                   <Button
                     onClick={connectAndSync}
                     size="lg"
-                    className="bg-gradient-to-r from-[#C9B458] to-[#C27BA0] text-black font-black px-8 py-6 text-lg rounded-lg border-4 border-black hover:shadow-[6px_6px_0_0_rgba(0,0,0,1)] transition-all"
+                    className="bg-gradient-to-r from-[#9586F2] to-[#C27BA0] text-black font-black px-8 py-6 text-lg rounded-lg border-4 border-black hover:shadow-[6px_6px_0_0_rgba(0,0,0,1)] transition-all"
                   >
                     <ExternalLink className="w-6 h-6 mr-3" />
                     <TranslatedText text="Connect Now" />
@@ -345,12 +345,12 @@ export default function ClassroomWorkspace() {
                     <Card
                       onClick={() => setSelectedClassId(isExpanded ? null : course.id)}
                       className={`border-4 ${
-                        isExpanded ? 'border-[#C27BA0]' : 'border-[#C9B458]'
+                        isExpanded ? 'border-[#C27BA0]' : 'border-[#9586F2]'
                       } bg-gradient-to-br from-black to-gray-900 cursor-pointer hover:shadow-[6px_6px_0_0_rgba(0,0,0,1)] transition-all`}
                     >
                       <CardHeader>
                         <div className="flex items-center gap-3 mb-2">
-                          <div className="w-10 h-10 bg-gradient-to-r from-[#C9B458] to-[#C27BA0] rounded-lg flex items-center justify-center border-2 border-black">
+                          <div className="w-10 h-10 bg-gradient-to-r from-[#9586F2] to-[#C27BA0] rounded-lg flex items-center justify-center border-2 border-black">
                             <GraduationCap className="w-6 h-6 text-black" />
                           </div>
                           <CardTitle className="text-lg font-black text-white">
@@ -362,7 +362,7 @@ export default function ClassroomWorkspace() {
                             Section: {course.section}
                           </CardDescription>
                         )}
-                        <Badge className="bg-[#C9B458] text-black font-black border-2 border-black mt-2 w-fit">
+                        <Badge className="bg-[#9586F2] text-black font-black border-2 border-black mt-2 w-fit">
                           {courseMaterials.length} Materials
                         </Badge>
                       </CardHeader>

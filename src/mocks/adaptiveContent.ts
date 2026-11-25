@@ -228,7 +228,7 @@ export const STYLE_PRESETS: StylePreset[] = [
     label: 'Reels-Style',
     description: 'Short-form video script with timestamps',
     icon: 'Video',
-    color: '#C9B458',
+    color: '#9586F2',
     emoji: '📱',
   },
   {
@@ -252,7 +252,7 @@ export const STYLE_PRESETS: StylePreset[] = [
     label: 'Simple Notes',
     description: 'Clean bullet-point summary',
     icon: 'FileText',
-    color: '#C9B458',
+    color: '#9586F2',
     emoji: '📝',
   },
   {

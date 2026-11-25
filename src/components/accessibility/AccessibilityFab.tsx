@@ -34,7 +34,7 @@ export const AccessibilityFab: React.FC = () => {
       >
         <Button
           onClick={() => setIsOpen(!isOpen)}
-          className="w-14 h-14 rounded-full bg-[#C9B458] hover:bg-[#B8A347] border-4 border-black shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] hover:shadow-[3px_3px_0px_0px_rgba(0,0,0,1)] transition-all"
+          className="w-14 h-14 rounded-full bg-[#9586F2] hover:bg-[#AA9DF8] border-4 border-black shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] hover:shadow-[3px_3px_0px_0px_rgba(0,0,0,1)] transition-all"
         >
           <motion.div
             animate={{ rotate: isOpen ? 90 : 0 }}
@@ -68,7 +68,7 @@ export const AccessibilityFab: React.FC = () => {
             >
               <Card className="w-80 border-4 border-black shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] bg-[#1a1a1a] p-4">
                 <h3 className="text-lg font-black mb-4 flex items-center gap-2 text-white">
-                  <Accessibility className="w-5 h-5 text-[#C9B458]" />
+                  <Accessibility className="w-5 h-5 text-[#9586F2]" />
                   Quick Accessibility
                 </h3>
 
@@ -82,7 +82,7 @@ export const AccessibilityFab: React.FC = () => {
                     <Switch
                       checked={dyslexiaFont}
                       onCheckedChange={setDyslexiaFont}
-                      className="data-[state=checked]:bg-[#C9B458]"
+                      className="data-[state=checked]:bg-[#9586F2]"
                     />
                   </div>
 
@@ -95,7 +95,7 @@ export const AccessibilityFab: React.FC = () => {
                     <Switch
                       checked={captionsEnabled}
                       onCheckedChange={setCaptionsEnabled}
-                      className="data-[state=checked]:bg-[#C9B458]"
+                      className="data-[state=checked]:bg-[#9586F2]"
                     />
                   </div>
 
@@ -108,7 +108,7 @@ export const AccessibilityFab: React.FC = () => {
                     <Switch
                       checked={highContrast}
                       onCheckedChange={setHighContrast}
-                      className="data-[state=checked]:bg-[#C9B458]"
+                      className="data-[state=checked]:bg-[#9586F2]"
                     />
                   </div>
 
@@ -127,7 +127,7 @@ export const AccessibilityFab: React.FC = () => {
                           onClick={() => setTextScale(scale)}
                           className={`flex-1 border-2 border-black font-bold ${
                             textScale === scale
-                              ? 'bg-[#C9B458] text-black hover:bg-[#B8A347] shadow-[3px_3px_0px_0px_rgba(0,0,0,1)]'
+                              ? 'bg-[#9586F2] text-black hover:bg-[#AA9DF8] shadow-[3px_3px_0px_0px_rgba(0,0,0,1)]'
                               : 'bg-white text-black hover:bg-gray-100 shadow-[2px_2px_0px_0px_rgba(0,0,0,1)]'
                           }`}
                         >
@@ -157,7 +157,7 @@ export const AccessibilityFab: React.FC = () => {
                           onClick={() => setColorblindMode(mode as ColorblindMode)}
                           className={`border-2 border-black text-xs font-bold ${
                             colorblindMode === mode
-                              ? 'bg-[#C9B458] text-black hover:bg-[#B8A347] shadow-[2px_2px_0px_0px_rgba(0,0,0,1)]'
+                              ? 'bg-[#9586F2] text-black hover:bg-[#AA9DF8] shadow-[2px_2px_0px_0px_rgba(0,0,0,1)]'
                               : 'bg-white text-black hover:bg-gray-100 shadow-[1px_1px_0px_0px_rgba(0,0,0,1)]'
                           }`}
                         >

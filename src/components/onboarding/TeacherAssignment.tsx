@@ -14,8 +14,8 @@ export default function TeacherAssignment({ teacher, iqTier, onAccept }: Teacher
     low: {
       title: 'Foundation Builder',
       description: 'You\'ve been matched with an expert mentor who specializes in building strong fundamentals',
-      color: '#C9B458',
-      gradient: 'from-[#C9B458] to-[#C27BA0]',
+      color: '#9586F2',
+      gradient: 'from-[#9586F2] to-[#C27BA0]',
     },
     medium: {
       title: 'Balanced Learner',
@@ -27,7 +27,7 @@ export default function TeacherAssignment({ teacher, iqTier, onAccept }: Teacher
       title: 'Advanced Explorer',
       description: 'You\'ve been matched with a mentor who will guide your independent learning journey',
       color: '#6DAEDB',
-      gradient: 'from-[#6DAEDB] to-[#C9B458]',
+      gradient: 'from-[#6DAEDB] to-[#9586F2]',
     },
   };
 

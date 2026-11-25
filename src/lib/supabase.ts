@@ -3,20 +3,24 @@ import { createClient } from '@supabase/supabase-js';
 // Supabase configuration
 const supabaseUrl = import.meta.env.VITE_SUPABASE_URL;
 const supabaseAnonKey = import.meta.env.VITE_SUPABASE_ANON_KEY;
+export const isSupabaseConfigured = Boolean(supabaseUrl && supabaseAnonKey);
 
-if (!supabaseUrl || !supabaseAnonKey) {
-  console.error('Supabase credentials not configured. Please set VITE_SUPABASE_URL and VITE_SUPABASE_ANON_KEY in your .env file');
+if (!isSupabaseConfigured) {
+  console.warn('Supabase credentials not configured. Authentication and database features are unavailable.');
 }
 
-// Create Supabase client with proper configuration
-export const supabase = createClient(supabaseUrl, supabaseAnonKey, {
-  auth: {
-    persistSession: true,
-    autoRefreshToken: true,
-    detectSessionInUrl: true,
-    flowType: 'pkce',
+export const supabase = createClient(
+  supabaseUrl || 'https://supabase-not-configured.invalid',
+  supabaseAnonKey || 'missing-supabase-anon-key',
+  {
+    auth: {
+      persistSession: true,
+      autoRefreshToken: true,
+      detectSessionInUrl: true,
+      flowType: 'pkce',
+    },
   },
-});
+);
 
 // Database types (will be generated from Supabase)
 export type Database = {

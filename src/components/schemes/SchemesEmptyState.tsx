@@ -22,12 +22,12 @@ export const SchemesEmptyState = ({ hasFilters, onClearFilters }: SchemesEmptySt
             initial={{ scale: 0 }}
             animate={{ scale: 1 }}
             transition={{ type: 'spring', stiffness: 260, damping: 20, delay: 0.2 }}
-            className="w-20 h-20 rounded-full bg-gradient-to-br from-[#C9B458]/20 to-[#C27BA0]/20 flex items-center justify-center mb-6"
+            className="w-20 h-20 rounded-full bg-gradient-to-br from-[#9586F2]/20 to-[#C27BA0]/20 flex items-center justify-center mb-6"
           >
             {hasFilters ? (
-              <Filter className="w-10 h-10 text-[#C9B458]" />
+              <Filter className="w-10 h-10 text-[#9586F2]" />
             ) : (
-              <FileQuestion className="w-10 h-10 text-[#C9B458]" />
+              <FileQuestion className="w-10 h-10 text-[#9586F2]" />
             )}
           </motion.div>
 
@@ -56,7 +56,7 @@ export const SchemesEmptyState = ({ hasFilters, onClearFilters }: SchemesEmptySt
               <Button
                 onClick={onClearFilters}
                 variant="outline"
-                className="hover:bg-[#C9B458]/10 hover:border-[#C9B458]"
+                className="hover:bg-[#9586F2]/10 hover:border-[#9586F2]"
               >
                 <RefreshCw className="w-4 h-4 mr-2" />
                 Clear All Filters

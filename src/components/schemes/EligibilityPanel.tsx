@@ -57,11 +57,11 @@ export const EligibilityPanel = ({ schemeId, onClose }: EligibilityPanelProps) =
           className="mt-6"
         >
           <Card className="border-2 shadow-lg overflow-hidden">
-            <CardHeader className="bg-gradient-to-r from-[#C9B458]/10 via-[#C27BA0]/10 to-[#6DAEDB]/10 pb-4">
+            <CardHeader className="bg-gradient-to-r from-[#9586F2]/10 via-[#C27BA0]/10 to-[#6DAEDB]/10 pb-4">
               <div className="flex items-start justify-between">
                 <div className="flex-1">
                   <div className="flex items-center gap-2 mb-1">
-                    <Sparkles className="w-5 h-5 text-[#C9B458]" />
+                    <Sparkles className="w-5 h-5 text-[#9586F2]" />
                     <CardTitle className="text-xl">Eligibility Check</CardTitle>
                   </div>
                   <CardDescription className="text-sm font-medium">
@@ -160,7 +160,7 @@ export const EligibilityPanel = ({ schemeId, onClose }: EligibilityPanelProps) =
                     {eligibilityData.overallEligibility === 'ELIGIBLE' && (
                       <div className="pt-4 border-t">
                         <Button 
-                          className="w-full bg-gradient-to-r from-[#C9B458] to-[#C27BA0] hover:opacity-90"
+                          className="w-full bg-gradient-to-r from-[#9586F2] to-[#C27BA0] hover:opacity-90"
                           size="lg"
                         >
                           Proceed with Smart Auto-Fill

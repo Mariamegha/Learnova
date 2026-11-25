@@ -59,7 +59,7 @@ export default function AdaptiveMCQTest({ onComplete }: AdaptiveMCQTestProps) {
           </div>
           <div className="h-2 bg-white/10 rounded-full overflow-hidden">
             <motion.div
-              className="h-full bg-gradient-to-r from-[#C9B458] via-[#C27BA0] to-[#6DAEDB]"
+              className="h-full bg-gradient-to-r from-[#9586F2] via-[#C27BA0] to-[#6DAEDB]"
               initial={{ width: 0 }}
               animate={{ width: `${progress}%` }}
               transition={{ duration: 0.5 }}
@@ -88,7 +88,7 @@ export default function AdaptiveMCQTest({ onComplete }: AdaptiveMCQTestProps) {
                     ? 'bg-[#6DAEDB]/20 text-[#6DAEDB]'
                     : currentQuestion.difficulty === 'medium'
                     ? 'bg-[#C27BA0]/20 text-[#C27BA0]'
-                    : 'bg-[#C9B458]/20 text-[#C9B458]'
+                    : 'bg-[#9586F2]/20 text-[#9586F2]'
                 }`}
               >
                 {currentQuestion.difficulty.toUpperCase()}
@@ -111,13 +111,13 @@ export default function AdaptiveMCQTest({ onComplete }: AdaptiveMCQTestProps) {
                   onClick={() => handleSelectOption(index)}
                   className={`w-full p-5 rounded-xl text-left transition-all border-2 flex items-center gap-4 group ${
                     selectedOption === index
-                      ? 'bg-[#C9B458]/20 border-[#C9B458] shadow-lg shadow-[#C9B458]/20'
+                      ? 'bg-[#9586F2]/20 border-[#9586F2] shadow-lg shadow-[#9586F2]/20'
                       : 'bg-white/5 border-white/10 hover:border-white/30 hover:bg-white/10'
                   }`}
                 >
                   <div className="flex-shrink-0">
                     {selectedOption === index ? (
-                      <CheckCircle2 size={24} className="text-[#C9B458]" />
+                      <CheckCircle2 size={24} className="text-[#9586F2]" />
                     ) : (
                       <Circle size={24} className="text-gray-500 group-hover:text-gray-400" />
                     )}
@@ -132,7 +132,7 @@ export default function AdaptiveMCQTest({ onComplete }: AdaptiveMCQTestProps) {
               onClick={handleNext}
               disabled={selectedOption === null}
               size="lg"
-              className="w-full bg-gradient-to-r from-[#C9B458] to-[#C27BA0] hover:opacity-90 disabled:opacity-50 disabled:cursor-not-allowed text-white font-semibold text-lg py-6 rounded-xl"
+              className="w-full bg-gradient-to-r from-[#9586F2] to-[#C27BA0] hover:opacity-90 disabled:opacity-50 disabled:cursor-not-allowed text-white font-semibold text-lg py-6 rounded-xl"
             >
               {currentQuestionIndex < questionSequence.length - 1 ? 'Next Question' : 'Finish Evaluation'}
             </Button>

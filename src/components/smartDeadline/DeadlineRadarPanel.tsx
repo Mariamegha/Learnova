@@ -16,7 +16,7 @@ export const DeadlineRadarPanel: React.FC<DeadlineRadarPanelProps> = ({ tasks })
 
   // Calculate segment angles
   const getSegmentColor = (urgency: number) => {
-    if (urgency >= 80) return '#C9B458'; // Gold - Urgent
+    if (urgency >= 80) return '#9586F2'; // Gold - Urgent
     if (urgency >= 50) return '#C27BA0'; // Pink - Moderate
     return '#6DAEDB'; // Blue - Low
   };
@@ -33,7 +33,7 @@ export const DeadlineRadarPanel: React.FC<DeadlineRadarPanelProps> = ({ tasks })
     <Card className="border-4 border-black shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] bg-obsidian p-6">
       <div className="mb-6">
         <h2 className="text-2xl font-black text-white flex items-center gap-2">
-          <Target className="w-6 h-6 text-[#C9B458]" />
+          <Target className="w-6 h-6 text-[#9586F2]" />
           Deadline Radar
         </h2>
         <p className="text-white/60 text-sm mt-1">Visual overview of upcoming tasks by urgency</p>
@@ -52,7 +52,7 @@ export const DeadlineRadarPanel: React.FC<DeadlineRadarPanelProps> = ({ tasks })
             initial={{ scale: 0 }}
             animate={{ scale: 1 }}
             transition={{ type: 'spring', stiffness: 260, damping: 20 }}
-            className="absolute z-10 w-32 h-32 rounded-full bg-[#C9B458] border-4 border-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] flex flex-col items-center justify-center"
+            className="absolute z-10 w-32 h-32 rounded-full bg-[#9586F2] border-4 border-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] flex flex-col items-center justify-center"
           >
             <Clock className="w-8 h-8 text-black mb-1" />
             <span className="text-black font-black text-lg">TODAY</span>
@@ -145,7 +145,7 @@ export const DeadlineRadarPanel: React.FC<DeadlineRadarPanelProps> = ({ tasks })
                   return (
                     <Card className="p-4 border-4 border-black bg-obsidian shadow-[6px_6px_0px_0px_rgba(0,0,0,1)]">
                       <div className="flex items-start gap-2 mb-2">
-                        <AlertTriangle className="w-4 h-4 text-[#C9B458] flex-shrink-0 mt-1" />
+                        <AlertTriangle className="w-4 h-4 text-[#9586F2] flex-shrink-0 mt-1" />
                         <div className="flex-1">
                           <h4 className="font-black text-white text-sm line-clamp-2">{task.title}</h4>
                           <p className="text-xs text-white/60 mt-1">{task.courseName}</p>
@@ -186,7 +186,7 @@ export const DeadlineRadarPanel: React.FC<DeadlineRadarPanelProps> = ({ tasks })
       {/* Legend */}
       <div className="mt-6 flex items-center justify-center gap-6">
         <div className="flex items-center gap-2">
-          <div className="w-4 h-4 bg-[#C9B458] border-2 border-black"></div>
+          <div className="w-4 h-4 bg-[#9586F2] border-2 border-black"></div>
           <span className="text-xs font-bold text-white">Urgent (80-100%)</span>
         </div>
         <div className="flex items-center gap-2">

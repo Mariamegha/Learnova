@@ -135,7 +135,7 @@ export default function AdaptiveContentPage() {
           className="mb-8"
         >
           <h1 className="text-4xl font-black text-white mb-2 flex items-center gap-3">
-            <Sparkles className="w-10 h-10 text-[#C9B458]" />
+            <Sparkles className="w-10 h-10 text-[#9586F2]" />
             Adaptive Content Generator
           </h1>
           <p className="text-white/70 text-lg">
@@ -183,7 +183,7 @@ export default function AdaptiveContentPage() {
           >
             <Card className="border-4 border-black shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] bg-obsidian p-6 sticky top-6">
               <div className="flex items-center gap-2 mb-4">
-                <Lightbulb className="w-5 h-5 text-[#C9B458]" />
+                <Lightbulb className="w-5 h-5 text-[#9586F2]" />
                 <h2 className="text-xl font-black text-white">Input Your Topic</h2>
               </div>
 
@@ -193,7 +193,7 @@ export default function AdaptiveContentPage() {
                   value={topic}
                   onChange={(e) => setTopic(e.target.value)}
                   placeholder="Enter any topic, concept, or question you want explained..."
-                  className="min-h-[200px] border-4 border-black bg-black/50 text-white placeholder:text-white/40 font-bold resize-none focus-visible:ring-[#C9B458]"
+                  className="min-h-[200px] border-4 border-black bg-black/50 text-white placeholder:text-white/40 font-bold resize-none focus-visible:ring-[#9586F2]"
                 />
 
                 <div className="flex items-center justify-between text-xs text-white/60">
@@ -219,7 +219,7 @@ export default function AdaptiveContentPage() {
                       <Badge
                         key={suggestion}
                         onClick={() => handleTopicSuggestion(suggestion)}
-                        className="cursor-pointer border-2 border-black bg-black/50 hover:bg-[#C9B458] text-white hover:text-black font-bold transition-all"
+                        className="cursor-pointer border-2 border-black bg-black/50 hover:bg-[#9586F2] text-white hover:text-black font-bold transition-all"
                       >
                         {suggestion}
                       </Badge>
@@ -238,7 +238,7 @@ export default function AdaptiveContentPage() {
                 <Button
                   onClick={handleGenerateAll}
                   disabled={isGenerating || !topic.trim()}
-                  className="w-full border-4 border-black bg-[#C9B458] hover:bg-[#B8A347] text-black font-black text-lg py-6 shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] hover:translate-x-[-2px] hover:translate-y-[-2px] hover:shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] transition-all disabled:opacity-50 disabled:cursor-not-allowed"
+                  className="w-full border-4 border-black bg-[#9586F2] hover:bg-[#AA9DF8] text-black font-black text-lg py-6 shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] hover:translate-x-[-2px] hover:translate-y-[-2px] hover:shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] transition-all disabled:opacity-50 disabled:cursor-not-allowed"
                 >
                   {isGenerating ? (
                     <span className="flex items-center justify-center gap-2">
@@ -267,7 +267,7 @@ export default function AdaptiveContentPage() {
               <Card className="border-4 border-black shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] bg-obsidian p-12">
                 <div className="text-center space-y-4">
                   <div className="flex justify-center gap-4 mb-6">
-                    <Video className="w-12 h-12 text-[#C9B458]" />
+                    <Video className="w-12 h-12 text-[#9586F2]" />
                     <Smile className="w-12 h-12 text-[#C27BA0]" />
                     <Users className="w-12 h-12 text-[#6DAEDB]" />
                   </div>
@@ -283,7 +283,7 @@ export default function AdaptiveContentPage() {
                 <TabsList className="grid grid-cols-5 gap-2 bg-transparent mb-4 h-auto p-0">
                   <TabsTrigger
                     value="reels"
-                    className="border-4 border-black data-[state=active]:bg-[#C9B458] data-[state=active]:text-black bg-black/50 text-white font-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] data-[state=active]:shadow-[6px_6px_0px_0px_rgba(0,0,0,1)]"
+                    className="border-4 border-black data-[state=active]:bg-[#9586F2] data-[state=active]:text-black bg-black/50 text-white font-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] data-[state=active]:shadow-[6px_6px_0px_0px_rgba(0,0,0,1)]"
                   >
                     <Video className="w-4 h-4 mr-1" />
                     Reels
@@ -304,7 +304,7 @@ export default function AdaptiveContentPage() {
                   </TabsTrigger>
                   <TabsTrigger
                     value="notes"
-                    className="border-4 border-black data-[state=active]:bg-[#C9B458] data-[state=active]:text-black bg-black/50 text-white font-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] data-[state=active]:shadow-[6px_6px_0px_0px_rgba(0,0,0,1)]"
+                    className="border-4 border-black data-[state=active]:bg-[#9586F2] data-[state=active]:text-black bg-black/50 text-white font-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] data-[state=active]:shadow-[6px_6px_0px_0px_rgba(0,0,0,1)]"
                   >
                     <FileText className="w-4 h-4 mr-1" />
                     Notes

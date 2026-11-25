@@ -114,7 +114,7 @@ export const SchemeFilters = ({
                     variant={selectedCategory === 'ALL' ? 'default' : 'outline'}
                     className={`cursor-pointer transition-all ${
                       selectedCategory === 'ALL' 
-                        ? 'bg-gradient-to-r from-[#C9B458] to-[#C27BA0] text-white' 
+                        ? 'bg-gradient-to-r from-[#9586F2] to-[#C27BA0] text-white' 
                         : 'hover:bg-muted'
                     }`}
                     onClick={() => onCategoryChange('ALL')}
@@ -127,7 +127,7 @@ export const SchemeFilters = ({
                       variant={selectedCategory === cat.value ? 'default' : 'outline'}
                       className={`cursor-pointer transition-all ${
                         selectedCategory === cat.value 
-                          ? 'bg-gradient-to-r from-[#C9B458] to-[#C27BA0] text-white' 
+                          ? 'bg-gradient-to-r from-[#9586F2] to-[#C27BA0] text-white' 
                           : 'hover:bg-muted'
                       }`}
                       onClick={() => onCategoryChange(cat.value)}

@@ -69,7 +69,7 @@ export const QuestionPanel = ({
 
   const getOptionStyle = (index: number) => {
     if (selectedOption === null) {
-      return 'border-gray-700 hover:border-[#C9B458] hover:bg-[#C9B458]/10';
+      return 'border-gray-700 hover:border-[#9586F2] hover:bg-[#9586F2]/10';
     }
     
     if (index === question.correctAnswer) {
@@ -96,7 +96,7 @@ export const QuestionPanel = ({
         <CardHeader>
           <div className="flex items-center justify-between mb-3">
             <div className="flex items-center gap-2">
-              <Badge variant="outline" className="bg-[#C9B458]/20 border-[#C9B458] text-[#C9B458]">
+              <Badge variant="outline" className="bg-[#9586F2]/20 border-[#9586F2] text-[#9586F2]">
                 Question {questionNumber}/{totalQuestions}
               </Badge>
               <Badge variant="outline" className={getDifficultyColor()}>

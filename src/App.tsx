@@ -15,7 +15,7 @@ import { CaptionBar } from "@/components/accessibility/CaptionBar";
 import { useAccessibilityStore } from "@/store/accessibilityStore";
 import { useUserStore } from "@/store/userStore";
 import { initializeAuth } from "@/services/authService";
-import { supabase } from "@/lib/supabase";
+import { isSupabaseConfigured, supabase } from "@/lib/supabase";
 import { Suspense } from "react";
 import { NAVIGATION_CLUSTERS } from "@/config/navigationClusters";
 import { useNavigationStore } from "@/store/navigationStore";
@@ -72,6 +72,10 @@ function AuthListener() {
   const isAuthenticatedRef = useRef(false);
 
   useEffect(() => {
+    if (!isSupabaseConfigured || useUserStore.getState().authMode === 'local') {
+      return;
+    }
+
     // Initialize auth state on app load (only once)
     initializeAuth().then(() => {
       isAuthenticatedRef.current = useUserStore.getState().isAuthenticated;

@@ -24,7 +24,7 @@ export default function ProcessingScreen({ onComplete }: ProcessingScreenProps) 
           key={index}
           className="absolute w-2 h-2 rounded-full"
           style={{
-            background: ['#C9B458', '#C27BA0', '#6DAEDB'][index % 3],
+            background: ['#9586F2', '#C27BA0', '#6DAEDB'][index % 3],
             left: `${Math.random() * 100}%`,
             top: `${Math.random() * 100}%`,
           }}
@@ -56,8 +56,8 @@ export default function ProcessingScreen({ onComplete }: ProcessingScreenProps) 
           }}
         >
           <div className="relative">
-            <div className="absolute inset-0 bg-gradient-to-r from-[#C9B458] to-[#6DAEDB] rounded-full blur-2xl opacity-50" />
-            <Brain size={80} className="text-[#C9B458] relative z-10" />
+            <div className="absolute inset-0 bg-gradient-to-r from-[#9586F2] to-[#6DAEDB] rounded-full blur-2xl opacity-50" />
+            <Brain size={80} className="text-[#9586F2] relative z-10" />
           </div>
         </motion.div>
 
@@ -66,7 +66,7 @@ export default function ProcessingScreen({ onComplete }: ProcessingScreenProps) 
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.2 }}
-          className="text-4xl font-bold mb-4 bg-gradient-to-r from-[#C9B458] via-[#C27BA0] to-[#6DAEDB] bg-clip-text text-transparent"
+          className="text-4xl font-bold mb-4 bg-gradient-to-r from-[#9586F2] via-[#C27BA0] to-[#6DAEDB] bg-clip-text text-transparent"
         >
           Analyzing Your Performance
         </motion.h1>
@@ -98,14 +98,14 @@ export default function ProcessingScreen({ onComplete }: ProcessingScreenProps) 
                 animate={{ rotate: 360 }}
                 transition={{ duration: 2, repeat: Infinity, ease: 'linear' }}
               >
-                <step.icon size={24} className="text-[#C9B458]" />
+                <step.icon size={24} className="text-[#9586F2]" />
               </motion.div>
               <span className="text-white font-medium">{step.label}</span>
               <div className="ml-auto flex gap-1">
                 {[0, 1, 2].map((dot) => (
                   <motion.div
                     key={dot}
-                    className="w-2 h-2 rounded-full bg-[#C9B458]"
+                    className="w-2 h-2 rounded-full bg-[#9586F2]"
                     animate={{ opacity: [0.3, 1, 0.3] }}
                     transition={{
                       duration: 1,

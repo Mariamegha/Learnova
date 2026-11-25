@@ -1,4 +1,4 @@
-﻿import { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Button } from '@/components/ui/button';
@@ -293,7 +293,7 @@ export default function CourseDetail() {
         <div className="container mx-auto px-4 py-8">
           <div className="flex items-center justify-center py-20">
             <div className="text-center space-y-4">
-              <div className="animate-spin rounded-full h-16 w-16 border-b-4 border-[#C9B458] mx-auto"></div>
+              <div className="animate-spin rounded-full h-16 w-16 border-b-4 border-[#9586F2] mx-auto"></div>
               <p className="text-lg text-muted-foreground">Loading course...</p>
             </div>
           </div>
@@ -350,9 +350,9 @@ export default function CourseDetail() {
       </div>
 
       {/* Hero Header */}
-      <div className="relative border-b-4 border-black bg-gradient-to-br from-[#C9B458]/10 via-[#C27BA0]/10 to-[#6DAEDB]/10 overflow-hidden">
+      <div className="relative border-b-4 border-black bg-gradient-to-br from-[#9586F2]/10 via-[#C27BA0]/10 to-[#6DAEDB]/10 overflow-hidden">
         <div className="absolute inset-0 opacity-30">
-          <ThreeDFallback fallbackColor="from-[#C9B458]/5 to-[#6DAEDB]/5">
+          <ThreeDFallback fallbackColor="from-[#9586F2]/5 to-[#6DAEDB]/5">
             <GridScan />
           </ThreeDFallback>
         </div>
@@ -380,7 +380,7 @@ export default function CourseDetail() {
                     <Badge className={`${getDifficultyColor(course.difficulty)} border-2 text-sm px-3 py-1`}>
                       {course.difficulty.toUpperCase()}
                     </Badge>
-                    <Badge className="bg-[#C9B458]/10 text-[#C9B458] border-2 border-[#C9B458]/20 text-sm px-3 py-1">
+                    <Badge className="bg-[#9586F2]/10 text-[#9586F2] border-2 border-[#9586F2]/20 text-sm px-3 py-1">
                       {course.category}
                     </Badge>
                   </div>
@@ -412,7 +412,7 @@ export default function CourseDetail() {
 
                   {/* Instructor */}
                   <div className="flex items-center gap-3 pt-2">
-                    <div className="h-10 w-10 rounded-full bg-gradient-to-br from-[#C9B458] to-[#C27BA0] flex items-center justify-center text-white font-bold">
+                    <div className="h-10 w-10 rounded-full bg-gradient-to-br from-[#9586F2] to-[#C27BA0] flex items-center justify-center text-white font-bold">
                       {course.instructor.charAt(0)}
                     </div>
                     <div>
@@ -426,7 +426,7 @@ export default function CourseDetail() {
                 <div className="flex gap-4 flex-wrap">
                   <Button
                     size="lg"
-                    className="bg-[#C9B458] hover:bg-[#B8A347] text-white border-4 border-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] hover:shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] transition-all"
+                    className="bg-[#9586F2] hover:bg-[#AA9DF8] text-white border-4 border-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] hover:shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] transition-all"
                     onClick={() => setActiveTab('curriculum')}
                   >
                     <PlayCircle className="mr-2 h-5 w-5" />
@@ -460,7 +460,7 @@ export default function CourseDetail() {
                 <Card className="border-4 border-black shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] bg-white">
                   <CardHeader>
                     <CardTitle className="flex items-center gap-2">
-                      <Target className="h-5 w-5 text-[#C9B458]" />
+                      <Target className="h-5 w-5 text-[#9586F2]" />
                       Your Progress
                     </CardTitle>
                   </CardHeader>
@@ -469,14 +469,14 @@ export default function CourseDetail() {
                     <div className="space-y-2">
                       <div className="flex justify-between text-sm">
                         <span className="text-muted-foreground">Completion</span>
-                        <span className="font-bold text-[#C9B458]">{Math.round(progressPercentage)}%</span>
+                        <span className="font-bold text-[#9586F2]">{Math.round(progressPercentage)}%</span>
                       </div>
                       <div className="relative h-3 bg-muted border-2 border-black rounded-full overflow-hidden">
                         <motion.div
                           initial={{ width: 0 }}
                           animate={{ width: `${progressPercentage}%` }}
                           transition={{ duration: 1, ease: "easeOut" }}
-                          className="absolute inset-y-0 left-0 bg-gradient-to-r from-[#C9B458] to-[#C27BA0]"
+                          className="absolute inset-y-0 left-0 bg-gradient-to-r from-[#9586F2] to-[#C27BA0]"
                         />
                       </div>
                     </div>
@@ -495,7 +495,7 @@ export default function CourseDetail() {
                           <Zap className="h-4 w-4" />
                           <span>XP Earned</span>
                         </div>
-                        <p className="text-2xl font-bold text-[#C9B458]">{completedLessons.size * 50}</p>
+                        <p className="text-2xl font-bold text-[#9586F2]">{completedLessons.size * 50}</p>
                       </div>
                     </div>
 
@@ -528,19 +528,19 @@ export default function CourseDetail() {
       <div className="container mx-auto px-4 py-8">
         <Tabs value={activeTab} onValueChange={(v) => setActiveTab(v as any)} className="space-y-6">
           <TabsList className="grid w-full grid-cols-4 border-4 border-black p-1 bg-white shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]">
-            <TabsTrigger value="overview" className="data-[state=active]:bg-[#C9B458] data-[state=active]:text-white">
+            <TabsTrigger value="overview" className="data-[state=active]:bg-[#9586F2] data-[state=active]:text-white">
               <Sparkles className="mr-2 h-4 w-4" />
               Overview
             </TabsTrigger>
-            <TabsTrigger value="curriculum" className="data-[state=active]:bg-[#C9B458] data-[state=active]:text-white">
+            <TabsTrigger value="curriculum" className="data-[state=active]:bg-[#9586F2] data-[state=active]:text-white">
               <BookOpen className="mr-2 h-4 w-4" />
               Curriculum
             </TabsTrigger>
-            <TabsTrigger value="resources" className="data-[state=active]:bg-[#C9B458] data-[state=active]:text-white">
+            <TabsTrigger value="resources" className="data-[state=active]:bg-[#9586F2] data-[state=active]:text-white">
               <Download className="mr-2 h-4 w-4" />
               Resources
             </TabsTrigger>
-            <TabsTrigger value="reviews" className="data-[state=active]:bg-[#C9B458] data-[state=active]:text-white">
+            <TabsTrigger value="reviews" className="data-[state=active]:bg-[#9586F2] data-[state=active]:text-white">
               <Star className="mr-2 h-4 w-4" />
               Reviews
             </TabsTrigger>
@@ -554,7 +554,7 @@ export default function CourseDetail() {
                 <Card className="border-4 border-black shadow-[8px_8px_0px_0px_rgba(0,0,0,1)]">
                   <CardHeader>
                     <CardTitle className="flex items-center gap-2">
-                      <TrendingUp className="h-5 w-5 text-[#C9B458]" />
+                      <TrendingUp className="h-5 w-5 text-[#9586F2]" />
                       What You'll Learn
                     </CardTitle>
                   </CardHeader>
@@ -643,7 +643,7 @@ export default function CourseDetail() {
                   </CardHeader>
                   <CardContent className="space-y-4">
                     <div className="flex items-center gap-3">
-                      <div className="h-16 w-16 rounded-full bg-gradient-to-br from-[#C9B458] to-[#C27BA0] flex items-center justify-center text-white font-bold text-2xl border-4 border-black">
+                      <div className="h-16 w-16 rounded-full bg-gradient-to-br from-[#9586F2] to-[#C27BA0] flex items-center justify-center text-white font-bold text-2xl border-4 border-black">
                         {course.instructor.charAt(0)}
                       </div>
                       <div>
@@ -711,7 +711,7 @@ export default function CourseDetail() {
                                   {moduleProgress === module.lessons.length ? (
                                     <CheckCircle2 className="h-5 w-5 text-green-500" />
                                   ) : moduleProgress > 0 ? (
-                                    <div className="h-5 w-5 rounded-full border-2 border-[#C9B458] bg-[#C9B458]/20" />
+                                    <div className="h-5 w-5 rounded-full border-2 border-[#9586F2] bg-[#9586F2]/20" />
                                   ) : (
                                     <div className="h-5 w-5 rounded-full border-2 border-muted-foreground" />
                                   )}
@@ -722,7 +722,7 @@ export default function CourseDetail() {
                                   <div className="mt-2 space-y-1">
                                     <div className="h-1 bg-muted rounded-full overflow-hidden">
                                       <div
-                                        className="h-full bg-[#C9B458]"
+                                        className="h-full bg-[#9586F2]"
                                         style={{ width: `${modulePercentage}%` }}
                                       />
                                     </div>
@@ -746,7 +746,7 @@ export default function CourseDetail() {
                                       onClick={() => setCurrentLesson({ moduleId: module.id, lessonId: lesson.id })}
                                       className={`w-full text-left p-2 rounded-lg border-2 transition-all ${
                                         isCurrent
-                                          ? 'border-[#C9B458] bg-[#C9B458]/10'
+                                          ? 'border-[#9586F2] bg-[#9586F2]/10'
                                           : 'border-transparent hover:border-black hover:bg-accent'
                                       }`}
                                     >
@@ -886,7 +886,7 @@ export default function CourseDetail() {
                                   course.modules[course.modules.length - 1].lessons.length - 1
                                 ].id === currentLesson?.lessonId
                               }
-                              className="bg-[#C9B458] hover:bg-[#B8A347] text-white border-4 border-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] hover:shadow-[2px_2px_0px_0px_rgba(0,0,0,1)]"
+                              className="bg-[#9586F2] hover:bg-[#AA9DF8] text-white border-4 border-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] hover:shadow-[2px_2px_0px_0px_rgba(0,0,0,1)]"
                             >
                               Next
                               <ChevronRight className="ml-2 h-4 w-4" />
@@ -926,8 +926,8 @@ export default function CourseDetail() {
                     className="flex items-center justify-between p-4 border-2 border-black rounded-lg hover:bg-accent transition-colors"
                   >
                     <div className="flex items-center gap-3">
-                      <div className="h-10 w-10 rounded-lg bg-[#C9B458]/10 border-2 border-black flex items-center justify-center">
-                        <Download className="h-5 w-5 text-[#C9B458]" />
+                      <div className="h-10 w-10 rounded-lg bg-[#9586F2]/10 border-2 border-black flex items-center justify-center">
+                        <Download className="h-5 w-5 text-[#9586F2]" />
                       </div>
                       <div>
                         <p className="font-semibold">{resource.name}</p>

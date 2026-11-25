@@ -37,10 +37,10 @@ export const SmartAutoFillPanel = () => {
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.4, delay: 0.2 }}
     >
-      <Card className="border-2 bg-gradient-to-br from-[#C9B458]/5 via-transparent to-[#C27BA0]/5">
+      <Card className="border-2 bg-gradient-to-br from-[#9586F2]/5 via-transparent to-[#C27BA0]/5">
         <CardHeader>
           <div className="flex items-start gap-3">
-            <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-[#C9B458] to-[#C27BA0] flex items-center justify-center flex-shrink-0">
+            <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-[#9586F2] to-[#C27BA0] flex items-center justify-center flex-shrink-0">
               <Sparkles className="w-5 h-5 text-white" />
             </div>
             <div className="flex-1">
@@ -77,7 +77,7 @@ export const SmartAutoFillPanel = () => {
               and automatically fill application forms with your verified documents and information.
             </p>
             <Button 
-              className="w-full bg-gradient-to-r from-[#C9B458] to-[#C27BA0] hover:opacity-90"
+              className="w-full bg-gradient-to-r from-[#9586F2] to-[#C27BA0] hover:opacity-90"
               size="lg"
             >
               Enable Smart Auto-Fill

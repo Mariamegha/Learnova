@@ -447,7 +447,7 @@ export function getTierColor(tier: DifficultyTier): string {
     case 'Silver':
       return '#C0C0C0';
     case 'Gold':
-      return '#C9B458';
+      return '#9586F2';
     case 'Diamond':
       return '#6DAEDB';
   }

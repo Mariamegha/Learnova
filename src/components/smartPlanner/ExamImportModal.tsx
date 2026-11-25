@@ -54,7 +54,7 @@ export default function ExamImportModal({ isOpen, onClose, onImport }: ExamImpor
         exam_time: exam.time || undefined,
         subject: exam.subject,
         importance: 'medium',
-        color: '#C9B458',
+        color: '#9586F2',
       }));
 
       // Save to database
@@ -98,10 +98,10 @@ export default function ExamImportModal({ isOpen, onClose, onImport }: ExamImpor
         className="bg-gradient-to-br from-[#0F1115] to-[#151823] rounded-2xl border border-white/10 shadow-2xl max-w-2xl w-full max-h-[90vh] overflow-hidden"
       >
         {/* Header */}
-        <div className="bg-gradient-to-r from-[#C9B458]/20 to-[#C27BA0]/20 p-6 border-b border-white/10">
+        <div className="bg-gradient-to-r from-[#9586F2]/20 to-[#C27BA0]/20 p-6 border-b border-white/10">
           <div className="flex items-center justify-between">
             <div className="flex items-center gap-3">
-              <Calendar className="w-6 h-6 text-[#C9B458]" />
+              <Calendar className="w-6 h-6 text-[#9586F2]" />
               <h2 className="text-2xl font-bold text-white">Import Exam Timetable</h2>
             </div>
             <button
@@ -117,8 +117,8 @@ export default function ExamImportModal({ isOpen, onClose, onImport }: ExamImpor
           {/* Upload Section */}
           <div className="mb-8">
             <h3 className="text-lg font-semibold text-white mb-4">Upload Timetable</h3>
-            <div className="border-2 border-dashed border-white/20 rounded-xl p-8 text-center hover:border-[#C9B458]/50 transition-colors cursor-pointer group">
-              <Upload className="w-12 h-12 text-gray-400 group-hover:text-[#C9B458] mx-auto mb-3 transition-colors" />
+            <div className="border-2 border-dashed border-white/20 rounded-xl p-8 text-center hover:border-[#9586F2]/50 transition-colors cursor-pointer group">
+              <Upload className="w-12 h-12 text-gray-400 group-hover:text-[#9586F2] mx-auto mb-3 transition-colors" />
               <p className="text-white font-semibold mb-1">Drop your timetable here</p>
               <p className="text-sm text-gray-400">Supports PDF, Image, or Excel files</p>
               <input type="file" className="hidden" accept=".pdf,.png,.jpg,.xlsx,.csv" />
@@ -141,7 +141,7 @@ export default function ExamImportModal({ isOpen, onClose, onImport }: ExamImpor
               <Button
                 onClick={addExamRow}
                 size="sm"
-                className="bg-[#C9B458] hover:bg-[#C9B458]/90 text-black font-semibold"
+                className="bg-[#9586F2] hover:bg-[#9586F2]/90 text-black font-semibold"
               >
                 <Plus className="w-4 h-4 mr-2" />
                 Add Exam
@@ -231,7 +231,7 @@ export default function ExamImportModal({ isOpen, onClose, onImport }: ExamImpor
             <Button
               onClick={handleImport}
               disabled={isSubmitting}
-              className="bg-gradient-to-r from-[#C9B458] to-[#C27BA0] hover:opacity-90 text-white font-semibold"
+              className="bg-gradient-to-r from-[#9586F2] to-[#C27BA0] hover:opacity-90 text-white font-semibold"
             >
               {isSubmitting ? (
                 <>

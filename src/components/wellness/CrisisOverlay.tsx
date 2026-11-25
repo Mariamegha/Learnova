@@ -41,7 +41,7 @@ export default function CrisisOverlay({ isOpen, onClose, exercise, resources }: 
   const getPhaseColor = (): string => {
     switch (breathingPhase) {
       case 'inhale': return '#6DAEDB';
-      case 'hold': return '#C9B458';
+      case 'hold': return '#9586F2';
       case 'exhale': return '#C27BA0';
       case 'pause': return '#9CA3AF';
     }
@@ -126,7 +126,7 @@ export default function CrisisOverlay({ isOpen, onClose, exercise, resources }: 
                     className={`${
                       isBreathingActive
                         ? 'bg-red-500 hover:bg-red-600'
-                        : 'bg-gradient-to-r from-[#C9B458] to-[#C27BA0] hover:opacity-90'
+                        : 'bg-gradient-to-r from-[#9586F2] to-[#C27BA0] hover:opacity-90'
                     } text-white font-bold px-8 py-3`}
                   >
                     {isBreathingActive ? 'Stop Exercise' : 'Start Breathing Exercise'}
@@ -174,7 +174,7 @@ export default function CrisisOverlay({ isOpen, onClose, exercise, resources }: 
                             <h4 className="font-bold text-white mb-1">{resource.name}</h4>
                             <p className="text-sm text-gray-400 mb-2">{resource.description}</p>
                             <div className="flex items-center justify-between">
-                              <span className="text-lg font-black text-[#C9B458]">{resource.contact}</span>
+                              <span className="text-lg font-black text-[#9586F2]">{resource.contact}</span>
                               <span className="text-xs text-gray-500">{resource.available}</span>
                             </div>
                           </div>

@@ -99,7 +99,7 @@ export const InstructorSourceManager: React.FC<InstructorSourceManagerProps> = (
       <DialogContent className="max-w-3xl max-h-[80vh] border-4 border-black shadow-[8px_8px_0px_0px_rgba(0,0,0,1)]">
         <DialogHeader className="border-b-4 border-black pb-4">
           <DialogTitle className="text-2xl font-black flex items-center gap-2">
-            <FileText className="w-6 h-6 text-[#C9B458]" />
+            <FileText className="w-6 h-6 text-[#9586F2]" />
             Manage Verified Sources
           </DialogTitle>
           <DialogDescription className="text-base font-bold">
@@ -110,7 +110,7 @@ export const InstructorSourceManager: React.FC<InstructorSourceManagerProps> = (
         <div className="space-y-4">
           {/* Upload Form */}
           {showUploadForm ? (
-            <Card className="border-4 border-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] p-4 bg-[#C9B458]/10">
+            <Card className="border-4 border-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] p-4 bg-[#9586F2]/10">
               <h3 className="text-lg font-black mb-4 flex items-center gap-2">
                 <Upload className="w-5 h-5" />
                 Upload New Source
@@ -168,7 +168,7 @@ export const InstructorSourceManager: React.FC<InstructorSourceManagerProps> = (
           ) : (
             <Button
               onClick={() => setShowUploadForm(true)}
-              className="w-full bg-[#C9B458] hover:bg-[#B8A347] text-black border-4 border-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]"
+              className="w-full bg-[#9586F2] hover:bg-[#AA9DF8] text-black border-4 border-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]"
             >
               <Plus className="w-4 h-4 mr-2" />
               Add New Source
@@ -269,7 +269,7 @@ export const InstructorSourceManager: React.FC<InstructorSourceManagerProps> = (
               <p className="text-xs text-black/60 font-bold">Total Sources</p>
             </div>
             <div className="flex-1">
-              <p className="text-2xl font-black text-[#C9B458]">{localSources.filter(s => s.verified).length}</p>
+              <p className="text-2xl font-black text-[#9586F2]">{localSources.filter(s => s.verified).length}</p>
               <p className="text-xs text-black/60 font-bold">Verified</p>
             </div>
           </div>

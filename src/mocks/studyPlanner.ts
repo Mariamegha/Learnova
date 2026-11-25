@@ -326,7 +326,7 @@ export const MOCK_EXAM_TIMETABLE: ExamEntry[] = [
     location: 'Hall A',
     topics: ['Arrays', 'Linked Lists', 'Trees', 'Graphs', 'Dynamic Programming'],
     importance: 'high',
-    color: '#C9B458'
+    color: '#9586F2'
   },
   {
     id: 'exam-002',
@@ -359,7 +359,7 @@ export const MOCK_EXAM_TIMETABLE: ExamEntry[] = [
     location: 'Hall C',
     topics: ['OSI Model', 'TCP/IP', 'Routing', 'Network Security'],
     importance: 'medium',
-    color: '#C9B458'
+    color: '#9586F2'
   },
   {
     id: 'exam-005',
@@ -380,7 +380,7 @@ export const MOCK_DAILY_STUDY_PLANS: DailyStudyPlan[] = [
     subjects: [
       {
         subject: 'Data Structures & Algorithms',
-        color: '#C9B458',
+        color: '#9586F2',
         totalHours: 4,
         chapters: [
           {
@@ -518,7 +518,7 @@ export const MOCK_DAILY_STUDY_PLANS: DailyStudyPlan[] = [
     subjects: [
       {
         subject: 'Computer Networks',
-        color: '#C9B458',
+        color: '#9586F2',
         totalHours: 4,
         chapters: [
           {

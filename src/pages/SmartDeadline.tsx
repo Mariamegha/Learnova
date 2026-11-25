@@ -54,7 +54,7 @@ export default function SmartDeadlinePage() {
           className="mb-8"
         >
           <h1 className="text-4xl font-black text-white mb-2 flex items-center gap-3">
-            <Target className="w-10 h-10 text-[#C9B458]" />
+            <Target className="w-10 h-10 text-[#9586F2]" />
             Smart Deadline Radar
           </h1>
           <p className="text-white/70 text-lg">
@@ -70,7 +70,7 @@ export default function SmartDeadlinePage() {
             >
               <Card className="border-4 border-black shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] bg-black/50 p-4">
                 <div className="flex items-center gap-3">
-                  <div className="w-12 h-12 rounded-full bg-[#C9B458] border-4 border-black flex items-center justify-center">
+                  <div className="w-12 h-12 rounded-full bg-[#9586F2] border-4 border-black flex items-center justify-center">
                     <Calendar className="w-6 h-6 text-black" />
                   </div>
                   <div>
@@ -126,7 +126,7 @@ export default function SmartDeadlinePage() {
             >
               <Card className="border-4 border-black shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] bg-black/50 p-4">
                 <div className="flex items-center gap-3">
-                  <div className="w-12 h-12 rounded-full bg-[#C9B458] border-4 border-black flex items-center justify-center">
+                  <div className="w-12 h-12 rounded-full bg-[#9586F2] border-4 border-black flex items-center justify-center">
                     <TrendingUp className="w-6 h-6 text-black" />
                   </div>
                   <div>
@@ -158,7 +158,7 @@ export default function SmartDeadlinePage() {
           >
             <div className="mb-4">
               <h2 className="text-xl font-black text-white flex items-center gap-2 mb-4">
-                <CheckCircle2 className="w-5 h-5 text-[#C9B458]" />
+                <CheckCircle2 className="w-5 h-5 text-[#9586F2]" />
                 Pace Suggestions
               </h2>
             </div>

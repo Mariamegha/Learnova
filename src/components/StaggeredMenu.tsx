@@ -35,22 +35,22 @@ interface StaggeredMenuProps {
 }
 
 const menuItems: MenuItem[] = [
-  { path: '/dashboard', label: 'Dashboard', icon: Home, color: '#FFD700' },
+  { path: '/dashboard', label: 'Dashboard', icon: Home, color: '#9586F2' },
   { path: '/courses', label: 'Courses', icon: BookOpen, color: '#FF1493' },
-  { path: '/ai-bot', label: 'AI Tutor', icon: BrainCircuit, color: '#FFD700' },
+  { path: '/ai-bot', label: 'AI Tutor', icon: BrainCircuit, color: '#9586F2' },
   { path: '/roadmap', label: 'Roadmap', icon: Map, color: '#FF1493' },
-  { path: '/notes', label: 'Notes', icon: StickyNote, color: '#FFD700' },
+  { path: '/notes', label: 'Notes', icon: StickyNote, color: '#9586F2' },
   { path: '/study-planner', label: 'Planner', icon: Calendar, color: '#FF1493' },
-  { path: '/performance-tiers', label: 'Performance', icon: Trophy, color: '#FFD700' },
+  { path: '/performance-tiers', label: 'Performance', icon: Trophy, color: '#9586F2' },
   { path: '/smart-opportunities', label: 'Opportunities', icon: Target, color: '#FF1493' },
-  { path: '/wellness', label: 'Wellness', icon: Heart, color: '#FFD700' },
+  { path: '/wellness', label: 'Wellness', icon: Heart, color: '#9586F2' },
   { path: '/schemes', label: 'Schemes', icon: Award, color: '#FF1493' },
-  { path: '/sign-language', label: 'Sign Language', icon: Hand, color: '#FFD700' },
+  { path: '/sign-language', label: 'Sign Language', icon: Hand, color: '#9586F2' },
   { path: '/game', label: 'Game Center', icon: Gamepad2, color: '#FF1493' },
-  { path: '/focus', label: 'Focus Room', icon: Glasses, color: '#FFD700' },
+  { path: '/focus', label: 'Focus Room', icon: Glasses, color: '#9586F2' },
   { path: '/study-vr', label: 'VR Study', icon: Glasses, color: '#FF1493' },
-  { path: '/community', label: 'Community', icon: Users, color: '#FFD700' },
-  { path: '/analytics', label: 'Analytics', icon: BarChart3, color: '#FFD700' },
+  { path: '/community', label: 'Community', icon: Users, color: '#9586F2' },
+  { path: '/analytics', label: 'Analytics', icon: BarChart3, color: '#9586F2' },
   { path: '/settings', label: 'Settings', icon: Settings, color: '#FF1493' },
 ];
 

@@ -97,7 +97,7 @@ export const GameHUD = ({
             </div>
 
             <div className="flex items-center gap-2 p-2 rounded-lg bg-gray-800/50">
-              <div className="w-4 h-4 rounded-full bg-gradient-to-br from-[#C9B458] to-[#C27BA0]" />
+              <div className="w-4 h-4 rounded-full bg-gradient-to-br from-[#9586F2] to-[#C27BA0]" />
               <div className="flex flex-col">
                 <span className="text-xs text-gray-400">Accuracy</span>
                 <span className="text-sm font-bold text-white">{accuracy}%</span>
@@ -110,11 +110,11 @@ export const GameHUD = ({
             <motion.div
               initial={{ opacity: 0, scale: 0.9 }}
               animate={{ opacity: 1, scale: 1 }}
-              className="flex items-center justify-center gap-2 p-2 rounded-lg bg-gradient-to-r from-[#C9B458]/20 to-[#C27BA0]/20 border border-[#C9B458]/30"
+              className="flex items-center justify-center gap-2 p-2 rounded-lg bg-gradient-to-r from-[#9586F2]/20 to-[#C27BA0]/20 border border-[#9586F2]/30"
             >
-              <Trophy className="w-4 h-4 text-[#C9B458]" />
+              <Trophy className="w-4 h-4 text-[#9586F2]" />
               <span className="text-xs text-gray-300">
-                Best Streak: <span className="font-bold text-[#C9B458]">{bestStreak}</span>
+                Best Streak: <span className="font-bold text-[#9586F2]">{bestStreak}</span>
               </span>
             </motion.div>
           )}

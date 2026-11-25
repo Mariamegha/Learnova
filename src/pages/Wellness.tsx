@@ -133,7 +133,7 @@ export default function Wellness() {
               <Button
                 onClick={handleSaveCheckIn}
                 disabled={!selectedMood}
-                className="w-full bg-gradient-to-r from-[#C9B458] to-[#C27BA0] hover:opacity-90 text-black font-black disabled:opacity-50"
+                className="w-full bg-gradient-to-r from-[#9586F2] to-[#C27BA0] hover:opacity-90 text-black font-black disabled:opacity-50"
               >
                 Save Check-in
               </Button>

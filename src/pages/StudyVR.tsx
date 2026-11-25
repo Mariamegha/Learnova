@@ -281,7 +281,7 @@ export default function StudyVR() {
       {/* LaserFlow Background */}
       <div className="fixed inset-0 z-0 opacity-50 pointer-events-none">
         <LaserFlow
-          color="#FFD700"
+          color="#9586F2"
           fogIntensity={0.7}
           verticalBeamOffset={0}
           flowSpeed={0.4}

@@ -56,7 +56,7 @@ export const SmartPaceControls: React.FC<SmartPaceControlsProps> = ({ onGenerate
               whileTap={{ scale: 0.98 }}
               className={`p-4 border-4 border-black transition-all ${
                 selectedMode === mode.id
-                  ? 'bg-[#C9B458] shadow-[6px_6px_0px_0px_rgba(0,0,0,1)]'
+                  ? 'bg-[#9586F2] shadow-[6px_6px_0px_0px_rgba(0,0,0,1)]'
                   : 'bg-black/50 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] hover:translate-x-[-2px] hover:translate-y-[-2px] hover:shadow-[6px_6px_0px_0px_rgba(0,0,0,1)]'
               }`}
             >
@@ -105,7 +105,7 @@ export const SmartPaceControls: React.FC<SmartPaceControlsProps> = ({ onGenerate
         <div className="flex items-center justify-between">
           <div className="flex-1">
             <div className="flex items-center gap-2 mb-1">
-              <Sparkles className="w-4 h-4 text-[#C9B458]" />
+              <Sparkles className="w-4 h-4 text-[#9586F2]" />
               <h3 className="font-bold text-white">Auto-Adjust with Deadlines</h3>
             </div>
             <p className="text-xs text-white/60">
@@ -115,7 +115,7 @@ export const SmartPaceControls: React.FC<SmartPaceControlsProps> = ({ onGenerate
           <Switch
             checked={autoAdjust}
             onCheckedChange={setAutoAdjust}
-            className="ml-4 data-[state=checked]:bg-[#C9B458]"
+            className="ml-4 data-[state=checked]:bg-[#9586F2]"
           />
         </div>
       </div>
@@ -157,13 +157,13 @@ export const SmartPaceControls: React.FC<SmartPaceControlsProps> = ({ onGenerate
         <h4 className="text-xs font-bold text-white/60 mb-2">CURRENT SETTINGS</h4>
         <div className="grid grid-cols-2 gap-2 text-xs">
           <div className="flex items-center gap-2">
-            <div className="w-2 h-2 bg-[#C9B458] rounded-full"></div>
+            <div className="w-2 h-2 bg-[#9586F2] rounded-full"></div>
             <span className="text-white/70">
               Mode: <strong className="text-white">{PACING_MODES.find((m) => m.id === selectedMode)?.label}</strong>
             </span>
           </div>
           <div className="flex items-center gap-2">
-            <div className={`w-2 h-2 rounded-full ${autoAdjust ? 'bg-[#C9B458]' : 'bg-white/30'}`}></div>
+            <div className={`w-2 h-2 rounded-full ${autoAdjust ? 'bg-[#9586F2]' : 'bg-white/30'}`}></div>
             <span className="text-white/70">
               Auto-Adjust: <strong className="text-white">{autoAdjust ? 'On' : 'Off'}</strong>
             </span>

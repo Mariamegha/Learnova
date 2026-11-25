@@ -32,7 +32,7 @@ export function ExamNotificationBell() {
     if (hasExamToday) return 'bg-red-500';
     if (hasExamTomorrow) return 'bg-orange-500';
     if (nearestExam && nearestExam.daysLeft <= 3) return 'bg-yellow-500';
-    return 'bg-[#C9B458]'; // Gold for normal upcoming exams
+    return 'bg-[#9586F2]'; // Gold for normal upcoming exams
   };
 
   // Icon animation based on urgency
@@ -129,9 +129,9 @@ export function ExamNotificationBell() {
             )}
           >
             {/* Header */}
-            <div className="bg-gradient-to-r from-[#C9B458]/20 to-[#C27BA0]/20 p-4 border-b border-white/10">
+            <div className="bg-gradient-to-r from-[#9586F2]/20 to-[#C27BA0]/20 p-4 border-b border-white/10">
               <div className="flex items-center gap-2">
-                <Calendar className="w-5 h-5 text-[#C9B458]" />
+                <Calendar className="w-5 h-5 text-[#9586F2]" />
                 <h3 className="font-bold text-white">Exam Countdown</h3>
               </div>
             </div>
@@ -217,7 +217,7 @@ export function ExamNotificationBell() {
               <div className="border-t border-white/10 p-3 bg-white/5">
                 <a
                   href="/study-planner"
-                  className="flex items-center justify-between text-sm text-[#C9B458] hover:text-[#C27BA0] transition-colors font-semibold"
+                  className="flex items-center justify-between text-sm text-[#9586F2] hover:text-[#C27BA0] transition-colors font-semibold"
                   onClick={() => setIsOpen(false)}
                 >
                   <span>View Study Planner</span>

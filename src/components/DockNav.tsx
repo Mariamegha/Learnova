@@ -59,7 +59,7 @@ function DockIcon({ item, mouseX }: { item: DockItem; mouseX: any }) {
       onMouseLeave={() => setIsHovered(false)}
       onClick={handleClick}
     >
-      <div className="dock-icon" style={{ color: isActive ? '#FFD700' : '#FF1493' }}>
+      <div className="dock-icon" style={{ color: isActive ? '#9586F2' : '#FF1493' }}>
         {item.icon}
       </div>
       {isHovered && (
@@ -195,7 +195,7 @@ export default function DockNav() {
       {/* Floating toggle button - always visible at bottom center */}
       <motion.button
         onClick={toggleDock}
-        className="fixed bottom-2 left-1/2 transform -translate-x-1/2 z-[101] w-12 h-12 rounded-full bg-gradient-to-br from-gold to-pink border-2 border-black flex items-center justify-center shadow-[0_0_20px_rgba(201,180,88,0.5)] hover:shadow-[0_0_30px_rgba(201,180,88,0.8)] transition-all"
+        className="fixed bottom-2 left-1/2 transform -translate-x-1/2 z-[101] w-12 h-12 rounded-full bg-gradient-to-br from-gold to-pink border-2 border-black flex items-center justify-center shadow-[0_0_20px_rgba(149,134,242,0.5)] hover:shadow-[0_0_30px_rgba(149,134,242,0.8)] transition-all"
         whileHover={{ scale: 1.1 }}
         whileTap={{ scale: 0.95 }}
         animate={{ 

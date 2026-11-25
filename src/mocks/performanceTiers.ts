@@ -82,7 +82,7 @@ export interface TierStatistics {
 }
 
 export const TIER_COLORS = {
-  BEST: '#C9B458',
+  BEST: '#9586F2',
   MEDIUM: '#C27BA0',
   WORST: '#6DAEDB'
 };

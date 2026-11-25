@@ -66,10 +66,10 @@ export const OutputCard: React.FC<OutputCardProps> = ({ content, onRegenerate, i
         {/* Header with actions */}
         <div className="border-b-4 border-black p-4 bg-black/30 flex items-center justify-between">
           <div className="flex items-center gap-2">
-            {content.style === 'reels' && <Video className="w-5 h-5 text-[#C9B458]" />}
+            {content.style === 'reels' && <Video className="w-5 h-5 text-[#9586F2]" />}
             {content.style === 'meme' && <Smile className="w-5 h-5 text-[#C27BA0]" />}
             {content.style === 'character' && <Users className="w-5 h-5 text-[#6DAEDB]" />}
-            {content.style === 'notes' && <FileText className="w-5 h-5 text-[#C9B458]" />}
+            {content.style === 'notes' && <FileText className="w-5 h-5 text-[#9586F2]" />}
             {content.style === 'exam' && <Award className="w-5 h-5 text-[#C27BA0]" />}
             <h3 className="font-black text-white">
               {content.style === 'reels' && 'Reels Script'}
@@ -115,12 +115,12 @@ export const OutputCard: React.FC<OutputCardProps> = ({ content, onRegenerate, i
 // Reels format component
 const ReelsOutput: React.FC<{ content: ReelsContent }> = ({ content }) => (
   <div className="space-y-4">
-    <div className="p-4 border-4 border-[#C9B458] bg-[#C9B458]/10">
+    <div className="p-4 border-4 border-[#9586F2] bg-[#9586F2]/10">
       <div className="flex items-center gap-2 mb-2">
-        <Zap className="w-5 h-5 text-[#C9B458]" />
+        <Zap className="w-5 h-5 text-[#9586F2]" />
         <h4 className="font-black text-white">{content.title}</h4>
       </div>
-      <p className="text-[#C9B458] font-bold text-lg">{content.hook}</p>
+      <p className="text-[#9586F2] font-bold text-lg">{content.hook}</p>
     </div>
 
     <div className="space-y-3">
@@ -132,7 +132,7 @@ const ReelsOutput: React.FC<{ content: ReelsContent }> = ({ content }) => (
           transition={{ delay: index * 0.1 }}
           className="flex gap-3 p-3 border-2 border-white/20 bg-black/30 rounded"
         >
-          <div className="flex items-center gap-2 text-[#C9B458] min-w-[80px]">
+          <div className="flex items-center gap-2 text-[#9586F2] min-w-[80px]">
             <Clock className="w-4 h-4" />
             <span className="text-xs font-bold">{segment.timestamp}</span>
           </div>
@@ -144,9 +144,9 @@ const ReelsOutput: React.FC<{ content: ReelsContent }> = ({ content }) => (
       ))}
     </div>
 
-    <div className="p-3 border-2 border-[#C9B458] bg-black/30 text-center">
+    <div className="p-3 border-2 border-[#9586F2] bg-black/30 text-center">
       <p className="text-white font-bold">{content.cta}</p>
-      <Badge className="mt-2 bg-[#C9B458] text-black border-2 border-black font-black">
+      <Badge className="mt-2 bg-[#9586F2] text-black border-2 border-black font-black">
         Duration: {content.duration}
       </Badge>
     </div>
@@ -218,12 +218,12 @@ const CharacterOutput: React.FC<{ content: CharacterContent }> = ({ content }) =
 // Notes format component
 const NotesOutput: React.FC<{ content: NotesContent }> = ({ content }) => (
   <div className="space-y-4">
-    <h4 className="text-2xl font-black text-white border-b-4 border-[#C9B458] pb-2">
+    <h4 className="text-2xl font-black text-white border-b-4 border-[#9586F2] pb-2">
       {content.title}
     </h4>
 
     <div className="space-y-2">
-      <h5 className="text-sm font-black text-[#C9B458] uppercase">Key Points</h5>
+      <h5 className="text-sm font-black text-[#9586F2] uppercase">Key Points</h5>
       {content.keyPoints.map((point, index) => (
         <motion.div
           key={index}
@@ -232,15 +232,15 @@ const NotesOutput: React.FC<{ content: NotesContent }> = ({ content }) => (
           transition={{ delay: index * 0.05 }}
           className="flex items-start gap-2"
         >
-          <CheckCircle2 className="w-4 h-4 text-[#C9B458] mt-1 flex-shrink-0" />
+          <CheckCircle2 className="w-4 h-4 text-[#9586F2] mt-1 flex-shrink-0" />
           <p className="text-white text-sm">{point}</p>
         </motion.div>
       ))}
     </div>
 
     {content.formulas && content.formulas.length > 0 && (
-      <div className="p-4 border-4 border-[#C9B458] bg-black/50">
-        <h5 className="text-sm font-black text-[#C9B458] uppercase mb-2">Key Formulas</h5>
+      <div className="p-4 border-4 border-[#9586F2] bg-black/50">
+        <h5 className="text-sm font-black text-[#9586F2] uppercase mb-2">Key Formulas</h5>
         {content.formulas.map((formula, index) => (
           <p key={index} className="font-mono text-white bg-black/50 p-2 mb-2 border-2 border-white/20">
             {formula}
@@ -290,14 +290,14 @@ const ExamOutput: React.FC<{ content: ExamContent }> = ({ content }) => (
               style={{ 
                 backgroundColor: 
                   q.difficulty === 'Easy' ? '#6DAEDB' : 
-                  q.difficulty === 'Medium' ? '#C9B458' : '#C27BA0',
+                  q.difficulty === 'Medium' ? '#9586F2' : '#C27BA0',
                 color: 'black'
               }}
             >
               {q.difficulty}
             </Badge>
           </div>
-          <p className="text-[#C9B458] text-sm font-bold mt-2">💡 {q.answer}</p>
+          <p className="text-[#9586F2] text-sm font-bold mt-2">💡 {q.answer}</p>
         </motion.div>
       ))}
     </div>

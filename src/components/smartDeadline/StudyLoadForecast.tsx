@@ -14,7 +14,7 @@ export const StudyLoadForecast: React.FC<StudyLoadForecastProps> = ({ weeklyLoad
   const avgHours = weeklyLoad.reduce((sum, day) => sum + day.hours, 0) / weeklyLoad.length;
 
   const getBarColor = (stressLevel: number) => {
-    if (stressLevel >= 80) return '#C9B458'; // Gold - High stress
+    if (stressLevel >= 80) return '#9586F2'; // Gold - High stress
     if (stressLevel >= 50) return '#C27BA0'; // Pink - Medium stress
     return '#6DAEDB'; // Blue - Low stress
   };
@@ -80,7 +80,7 @@ export const StudyLoadForecast: React.FC<StudyLoadForecastProps> = ({ weeklyLoad
           className="p-3 border-4 border-black bg-black/50 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]"
         >
           <p className="text-xs text-white/60 font-bold mb-1">Peak Load</p>
-          <p className="text-2xl font-black text-[#C9B458]">{maxHours}h</p>
+          <p className="text-2xl font-black text-[#9586F2]">{maxHours}h</p>
           <p className="text-xs text-white/70 mt-1">{peakDay.day}</p>
         </motion.div>
 
@@ -140,9 +140,9 @@ export const StudyLoadForecast: React.FC<StudyLoadForecastProps> = ({ weeklyLoad
         <motion.div
           initial={{ opacity: 0, height: 0 }}
           animate={{ opacity: 1, height: 'auto' }}
-          className="mt-4 p-3 border-4 border-[#C9B458] bg-[#C9B458]/10 flex items-start gap-2"
+          className="mt-4 p-3 border-4 border-[#9586F2] bg-[#9586F2]/10 flex items-start gap-2"
         >
-          <AlertTriangle className="w-5 h-5 text-[#C9B458] flex-shrink-0 mt-0.5" />
+          <AlertTriangle className="w-5 h-5 text-[#9586F2] flex-shrink-0 mt-0.5" />
           <div>
             <p className="text-sm font-black text-white">High Stress Alert</p>
             <p className="text-xs text-white/80 mt-1">
@@ -156,7 +156,7 @@ export const StudyLoadForecast: React.FC<StudyLoadForecastProps> = ({ weeklyLoad
       {/* Legend */}
       <div className="mt-4 flex items-center justify-center gap-4 text-xs">
         <div className="flex items-center gap-2">
-          <div className="w-3 h-3 bg-[#C9B458] border-2 border-black"></div>
+          <div className="w-3 h-3 bg-[#9586F2] border-2 border-black"></div>
           <span className="font-bold text-white/70">High Stress (80%+)</span>
         </div>
         <div className="flex items-center gap-2">

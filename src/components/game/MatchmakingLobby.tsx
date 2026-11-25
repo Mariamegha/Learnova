@@ -83,7 +83,7 @@ export const MatchmakingLobby = ({ onMatchStart, onCancel }: MatchmakingLobbyPro
               {/* Match Info */}
               <div className="p-4 rounded-lg bg-gradient-to-r from-purple-500/10 to-pink-500/10 border border-purple-500/30">
                 <h4 className="font-semibold text-white mb-3 flex items-center gap-2">
-                  <Crown className="w-4 h-4 text-[#C9B458]" />
+                  <Crown className="w-4 h-4 text-[#9586F2]" />
                   Match Details
                 </h4>
                 <div className="grid grid-cols-2 gap-3 text-sm">

@@ -40,7 +40,7 @@ export const SignAvatar: React.FC<SignAvatarProps> = ({ embedded = false, onClos
       {/* Header */}
       <div className="flex items-center justify-between mb-4">
         <div className="flex items-center gap-2">
-          <Hand className="w-6 h-6 text-[#C9B458]" />
+          <Hand className="w-6 h-6 text-[#9586F2]" />
           <h3 className="text-xl font-black">Sign Language Avatar</h3>
         </div>
         {!embedded && onClose && (
@@ -68,13 +68,13 @@ export const SignAvatar: React.FC<SignAvatarProps> = ({ embedded = false, onClos
       {/* Avatar Container */}
       <div className="relative mb-4">
         <motion.div 
-          className="w-full h-[400px] bg-gradient-to-br from-[#C9B458]/20 via-[#C27BA0]/20 to-[#6DAEDB]/20 border-4 border-black rounded-lg overflow-hidden flex items-center justify-center"
+          className="w-full h-[400px] bg-gradient-to-br from-[#9586F2]/20 via-[#C27BA0]/20 to-[#6DAEDB]/20 border-4 border-black rounded-lg overflow-hidden flex items-center justify-center"
           animate={{
             background: isPlaying 
-              ? ['linear-gradient(135deg, rgba(201,180,88,0.2), rgba(194,123,160,0.2), rgba(109,174,219,0.2))',
-                 'linear-gradient(225deg, rgba(194,123,160,0.2), rgba(109,174,219,0.2), rgba(201,180,88,0.2))',
-                 'linear-gradient(315deg, rgba(109,174,219,0.2), rgba(201,180,88,0.2), rgba(194,123,160,0.2))']
-              : 'linear-gradient(135deg, rgba(201,180,88,0.2), rgba(194,123,160,0.2), rgba(109,174,219,0.2))'
+              ? ['linear-gradient(135deg, rgba(149,134,242,0.2), rgba(194,123,160,0.2), rgba(109,174,219,0.2))',
+                 'linear-gradient(225deg, rgba(194,123,160,0.2), rgba(109,174,219,0.2), rgba(149,134,242,0.2))',
+                 'linear-gradient(315deg, rgba(109,174,219,0.2), rgba(149,134,242,0.2), rgba(194,123,160,0.2))']
+              : 'linear-gradient(135deg, rgba(149,134,242,0.2), rgba(194,123,160,0.2), rgba(109,174,219,0.2))'
           }}
           transition={{ duration: 2, repeat: isPlaying ? Infinity : 0 }}
         >
@@ -98,7 +98,7 @@ export const SignAvatar: React.FC<SignAvatarProps> = ({ embedded = false, onClos
                 exit={{ opacity: 0 }}
                 className="text-center"
               >
-                <Loader2 className="w-16 h-16 animate-spin text-[#C9B458] mx-auto mb-4" />
+                <Loader2 className="w-16 h-16 animate-spin text-[#9586F2] mx-auto mb-4" />
                 <p className="text-sm font-bold">Translating to {signLanguage}...</p>
               </motion.div>
             ) : isPlaying ? (
@@ -118,7 +118,7 @@ export const SignAvatar: React.FC<SignAvatarProps> = ({ embedded = false, onClos
                   }}
                   transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
                 >
-                  <div className="w-full h-full rounded-full bg-gradient-to-br from-[#C9B458] to-[#C27BA0] border-4 border-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] flex items-center justify-center">
+                  <div className="w-full h-full rounded-full bg-gradient-to-br from-[#9586F2] to-[#C27BA0] border-4 border-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] flex items-center justify-center">
                     <motion.div
                       animate={{
                         y: [0, -10, 0, -5, 0],
@@ -130,9 +130,9 @@ export const SignAvatar: React.FC<SignAvatarProps> = ({ embedded = false, onClos
                   </div>
                 </motion.div>
                 <div className="flex items-center justify-center gap-2">
-                  <div className="w-2 h-2 bg-[#C9B458] rounded-full animate-pulse" />
+                  <div className="w-2 h-2 bg-[#9586F2] rounded-full animate-pulse" />
                   <p className="text-sm font-bold">Signing in {signLanguage}...</p>
-                  <div className="w-2 h-2 bg-[#C9B458] rounded-full animate-pulse" />
+                  <div className="w-2 h-2 bg-[#9586F2] rounded-full animate-pulse" />
                 </div>
               </motion.div>
             ) : (
@@ -142,7 +142,7 @@ export const SignAvatar: React.FC<SignAvatarProps> = ({ embedded = false, onClos
                 animate={{ opacity: 1 }}
                 className="text-center p-8"
               >
-                <div className="w-32 h-32 mx-auto mb-4 rounded-full bg-gradient-to-br from-[#C9B458]/30 to-[#C27BA0]/30 border-4 border-black flex items-center justify-center">
+                <div className="w-32 h-32 mx-auto mb-4 rounded-full bg-gradient-to-br from-[#9586F2]/30 to-[#C27BA0]/30 border-4 border-black flex items-center justify-center">
                   <Hand className="w-16 h-16 text-black/40" />
                 </div>
                 <p className="text-sm font-bold text-black/60">Enter text below to see sign language translation</p>
@@ -168,7 +168,7 @@ export const SignAvatar: React.FC<SignAvatarProps> = ({ embedded = false, onClos
       <Button
         onClick={handleTranslate}
         disabled={!text.trim() || isTranslating || isPlaying}
-        className="w-full bg-[#C9B458] hover:bg-[#B8A347] text-black font-black border-4 border-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] hover:shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] transition-all"
+        className="w-full bg-[#9586F2] hover:bg-[#AA9DF8] text-black font-black border-4 border-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] hover:shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] transition-all"
       >
         {isTranslating ? (
           <>

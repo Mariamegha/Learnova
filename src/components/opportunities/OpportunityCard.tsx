@@ -57,7 +57,7 @@ export default function OpportunityCard({ opportunity, onAutoJudge, onViewDetail
         {/* Match Score & Eligibility */}
         <div className="flex items-center gap-3 mb-3">
           <div className="flex items-center gap-1.5">
-            <TrendingUp className="w-4 h-4 text-[#C9B458]" />
+            <TrendingUp className="w-4 h-4 text-[#9586F2]" />
             <span className="text-sm font-bold text-white">{opportunity.matchScore}% Match</span>
           </div>
           <div
@@ -78,7 +78,7 @@ export default function OpportunityCard({ opportunity, onAutoJudge, onViewDetail
         <div className="grid grid-cols-2 gap-2 mb-4">
           {opportunity.amount && (
             <div className="flex items-center gap-2">
-              <Sparkles className="w-4 h-4 text-[#C9B458]" />
+              <Sparkles className="w-4 h-4 text-[#9586F2]" />
               <span className="text-xs text-gray-300 font-semibold">{opportunity.amount}</span>
             </div>
           )}
@@ -118,7 +118,7 @@ export default function OpportunityCard({ opportunity, onAutoJudge, onViewDetail
         <div className="flex gap-2">
           <Button
             onClick={() => onAutoJudge(opportunity)}
-            className="flex-1 bg-gradient-to-r from-[#C9B458] to-[#C27BA0] hover:opacity-90 text-black font-bold"
+            className="flex-1 bg-gradient-to-r from-[#9586F2] to-[#C27BA0] hover:opacity-90 text-black font-bold"
             size="sm"
           >
             Auto-Judge Eligibility

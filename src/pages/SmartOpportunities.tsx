@@ -79,7 +79,7 @@ export default function SmartOpportunities() {
             </motion.button>
             <div className="flex-1">
               <div className="flex items-center gap-3">
-                <Target className="w-8 h-8 text-[#C9B458]" />
+                <Target className="w-8 h-8 text-[#9586F2]" />
                 <div>
                   <h1 className="text-3xl font-black text-white">Smart Opportunities</h1>
                   <p className="text-sm text-gray-400 mt-1">
@@ -88,8 +88,8 @@ export default function SmartOpportunities() {
                 </div>
               </div>
             </div>
-            <div className="hidden md:flex items-center gap-2 bg-gradient-to-r from-[#C9B458]/20 to-[#C27BA0]/20 rounded-lg px-4 py-2 border border-[#C9B458]/30">
-              <TrendingUp className="w-5 h-5 text-[#C9B458]" />
+            <div className="hidden md:flex items-center gap-2 bg-gradient-to-r from-[#9586F2]/20 to-[#C27BA0]/20 rounded-lg px-4 py-2 border border-[#9586F2]/30">
+              <TrendingUp className="w-5 h-5 text-[#9586F2]" />
               <div>
                 <p className="text-xs text-gray-400">Your Match Score</p>
                 <p className="text-lg font-black text-white">92%</p>
@@ -107,7 +107,7 @@ export default function SmartOpportunities() {
                 onClick={() => setActiveTab(tab.id)}
                 className={`px-4 py-2 rounded-lg font-bold text-sm whitespace-nowrap transition-all ${
                   activeTab === tab.id
-                    ? 'bg-gradient-to-r from-[#C9B458] to-[#C27BA0] text-black'
+                    ? 'bg-gradient-to-r from-[#9586F2] to-[#C27BA0] text-black'
                     : 'bg-white/5 text-gray-400 hover:bg-white/10 hover:text-white'
                 }`}
               >

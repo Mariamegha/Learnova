@@ -28,7 +28,7 @@ export default function ExamCalendar({ exams, onDateSelect, selectedDate }: Exam
         time: exam.exam_time || '',
         duration: exam.duration_minutes || 0,
         location: exam.location || '',
-        color: exam.color || '#C9B458',
+        color: exam.color || '#9586F2',
         topics: exam.topics || [],
         importance: 'high' as const,
       }));
@@ -97,7 +97,7 @@ export default function ExamCalendar({ exams, onDateSelect, selectedDate }: Exam
       {/* Header */}
       <div className="flex items-center justify-between mb-6">
         <div className="flex items-center gap-3">
-          <CalendarIcon className="w-6 h-6 text-[#C9B458]" />
+          <CalendarIcon className="w-6 h-6 text-[#9586F2]" />
           <h3 className="text-2xl font-bold text-white">
             {monthNames[month]} {year}
           </h3>
@@ -151,7 +151,7 @@ export default function ExamCalendar({ exams, onDateSelect, selectedDate }: Exam
               className={`
                 aspect-square rounded-xl p-2 relative transition-all
                 ${exam ? 'border-2' : 'border border-white/10'}
-                ${today ? 'ring-2 ring-[#C9B458] ring-offset-2 ring-offset-[#0F1115]' : ''}
+                ${today ? 'ring-2 ring-[#9586F2] ring-offset-2 ring-offset-[#0F1115]' : ''}
                 ${selected ? 'bg-white/20' : 'bg-white/5'}
                 ${exam ? `hover:shadow-lg` : 'hover:bg-white/10'}
               `}
@@ -189,7 +189,7 @@ export default function ExamCalendar({ exams, onDateSelect, selectedDate }: Exam
             >
               <div
                 className="w-3 h-3 rounded-full"
-                style={{ backgroundColor: exam.color || '#C9B458' }}
+                style={{ backgroundColor: exam.color || '#9586F2' }}
               />
               <span className="text-xs font-medium text-white">
                 {exam.subject}

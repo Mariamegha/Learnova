@@ -48,7 +48,7 @@ export const domains: Domain[] = [
     name: 'Arts & Humanities',
     icon: '🎨',
     description: 'Creative expression, literature, and culture',
-    color: '#C9B458'
+    color: '#9586F2'
   },
   {
     id: 'business',

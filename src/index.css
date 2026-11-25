@@ -18,7 +18,7 @@ All colors MUST be HSL.
     --popover: 225 18% 11%;
     --popover-foreground: 225 10% 92%;
 
-    --primary: 45 43% 57%; /* #C9B458 dull gold */
+    --primary: 249 79% 74%; /* Violet primary */
     --primary-foreground: 225 15% 8%;
 
     --secondary: 330 28% 62%; /* #C27BA0 dull pink */
@@ -27,7 +27,7 @@ All colors MUST be HSL.
     --muted: 225 23% 15%; /* #1B1F2E */
     --muted-foreground: 225 10% 67%; /* #A7AABD */
 
-    --accent: 200 50% 65%; /* #6DAEDB soft blue */
+    --accent: 173 52% 56%; /* Soft teal accent */
     --accent-foreground: 225 10% 92%;
 
     --destructive: 0 24% 61%; /* #B87C7C soft error */
@@ -41,7 +41,7 @@ All colors MUST be HSL.
 
     --border: 225 20% 22%; /* #2A2E3F */
     --input: 225 23% 15%;
-    --ring: 45 43% 57%; /* dull gold focus */
+    --ring: 249 79% 74%;
 
     --radius: 0.5rem;
 
@@ -60,7 +60,7 @@ All colors MUST be HSL.
     --popover: 225 18% 11%;
     --popover-foreground: 225 10% 92%;
 
-    --primary: 45 43% 57%;
+    --primary: 249 79% 74%;
     --primary-foreground: 225 15% 8%;
 
     --secondary: 330 28% 62%;
@@ -69,7 +69,7 @@ All colors MUST be HSL.
     --muted: 225 23% 15%;
     --muted-foreground: 225 10% 67%;
 
-    --accent: 200 50% 65%;
+    --accent: 173 52% 56%;
     --accent-foreground: 225 10% 92%;
 
     --destructive: 0 24% 61%;
@@ -83,7 +83,7 @@ All colors MUST be HSL.
 
     --border: 225 20% 22%;
     --input: 225 23% 15%;
-    --ring: 330 28% 62%;
+    --ring: 249 79% 74%;
   }
 
   .colorblind {
@@ -116,12 +116,12 @@ All colors MUST be HSL.
 
   /* Soft selection color */
   ::selection {
-    background-color: rgba(201, 180, 88, 0.3); /* Dull gold */
+    background-color: rgba(149, 134, 242, 0.3); /* Dull gold */
     color: #E6E8ED;
   }
 
   ::-moz-selection {
-    background-color: rgba(201, 180, 88, 0.3);
+    background-color: rgba(149, 134, 242, 0.3);
     color: #E6E8ED;
   }
 
@@ -149,7 +149,7 @@ All colors MUST be HSL.
   textarea:focus,
   select:focus,
   button:focus-visible {
-    outline: 2px solid rgba(201, 180, 88, 0.5);
+    outline: 2px solid rgba(149, 134, 242, 0.5);
     outline-offset: 2px;
   }
 
@@ -305,7 +305,7 @@ All colors MUST be HSL.
 
 /* Accessibility Focus Indicators */
 *:focus-visible {
-  outline: 4px solid #C9B458 !important;
+  outline: 4px solid #9586F2 !important;
   outline-offset: 2px !important;
 }
 

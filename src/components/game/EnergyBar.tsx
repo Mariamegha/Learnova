@@ -16,14 +16,14 @@ export const EnergyBar = ({
   const percentage = (currentEnergy / maxEnergy) * 100;
   
   const getEnergyColor = () => {
-    if (percentage >= 70) return 'from-[#C9B458] to-[#FFD700]';
+    if (percentage >= 70) return 'from-[#9586F2] to-[#9586F2]';
     if (percentage >= 40) return 'from-amber-500 to-yellow-500';
     if (percentage >= 20) return 'from-orange-500 to-amber-500';
     return 'from-red-500 to-orange-500';
   };
 
   const getGlowColor = () => {
-    if (percentage >= 70) return 'shadow-[0_0_20px_rgba(201,180,88,0.6)]';
+    if (percentage >= 70) return 'shadow-[0_0_20px_rgba(149,134,242,0.6)]';
     if (percentage >= 40) return 'shadow-[0_0_20px_rgba(245,158,11,0.5)]';
     if (percentage >= 20) return 'shadow-[0_0_20px_rgba(249,115,22,0.5)]';
     return 'shadow-[0_0_20px_rgba(239,68,68,0.5)]';
@@ -34,10 +34,10 @@ export const EnergyBar = ({
       {showLabel && (
         <div className="flex items-center justify-between text-sm">
           <div className="flex items-center gap-2">
-            <Zap className="w-4 h-4 text-[#C9B458]" />
+            <Zap className="w-4 h-4 text-[#9586F2]" />
             <span className="font-semibold">Energy</span>
           </div>
-          <span className="font-bold text-[#C9B458]">
+          <span className="font-bold text-[#9586F2]">
             {currentEnergy}/{maxEnergy}
           </span>
         </div>

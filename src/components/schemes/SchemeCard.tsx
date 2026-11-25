@@ -49,7 +49,7 @@ export const SchemeCard = ({ scheme, onCheckEligibility, variant = 'default' }: 
             >
               <Badge 
                 variant="default" 
-                className="bg-gradient-to-r from-[#C9B458] to-[#C27BA0] text-white border-0 shadow-md"
+                className="bg-gradient-to-r from-[#9586F2] to-[#C27BA0] text-white border-0 shadow-md"
               >
                 <TrendingUp className="w-3 h-3 mr-1" />
                 {scheme.matchScore}% Match
@@ -76,7 +76,7 @@ export const SchemeCard = ({ scheme, onCheckEligibility, variant = 'default' }: 
               {scheme.category.replace('_', ' ')}
             </Badge>
             {scheme.stipend && (
-              <Badge variant="outline" className="border-[#C9B458] text-[#C9B458]">
+              <Badge variant="outline" className="border-[#9586F2] text-[#9586F2]">
                 {scheme.stipend}
               </Badge>
             )}
@@ -127,14 +127,14 @@ export const SchemeCard = ({ scheme, onCheckEligibility, variant = 'default' }: 
                   variant="outline"
                   size="sm"
                   onClick={() => onCheckEligibility(scheme.id)}
-                  className="hover:bg-[#C9B458]/10 hover:border-[#C9B458] hover:text-[#C9B458]"
+                  className="hover:bg-[#9586F2]/10 hover:border-[#9586F2] hover:text-[#9586F2]"
                 >
                   Check Eligibility
                 </Button>
               )}
               <Button
                 size="sm"
-                className="bg-gradient-to-r from-[#C9B458] to-[#C27BA0] hover:opacity-90"
+                className="bg-gradient-to-r from-[#9586F2] to-[#C27BA0] hover:opacity-90"
                 asChild
               >
                 <a href={scheme.applyUrl} target="_blank" rel="noopener noreferrer">

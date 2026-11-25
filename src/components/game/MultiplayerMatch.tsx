@@ -180,7 +180,7 @@ export const MultiplayerMatch = ({ match, onMatchComplete }: MultiplayerMatchPro
                 <Card className="bg-gray-900/90 border-gray-700 backdrop-blur-sm sticky top-6">
                   <CardContent className="pt-6 space-y-4">
                     <div className="flex items-center gap-2 mb-4">
-                      <Trophy className="w-5 h-5 text-[#C9B458]" />
+                      <Trophy className="w-5 h-5 text-[#9586F2]" />
                       <h3 className="font-semibold text-white">Live Rankings</h3>
                     </div>
 
@@ -227,8 +227,8 @@ export const MultiplayerMatch = ({ match, onMatchComplete }: MultiplayerMatchPro
 
                               <div className="text-right">
                                 <div className="flex items-center gap-1">
-                                  <Zap className="w-3 h-3 text-[#C9B458]" />
-                                  <span className="text-sm font-bold text-[#C9B458]">
+                                  <Zap className="w-3 h-3 text-[#9586F2]" />
+                                  <span className="text-sm font-bold text-[#9586F2]">
                                     {player.energy}
                                   </span>
                                 </div>

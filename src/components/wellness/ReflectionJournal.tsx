@@ -25,7 +25,7 @@ export default function ReflectionJournal() {
       className="bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-xl rounded-2xl p-6 border border-white/10"
     >
       <div className="flex items-center gap-2 mb-4">
-        <BookOpen className="w-5 h-5 text-[#C9B458]" />
+        <BookOpen className="w-5 h-5 text-[#9586F2]" />
         <h3 className="text-lg font-black text-white">Progress Reflection</h3>
       </div>
 
@@ -51,14 +51,14 @@ export default function ReflectionJournal() {
         value={reflection}
         onChange={e => setReflection(e.target.value)}
         placeholder="Write your thoughts here..."
-        className="w-full bg-white/5 border border-white/10 rounded-xl p-4 text-white placeholder-gray-500 resize-none focus:outline-none focus:ring-2 focus:ring-[#C9B458]/50 mb-4"
+        className="w-full bg-white/5 border border-white/10 rounded-xl p-4 text-white placeholder-gray-500 resize-none focus:outline-none focus:ring-2 focus:ring-[#9586F2]/50 mb-4"
         rows={6}
       />
 
       <Button
         onClick={handleSave}
         disabled={!reflection.trim()}
-        className="w-full bg-gradient-to-r from-[#C9B458] to-[#C27BA0] hover:opacity-90 text-black font-bold disabled:opacity-50"
+        className="w-full bg-gradient-to-r from-[#9586F2] to-[#C27BA0] hover:opacity-90 text-black font-bold disabled:opacity-50"
       >
         <Save className="w-4 h-4 mr-2" />
         Save Reflection

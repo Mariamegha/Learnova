@@ -47,7 +47,7 @@ export const MatchLeaderboard = ({ players, onContinue }: MatchLeaderboardProps)
             initial={{ scale: 0, rotate: -180 }}
             animate={{ scale: 1, rotate: 0 }}
             transition={{ type: 'spring', stiffness: 200, delay: 0.2 }}
-            className="w-20 h-20 mx-auto mb-4 rounded-full bg-gradient-to-br from-[#C9B458] to-[#C27BA0] flex items-center justify-center"
+            className="w-20 h-20 mx-auto mb-4 rounded-full bg-gradient-to-br from-[#9586F2] to-[#C27BA0] flex items-center justify-center"
           >
             <Trophy className="w-10 h-10 text-white" />
           </motion.div>
@@ -73,16 +73,16 @@ export const MatchLeaderboard = ({ players, onContinue }: MatchLeaderboardProps)
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.3 }}
-            className="p-4 rounded-lg bg-gradient-to-r from-[#C9B458]/20 to-[#C27BA0]/20 border border-[#C9B458]/30"
+            className="p-4 rounded-lg bg-gradient-to-r from-[#9586F2]/20 to-[#C27BA0]/20 border border-[#9586F2]/30"
           >
             <div className="flex items-center justify-between">
               <div className="flex items-center gap-3">
-                <div className="w-10 h-10 rounded-full bg-gradient-to-br from-[#C9B458] to-[#C27BA0] flex items-center justify-center">
+                <div className="w-10 h-10 rounded-full bg-gradient-to-br from-[#9586F2] to-[#C27BA0] flex items-center justify-center">
                   <Zap className="w-5 h-5 text-white" />
                 </div>
                 <div>
                   <div className="text-sm text-gray-400">Match Reward</div>
-                  <div className="text-2xl font-bold text-[#C9B458]">
+                  <div className="text-2xl font-bold text-[#9586F2]">
                     +{playerReward} XP
                   </div>
                 </div>
@@ -136,7 +136,7 @@ export const MatchLeaderboard = ({ players, onContinue }: MatchLeaderboardProps)
                     </div>
 
                     <div className="text-right">
-                      <div className="text-2xl font-bold text-[#C9B458]">
+                      <div className="text-2xl font-bold text-[#9586F2]">
                         {player.energy}
                       </div>
                       <div className="text-xs text-gray-400">
@@ -169,7 +169,7 @@ export const MatchLeaderboard = ({ players, onContinue }: MatchLeaderboardProps)
               <div className="text-xs text-gray-400">Final Energy</div>
             </div>
             <div className="text-center">
-              <div className="text-2xl font-bold text-[#C9B458]">
+              <div className="text-2xl font-bold text-[#9586F2]">
                 {Math.round((sortedPlayers.find(p => !p.isAI)?.correctAnswers || 0) / 5 * 100)}%
               </div>
               <div className="text-xs text-gray-400">Accuracy</div>

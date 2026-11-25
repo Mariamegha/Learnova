@@ -3,6 +3,7 @@ import { persist } from 'zustand/middleware';
 
 interface UserState {
   isAuthenticated: boolean;
+  authMode: 'local' | 'supabase' | null;
   user: {
     name: string;
     email: string;
@@ -10,7 +11,7 @@ interface UserState {
     level: number;
     streak: number;
   } | null;
-  login: (email: string, name: string) => void;
+  login: (email: string, name: string, authMode?: 'local' | 'supabase') => void;
   logout: () => void;
   addXP: (amount: number) => void;
 }
@@ -19,15 +20,18 @@ export const useUserStore = create<UserState>()(
   persist(
     (set) => ({
       isAuthenticated: false,
+      authMode: null,
       user: null,
-      login: (email, name) =>
+      login: (email, name, authMode = 'supabase') =>
         set({
           isAuthenticated: true,
+          authMode,
           user: { name, email, xp: 0, level: 1, streak: 0 },
         }),
       logout: () =>
         set({
           isAuthenticated: false,
+          authMode: null,
           user: null,
         }),
       addXP: (amount) =>

@@ -22,7 +22,7 @@ export const ReasoningDrawer: React.FC<ReasoningDrawerProps> = ({ message, isOpe
       <SheetContent className="w-full sm:max-w-xl border-l-4 border-black shadow-[-8px_0px_0px_0px_rgba(0,0,0,1)] overflow-y-auto">
         <SheetHeader className="border-b-4 border-black pb-4 mb-4">
           <SheetTitle className="text-2xl font-black flex items-center gap-2">
-            <Brain className="w-6 h-6 text-[#C9B458]" />
+            <Brain className="w-6 h-6 text-[#9586F2]" />
             AI Reasoning Process
           </SheetTitle>
           <SheetDescription className="text-base font-bold">
@@ -129,7 +129,7 @@ export const ReasoningDrawer: React.FC<ReasoningDrawerProps> = ({ message, isOpe
           </Card>
 
           {/* Info Footer */}
-          <div className="bg-[#C9B458]/10 border-2 border-black rounded-lg p-3">
+          <div className="bg-[#9586F2]/10 border-2 border-black rounded-lg p-3">
             <p className="text-xs text-black/70">
               <strong>Note:</strong> This reasoning breakdown shows how the AI arrived at its answer using only instructor-verified sources. All information is traceable to approved course materials.
             </p>

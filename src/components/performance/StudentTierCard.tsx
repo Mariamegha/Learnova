@@ -92,7 +92,7 @@ export default function StudentTierCard({ student, onClick }: StudentTierCardPro
         </div>
         {student.achievements.length > 0 && (
           <div className="flex items-center gap-1">
-            <CheckCircle2 className="w-4 h-4 text-[#C9B458]" />
+            <CheckCircle2 className="w-4 h-4 text-[#9586F2]" />
             <span className="text-xs text-gray-400">{student.achievements.length}</span>
           </div>
         )}

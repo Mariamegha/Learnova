@@ -1,4 +1,4 @@
-import { supabase } from '@/lib/supabase';
+import { isSupabaseConfigured, supabase } from '@/lib/supabase';
 import { useUserStore } from '@/store/userStore';
 
 export interface SignUpData {
@@ -10,6 +10,28 @@ export interface SignUpData {
 export interface SignInData {
   email: string;
   password: string;
+}
+
+export function signInAsLocalUser(name: string) {
+  const displayName = name.trim().replace(/\s+/g, ' ').slice(0, 48);
+  if (!displayName) {
+    return { user: null, error: 'Please enter your name to continue.' };
+  }
+
+  const nameSlug = displayName.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '') || 'learner';
+  const email = `${nameSlug}@local.edumite`;
+  useUserStore.getState().login(email, displayName, 'local');
+  useUserStore.setState({
+    user: {
+      name: displayName,
+      email,
+      xp: 0,
+      level: 1,
+      streak: 0,
+    },
+  });
+
+  return { user: { id: `local-${nameSlug}`, email }, error: null };
 }
 
 /**
@@ -175,6 +197,11 @@ export async function signIn({ email, password }: SignInData) {
  * Sign out the current user
  */
 export async function signOut() {
+  if (!isSupabaseConfigured || useUserStore.getState().authMode === 'local') {
+    useUserStore.getState().logout();
+    return { error: null };
+  }
+
   try {
     const { error } = await supabase.auth.signOut();
     if (error) throw error;

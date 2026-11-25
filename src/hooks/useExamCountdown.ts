@@ -9,6 +9,7 @@
 
 import { useState, useEffect, useCallback } from 'react';
 import { examNotificationService } from '@/services/examNotificationService';
+import { isSupabaseConfigured } from '@/lib/supabase';
 import type { ExamSchedule, ExamCountdown } from '@/types/examNotifications';
 
 export function useExamCountdown() {
@@ -90,6 +91,12 @@ export function useExamCountdown() {
    * Fetch all exams from database
    */
   const fetchExams = useCallback(async () => {
+    if (!isSupabaseConfigured) {
+      setAllExams([]);
+      setIsLoading(false);
+      return;
+    }
+
     try {
       setIsLoading(true);
       setError(null);
@@ -115,6 +122,10 @@ export function useExamCountdown() {
    * Subscribe to real-time exam updates
    */
   useEffect(() => {
+    if (!isSupabaseConfigured) {
+      return;
+    }
+
     const unsubscribe = examNotificationService.subscribeToExams((updatedExams) => {
       setAllExams(updatedExams);
     });

@@ -1881,8 +1881,8 @@ export default function WorkspaceView() {
       <div className="fixed inset-0 z-0">
         <ThreeDFallback fallbackColor={`from-${config.theme}/5 to-${config.theme}/10`}>
           <GridScan
-            linesColor={config.theme === 'gold' ? '#C9B458' : config.theme === 'pink' ? '#C27BA0' : '#6DAEDB'}
-            scanColor={config.theme === 'pink' ? '#C9B458' : config.theme === 'gold' ? '#C27BA0' : '#C9B458'}
+            linesColor={config.theme === 'gold' ? '#9586F2' : config.theme === 'pink' ? '#C27BA0' : '#6DAEDB'}
+            scanColor={config.theme === 'pink' ? '#9586F2' : config.theme === 'gold' ? '#C27BA0' : '#9586F2'}
             scanOpacity={0.3}
             gridScale={0.12}
             lineThickness={1.0}

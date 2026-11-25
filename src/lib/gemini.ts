@@ -2,14 +2,7 @@ import { GoogleGenAI } from '@google/genai';
 
 const apiKey = import.meta.env.VITE_GEMINI_API_KEY;
 const modelName = import.meta.env.VITE_GEMINI_MODEL || 'gemini-2.5-flash';
-
-if (!apiKey) {
-
-}
-
-const ai = new GoogleGenAI({
-  apiKey: apiKey,
-});
+let ai: GoogleGenAI | null = null;
 
 export type GeminiMessage = { role: 'user' | 'assistant'; content: string };
 export type RoadmapDifficulty = 'easy' | 'medium' | 'hard';
@@ -153,15 +146,17 @@ export interface GeneratedCoursePlan {
   };
 }
 
-function ensureApiReady() {
+function ensureApiReady(): string {
   if (!apiKey) {
     throw new Error('Gemini API key is not configured. Please set VITE_GEMINI_API_KEY in your .env file.');
   }
+  return apiKey;
 }
 
 async function generateText(prompt: string): Promise<string> {
-  ensureApiReady();
+  const configuredApiKey = ensureApiReady();
 
+  ai ??= new GoogleGenAI({ apiKey: configuredApiKey });
   const response = await ai.models.generateContent({
     model: modelName,
     contents: prompt,

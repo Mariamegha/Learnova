@@ -46,13 +46,13 @@ export default function AutoApplicationModal({
             exit={{ opacity: 0, scale: 0.95, y: 20 }}
             className="fixed inset-0 z-50 flex items-center justify-center p-4"
           >
-            <div className="bg-gradient-to-br from-[#0F1115] to-black border-2 border-[#C9B458]/30 rounded-2xl max-w-3xl w-full max-h-[90vh] overflow-hidden shadow-2xl">
+            <div className="bg-gradient-to-br from-[#0F1115] to-black border-2 border-[#9586F2]/30 rounded-2xl max-w-3xl w-full max-h-[90vh] overflow-hidden shadow-2xl">
               {/* Header */}
-              <div className="bg-gradient-to-r from-[#C9B458]/20 to-[#C27BA0]/20 border-b border-white/10 p-6">
+              <div className="bg-gradient-to-r from-[#9586F2]/20 to-[#C27BA0]/20 border-b border-white/10 p-6">
                 <div className="flex items-start justify-between">
                   <div>
                     <div className="flex items-center gap-2 mb-2">
-                      <Sparkles className="w-6 h-6 text-[#C9B458]" />
+                      <Sparkles className="w-6 h-6 text-[#9586F2]" />
                       <h2 className="text-2xl font-black text-white">Auto-Apply Preview</h2>
                     </div>
                     <h3 className="text-lg text-gray-300">{opportunity.title}</h3>
@@ -92,7 +92,7 @@ export default function AutoApplicationModal({
                 {/* Required Documents */}
                 <div className="mb-6">
                   <h4 className="font-black text-white mb-4 flex items-center gap-2">
-                    <FileText className="w-5 h-5 text-[#C9B458]" />
+                    <FileText className="w-5 h-5 text-[#9586F2]" />
                     Required Documents ({availableCount}/{totalCount})
                   </h4>
                   <div className="space-y-3">
@@ -147,7 +147,7 @@ export default function AutoApplicationModal({
                       >
                         <p className="text-xs text-gray-400 mb-1">{field.field}</p>
                         <p className="text-sm font-bold text-white mb-1">{field.value}</p>
-                        <p className="text-xs text-[#C9B458]">From: {field.source}</p>
+                        <p className="text-xs text-[#9586F2]">From: {field.source}</p>
                       </div>
                     ))}
                   </div>
@@ -169,7 +169,7 @@ export default function AutoApplicationModal({
                       onSubmit();
                       onClose();
                     }}
-                    className="flex-1 bg-gradient-to-r from-[#C9B458] to-[#C27BA0] hover:opacity-90 text-black font-black"
+                    className="flex-1 bg-gradient-to-r from-[#9586F2] to-[#C27BA0] hover:opacity-90 text-black font-black"
                   >
                     Start Auto-Application
                   </Button>

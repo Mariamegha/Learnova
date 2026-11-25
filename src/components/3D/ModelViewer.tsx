@@ -220,7 +220,7 @@ function FallbackCube({ scale = 1, position = [0, 0, 0] }: { scale: number; posi
   return (
     <mesh ref={meshRef} position={position} scale={scale} castShadow receiveShadow>
       <boxGeometry args={[1, 1, 1]} />
-      <meshStandardMaterial color="#FFD700" metalness={0.6} roughness={0.2} />
+      <meshStandardMaterial color="#9586F2" metalness={0.6} roughness={0.2} />
     </mesh>
   );
 }
@@ -294,7 +294,7 @@ export default function ModelViewer({
           shadow-mapSize-width={1024}
           shadow-mapSize-height={1024}
         />
-        <pointLight position={[-5, 5, -5]} intensity={0.5} color="#FFD700" />
+        <pointLight position={[-5, 5, -5]} intensity={0.5} color="#9586F2" />
         <pointLight position={[5, -5, 5]} intensity={0.5} color="#FF1493" />
 
         {/* Environment */}

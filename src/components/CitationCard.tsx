@@ -17,7 +17,7 @@ export const CitationCard: React.FC<CitationCardProps> = ({ citation, onClick })
     >
       <Card
         onClick={onClick}
-        className="border-4 border-[#C9B458] bg-obsidian shadow-[3px_3px_0px_0px_rgba(201,180,88,1)] hover:shadow-[5px_5px_0px_0px_rgba(201,180,88,1)] transition-all cursor-pointer p-3"
+        className="border-4 border-[#9586F2] bg-obsidian shadow-[3px_3px_0px_0px_rgba(149,134,242,1)] hover:shadow-[5px_5px_0px_0px_rgba(149,134,242,1)] transition-all cursor-pointer p-3"
       >
         <div className="flex items-start gap-3">
           <div className="flex-shrink-0 mt-1">

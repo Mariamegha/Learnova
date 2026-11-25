@@ -30,7 +30,7 @@ export const DeadlineTimeline: React.FC<DeadlineTimelineProps> = ({ tasks }) => 
   };
 
   const getTaskColor = (days: number) => {
-    if (days <= 3) return '#C9B458'; // Gold - Urgent
+    if (days <= 3) return '#9586F2'; // Gold - Urgent
     if (days <= 7) return '#C27BA0'; // Pink - Moderate
     return '#6DAEDB'; // Blue - Future
   };
@@ -65,13 +65,13 @@ export const DeadlineTimeline: React.FC<DeadlineTimelineProps> = ({ tasks }) => 
         <div className="flex gap-2">
           <button
             onClick={() => scroll('left')}
-            className="w-10 h-10 border-4 border-black bg-[#C9B458] hover:bg-[#B8A347] shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] hover:translate-x-[-2px] hover:translate-y-[-2px] hover:shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] transition-all flex items-center justify-center"
+            className="w-10 h-10 border-4 border-black bg-[#9586F2] hover:bg-[#AA9DF8] shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] hover:translate-x-[-2px] hover:translate-y-[-2px] hover:shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] transition-all flex items-center justify-center"
           >
             <ChevronLeft className="w-5 h-5 text-black" />
           </button>
           <button
             onClick={() => scroll('right')}
-            className="w-10 h-10 border-4 border-black bg-[#C9B458] hover:bg-[#B8A347] shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] hover:translate-x-[-2px] hover:translate-y-[-2px] hover:shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] transition-all flex items-center justify-center"
+            className="w-10 h-10 border-4 border-black bg-[#9586F2] hover:bg-[#AA9DF8] shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] hover:translate-x-[-2px] hover:translate-y-[-2px] hover:shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] transition-all flex items-center justify-center"
           >
             <ChevronRight className="w-5 h-5 text-black" />
           </button>

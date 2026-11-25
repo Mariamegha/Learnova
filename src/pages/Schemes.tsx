@@ -103,17 +103,17 @@ const Schemes = () => {
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
-          className="bg-gradient-to-br from-[#C9B458]/10 via-[#C27BA0]/10 to-[#6DAEDB]/10 border-b"
+          className="bg-gradient-to-br from-[#9586F2]/10 via-[#C27BA0]/10 to-[#6DAEDB]/10 border-b"
         >
           <div className="container mx-auto px-4 py-12">
             <div className="max-w-4xl">
               <div className="flex items-center gap-2 mb-3">
-                <Award className="w-8 h-8 text-[#C9B458]" />
+                <Award className="w-8 h-8 text-[#9586F2]" />
                 <Badge variant="secondary" className="text-xs">
                   Phase 28
                 </Badge>
               </div>
-              <h1 className="text-4xl font-bold mb-3 bg-gradient-to-r from-[#C9B458] via-[#C27BA0] to-[#6DAEDB] bg-clip-text text-transparent">
+              <h1 className="text-4xl font-bold mb-3 bg-gradient-to-r from-[#9586F2] via-[#C27BA0] to-[#6DAEDB] bg-clip-text text-transparent">
                 Opportunities Center
               </h1>
               <p className="text-lg text-muted-foreground max-w-2xl">
@@ -128,7 +128,7 @@ const Schemes = () => {
                   </span>
                 </div>
                 <div className="flex items-center gap-2 text-sm">
-                  <TrendingUp className="w-4 h-4 text-[#C9B458]" />
+                  <TrendingUp className="w-4 h-4 text-[#9586F2]" />
                   <span className="text-muted-foreground">
                     <strong className="text-foreground">{recommendedSchemes.length}</strong> Recommended for You
                   </span>
@@ -161,7 +161,7 @@ const Schemes = () => {
                 >
                   <div className="flex items-center justify-between mb-4">
                     <div className="flex items-center gap-2">
-                      <Sparkles className="w-5 h-5 text-[#C9B458]" />
+                      <Sparkles className="w-5 h-5 text-[#9586F2]" />
                       <h2 className="text-2xl font-bold">Recommended for You</h2>
                     </div>
                     <Badge variant="secondary" className="text-xs">
@@ -318,7 +318,7 @@ const Schemes = () => {
                 <Card className="border-2">
                   <CardContent className="pt-6 space-y-4">
                     <h3 className="font-semibold flex items-center gap-2">
-                      <TrendingUp className="w-4 h-4 text-[#C9B458]" />
+                      <TrendingUp className="w-4 h-4 text-[#9586F2]" />
                       Your Stats
                     </h3>
                     <div className="space-y-3">

@@ -15,7 +15,7 @@ export default function DomainSelector({ onSelect }: DomainSelectorProps) {
           transition={{ duration: 0.6 }}
           className="text-center mb-12"
         >
-          <h1 className="text-5xl font-bold mb-4 bg-gradient-to-r from-[#C9B458] via-[#C27BA0] to-[#6DAEDB] bg-clip-text text-transparent">
+          <h1 className="text-5xl font-bold mb-4 bg-gradient-to-r from-[#9586F2] via-[#C27BA0] to-[#6DAEDB] bg-clip-text text-transparent">
             Choose Your Domain
           </h1>
           <p className="text-gray-400 text-lg">

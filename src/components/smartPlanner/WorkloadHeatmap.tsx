@@ -12,11 +12,11 @@ export default function WorkloadHeatmap({ workloadData }: WorkloadHeatmapProps) 
       case 'low':
         return '#6DAEDB40';
       case 'medium':
-        return '#C9B45880';
+        return '#9586F280';
       case 'high':
         return '#C27BA0';
       case 'extreme':
-        return '#C9B458';
+        return '#9586F2';
       default:
         return '#ffffff10';
     }
@@ -74,7 +74,7 @@ export default function WorkloadHeatmap({ workloadData }: WorkloadHeatmapProps) 
       {/* Statistics */}
       <div className="grid grid-cols-4 gap-4 mb-6">
         <div className="bg-white/5 rounded-xl p-4 border border-white/10">
-          <div className="text-2xl font-black text-[#C9B458]">{totalHours}h</div>
+          <div className="text-2xl font-black text-[#9586F2]">{totalHours}h</div>
           <div className="text-xs text-gray-400 font-semibold mt-1">TOTAL HOURS</div>
         </div>
         <div className="bg-white/5 rounded-xl p-4 border border-white/10">

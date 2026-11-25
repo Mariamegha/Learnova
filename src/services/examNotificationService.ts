@@ -80,7 +80,7 @@ class ExamNotificationService {
         duration_minutes: payload.duration_minutes || 180,
         topics: payload.topics || [],
         importance: payload.importance || 'medium',
-        color: payload.color || '#C9B458',
+        color: payload.color || '#9586F2',
         notes: payload.notes || null,
       };
 
@@ -121,7 +121,7 @@ class ExamNotificationService {
         duration_minutes: payload.duration_minutes || 180,
         topics: payload.topics || [],
         importance: payload.importance || 'medium',
-        color: payload.color || '#C9B458',
+        color: payload.color || '#9586F2',
         notes: payload.notes || null,
       }));
 

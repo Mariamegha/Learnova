@@ -37,9 +37,9 @@ export const DifficultyToneSelector: React.FC<DifficultyToneSelectorProps> = ({
   const getDifficultyColor = (level: DifficultyLevel) => {
     const colors: Record<DifficultyLevel, string> = {
       elementary: '#6DAEDB',
-      middle: '#C9B458',
+      middle: '#9586F2',
       high: '#C27BA0',
-      college: '#C9B458',
+      college: '#9586F2',
       graduate: '#C27BA0',
     };
     return colors[level];
@@ -50,7 +50,7 @@ export const DifficultyToneSelector: React.FC<DifficultyToneSelectorProps> = ({
       {/* Difficulty Selector */}
       <Card className="border-4 border-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] bg-obsidian p-4">
         <div className="flex items-center gap-2 mb-3">
-          <GraduationCap className="w-5 h-5 text-[#C9B458]" />
+          <GraduationCap className="w-5 h-5 text-[#9586F2]" />
           <h3 className="text-sm font-black text-white uppercase">Difficulty Level</h3>
         </div>
 

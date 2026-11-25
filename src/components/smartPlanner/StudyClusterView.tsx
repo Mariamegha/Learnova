@@ -66,7 +66,7 @@ export default function StudyClusterView({ dailyPlan }: StudyClusterViewProps) {
   return (
     <div className="space-y-4">
       {/* Day Header */}
-      <div className="bg-gradient-to-r from-[#C9B458]/20 to-[#C27BA0]/20 backdrop-blur-xl rounded-2xl p-6 border border-white/10">
+      <div className="bg-gradient-to-r from-[#9586F2]/20 to-[#C27BA0]/20 backdrop-blur-xl rounded-2xl p-6 border border-white/10">
         <div className="flex items-center justify-between">
           <div>
             <h3 className="text-3xl font-bold text-white mb-2">
@@ -81,7 +81,7 @@ export default function StudyClusterView({ dailyPlan }: StudyClusterViewProps) {
             </p>
           </div>
           <div className="text-right">
-            <div className="text-4xl font-black text-[#C9B458]">
+            <div className="text-4xl font-black text-[#9586F2]">
               {dailyPlan.totalWorkload}h
             </div>
             <div className="text-sm text-gray-400 font-semibold">WORKLOAD</div>
@@ -109,7 +109,7 @@ export default function StudyClusterView({ dailyPlan }: StudyClusterViewProps) {
                 style={{ backgroundColor: subjectData.color }}
               />
               <div className="text-left">
-                <h4 className="text-xl font-bold text-white group-hover:text-[#C9B458] transition-colors">
+                <h4 className="text-xl font-bold text-white group-hover:text-[#9586F2] transition-colors">
                   {subjectData.subject}
                 </h4>
                 <p className="text-sm text-gray-400 mt-1">
@@ -236,7 +236,7 @@ export default function StudyClusterView({ dailyPlan }: StudyClusterViewProps) {
                                                 className="w-full flex items-center gap-2 p-2 rounded hover:bg-white/5 transition-colors group"
                                               >
                                                 {isCompleted ? (
-                                                  <CheckCircle2 className="w-3 h-3 text-[#C9B458] flex-shrink-0" />
+                                                  <CheckCircle2 className="w-3 h-3 text-[#9586F2] flex-shrink-0" />
                                                 ) : (
                                                   <Circle className="w-3 h-3 text-gray-600 group-hover:text-gray-400 flex-shrink-0" />
                                                 )}

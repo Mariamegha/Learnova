@@ -14,7 +14,7 @@ export default function EvaluationInstructions({ domain, onStart }: EvaluationIn
       icon: Brain,
       title: 'Adaptive Testing',
       description: 'Questions adjust based on your performance',
-      color: '#C9B458'
+      color: '#9586F2'
     },
     {
       icon: Clock,
@@ -45,7 +45,7 @@ export default function EvaluationInstructions({ domain, onStart }: EvaluationIn
           className="bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-xl rounded-3xl p-12 border border-white/10 relative overflow-hidden"
         >
           {/* Background decoration */}
-          <div className="absolute top-0 right-0 w-64 h-64 bg-gradient-to-br from-[#C9B458]/20 to-transparent rounded-full blur-3xl" />
+          <div className="absolute top-0 right-0 w-64 h-64 bg-gradient-to-br from-[#9586F2]/20 to-transparent rounded-full blur-3xl" />
           <div className="absolute bottom-0 left-0 w-64 h-64 bg-gradient-to-tr from-[#6DAEDB]/20 to-transparent rounded-full blur-3xl" />
 
           <div className="relative z-10">
@@ -68,7 +68,7 @@ export default function EvaluationInstructions({ domain, onStart }: EvaluationIn
               initial={{ y: 20, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
               transition={{ delay: 0.4 }}
-              className="text-4xl font-bold mb-4 bg-gradient-to-r from-[#C9B458] via-[#C27BA0] to-[#6DAEDB] bg-clip-text text-transparent"
+              className="text-4xl font-bold mb-4 bg-gradient-to-r from-[#9586F2] via-[#C27BA0] to-[#6DAEDB] bg-clip-text text-transparent"
             >
               Quick Evaluation
             </motion.h1>
@@ -116,7 +116,7 @@ export default function EvaluationInstructions({ domain, onStart }: EvaluationIn
               <Button
                 onClick={onStart}
                 size="lg"
-                className="w-full bg-gradient-to-r from-[#C9B458] to-[#C27BA0] hover:opacity-90 text-white font-semibold text-lg py-6 rounded-xl group relative overflow-hidden"
+                className="w-full bg-gradient-to-r from-[#9586F2] to-[#C27BA0] hover:opacity-90 text-white font-semibold text-lg py-6 rounded-xl group relative overflow-hidden"
               >
                 <span className="relative z-10 flex items-center justify-center gap-2">
                   <Sparkles size={20} />

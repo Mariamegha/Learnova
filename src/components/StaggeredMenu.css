@@ -22,7 +22,7 @@
   flex-direction: column;
   overflow-y: auto;
   box-shadow: 8px 0 24px rgba(255, 215, 0, 0.3);
-  border-right: 4px solid #FFD700;
+  border-right: 4px solid #9586F2;
 }
 
 /* Particles Background */
@@ -38,7 +38,7 @@
   position: absolute;
   width: 3px;
   height: 3px;
-  background: #FFD700;
+  background: #9586F2;
   border-radius: 50%;
   animation: float 8s infinite ease-in-out;
   opacity: 0.4;
@@ -94,7 +94,7 @@
 }
 
 .logo-part-gold {
-  color: #FFD700;
+  color: #9586F2;
 }
 
 .logo-part-pink {
@@ -178,7 +178,7 @@
 /* Footer */
 .staggered-menu-footer {
   padding: 32px;
-  border-top: 2px solid #FFD700;
+  border-top: 2px solid #9586F2;
   background: #0B0B0D;
   z-index: 10;
 }
@@ -206,14 +206,14 @@
   align-items: center;
   justify-content: center;
   background: transparent;
-  border: 2px solid #FFD700;
+  border: 2px solid #9586F2;
   border-radius: 4px;
-  color: #FFD700;
+  color: #9586F2;
   transition: all 0.3s ease;
 }
 
 .social-link:hover {
-  background: #FFD700;
+  background: #9586F2;
   color: #000;
   transform: translateY(-4px);
   box-shadow: 0 4px 12px rgba(255, 215, 0, 0.5);

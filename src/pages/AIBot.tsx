@@ -177,7 +177,7 @@ export default function AIBot() {
                     size="icon"
                     onClick={() => setShowSourceManager(true)}
                     title="Manage Sources"
-                    className="text-[#C9B458] hover:bg-[#C9B458]/20"
+                    className="text-[#9586F2] hover:bg-[#9586F2]/20"
                   >
                     <SettingsIcon className="h-5 w-5" />
                   </Button>

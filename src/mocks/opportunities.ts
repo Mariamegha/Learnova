@@ -44,7 +44,7 @@ export interface AutoApplicationPreview {
 }
 
 export const OPPORTUNITY_COLORS = {
-  SCHOLARSHIP: '#C9B458',
+  SCHOLARSHIP: '#9586F2',
   SCHEME: '#C27BA0',
   COMPETITION: '#6DAEDB',
   INTERNSHIP: '#9B59B6',

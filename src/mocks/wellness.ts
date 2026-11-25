@@ -74,7 +74,7 @@ export const MOOD_OPTIONS: MoodOption[] = [
     type: 'EXCELLENT',
     emoji: '🌟',
     label: 'Excellent',
-    color: '#FFD700',
+    color: '#9586F2',
     gradient: 'from-yellow-400 to-orange-400'
   },
   {

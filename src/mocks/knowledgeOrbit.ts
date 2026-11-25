@@ -48,7 +48,7 @@ const mathTopics: OrbitNode[] = [
     orbitRadius: 8,
     orbitSpeed: 1.2,
     angle: 0,
-    color: '#C9B458',
+    color: '#9586F2',
     description: 'Understanding rates of change and slopes of curves',
     resources: [
       { id: 'r1', type: 'video', title: 'Introduction to Derivatives', duration: '12 min', completed: true },
@@ -67,7 +67,7 @@ const mathTopics: OrbitNode[] = [
         orbitRadius: 2.5,
         orbitSpeed: 2.0,
         angle: 45,
-        color: '#C9B458',
+        color: '#9586F2',
         description: 'Basic differentiation using power rule',
         resources: [{ id: 'r4', type: 'video', title: 'Power Rule Explained', duration: '8 min', completed: true }],
         dependencies: ['calculus_derivatives'],
@@ -82,7 +82,7 @@ const mathTopics: OrbitNode[] = [
         orbitRadius: 3,
         orbitSpeed: 1.5,
         angle: 120,
-        color: '#C9B458',
+        color: '#9586F2',
         description: 'Differentiating composite functions',
         resources: [{ id: 'r5', type: 'article', title: 'Chain Rule Guide', completed: false }],
         dependencies: ['power_rule'],
@@ -99,7 +99,7 @@ const mathTopics: OrbitNode[] = [
     orbitRadius: 12,
     orbitSpeed: 0.8,
     angle: 90,
-    color: '#C9B458',
+    color: '#9586F2',
     description: 'Study of vectors, matrices, and linear transformations',
     resources: [
       { id: 'r6', type: 'video', title: 'Vectors & Matrices', duration: '15 min', completed: true },
@@ -117,7 +117,7 @@ const mathTopics: OrbitNode[] = [
         orbitRadius: 3.5,
         orbitSpeed: 1.0,
         angle: 200,
-        color: '#C9B458',
+        color: '#9586F2',
         description: 'Special scalars associated with linear transformations',
         resources: [{ id: 'r8', type: 'video', title: 'Eigenvalues Intro', duration: '18 min', completed: false }],
         dependencies: ['linear_algebra'],
@@ -134,7 +134,7 @@ const mathTopics: OrbitNode[] = [
     orbitRadius: 6,
     orbitSpeed: 1.8,
     angle: 180,
-    color: '#C9B458',
+    color: '#9586F2',
     description: 'Study of triangles and periodic functions',
     resources: [
       { id: 'r9', type: 'video', title: 'Trig Functions', duration: '10 min', completed: true },
@@ -153,7 +153,7 @@ const mathTopics: OrbitNode[] = [
     orbitRadius: 10,
     orbitSpeed: 1.0,
     angle: 270,
-    color: '#C9B458',
+    color: '#9586F2',
     description: 'Mathematics of randomness and likelihood',
     resources: [
       { id: 'r11', type: 'article', title: 'Probability Basics', completed: true },
@@ -171,7 +171,7 @@ const mathTopics: OrbitNode[] = [
         orbitRadius: 2.8,
         orbitSpeed: 1.6,
         angle: 315,
-        color: '#C9B458',
+        color: '#9586F2',
         description: 'Conditional probability and updating beliefs',
         resources: [{ id: 'r13', type: 'video', title: "Bayes' Theorem", duration: '14 min', completed: false }],
         dependencies: ['probability'],
@@ -385,7 +385,7 @@ export const GALAXY_CLUSTERS: GalaxyCluster[] = [
   {
     id: 'math_galaxy',
     name: 'Mathematics',
-    color: '#C9B458',
+    color: '#9586F2',
     centerPosition: [0, 0, 0],
     topics: mathTopics,
   },
@@ -429,7 +429,7 @@ export function getNodeById(id: string): OrbitNode | undefined {
 // Calculate progress color
 export function getProgressColor(progress: number): string {
   if (progress < 0.3) return '#6DAEDB'; // Blue - just started
-  if (progress < 0.7) return '#C9B458'; // Gold - in progress
+  if (progress < 0.7) return '#9586F2'; // Gold - in progress
   return '#C27BA0'; // Pink - nearly complete
 }
 

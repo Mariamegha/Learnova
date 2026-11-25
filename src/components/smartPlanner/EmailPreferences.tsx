@@ -127,7 +127,7 @@ export function EmailPreferences({ isOpen, onClose }: EmailPreferencesProps) {
         onClick={(e) => e.stopPropagation()}
       >
         {/* Header */}
-        <div className="bg-gradient-to-r from-[#C9B458] to-[#F4E5A1] border-b-4 border-black p-6 flex justify-between items-center sticky top-0 z-10">
+        <div className="bg-gradient-to-r from-[#9586F2] to-[#F4E5A1] border-b-4 border-black p-6 flex justify-between items-center sticky top-0 z-10">
           <h2 className="text-2xl font-black text-black">📧 Email Notification Settings</h2>
           <button
             onClick={onClose}
@@ -178,7 +178,7 @@ export function EmailPreferences({ isOpen, onClose }: EmailPreferencesProps) {
                   onChange={(e) => setPreferences(prev => ({ ...prev, notification_email: e.target.value || null }))}
                   placeholder={userEmail || 'your@email.com'}
                   disabled={!preferences.email_notifications_enabled}
-                  className="w-full px-4 py-3 border-4 border-black rounded-lg focus:outline-none focus:ring-4 focus:ring-[#C9B458] disabled:bg-gray-100 disabled:cursor-not-allowed font-bold"
+                  className="w-full px-4 py-3 border-4 border-black rounded-lg focus:outline-none focus:ring-4 focus:ring-[#9586F2] disabled:bg-gray-100 disabled:cursor-not-allowed font-bold"
                 />
               </div>
 
@@ -196,7 +196,7 @@ export function EmailPreferences({ isOpen, onClose }: EmailPreferencesProps) {
                       key={key}
                       className={`flex items-center gap-3 p-4 border-4 border-black rounded-lg cursor-pointer transition-colors ${
                         preferences[key as keyof NotificationPreferences] 
-                          ? 'bg-[#C9B458]/20 hover:bg-[#C9B458]/30' 
+                          ? 'bg-[#9586F2]/20 hover:bg-[#9586F2]/30' 
                           : 'bg-gray-50 hover:bg-gray-100'
                       } ${!preferences.email_notifications_enabled ? 'opacity-50 cursor-not-allowed' : ''}`}
                     >
@@ -205,7 +205,7 @@ export function EmailPreferences({ isOpen, onClose }: EmailPreferencesProps) {
                         checked={preferences[key as keyof NotificationPreferences] as boolean}
                         onChange={(e) => setPreferences(prev => ({ ...prev, [key]: e.target.checked }))}
                         disabled={!preferences.email_notifications_enabled}
-                        className="w-6 h-6 border-4 border-black rounded accent-[#C9B458]"
+                        className="w-6 h-6 border-4 border-black rounded accent-[#9586F2]"
                       />
                       <span className="font-bold text-black flex-1">
                         {icon} {label}
@@ -224,7 +224,7 @@ export function EmailPreferences({ isOpen, onClose }: EmailPreferencesProps) {
                   value={preferences.preferred_notification_time}
                   onChange={(e) => setPreferences(prev => ({ ...prev, preferred_notification_time: e.target.value }))}
                   disabled={!preferences.email_notifications_enabled}
-                  className="w-full px-4 py-3 border-4 border-black rounded-lg focus:outline-none focus:ring-4 focus:ring-[#C9B458] disabled:bg-gray-100 disabled:cursor-not-allowed font-bold text-lg"
+                  className="w-full px-4 py-3 border-4 border-black rounded-lg focus:outline-none focus:ring-4 focus:ring-[#9586F2] disabled:bg-gray-100 disabled:cursor-not-allowed font-bold text-lg"
                 />
               </div>
 
@@ -259,7 +259,7 @@ export function EmailPreferences({ isOpen, onClose }: EmailPreferencesProps) {
               <button
                 onClick={savePreferences}
                 disabled={saving}
-                className="w-full py-4 bg-gradient-to-r from-[#C9B458] to-[#F4E5A1] border-4 border-black rounded-lg font-black text-lg text-black hover:shadow-[4px_4px_0_0_rgba(0,0,0,1)] active:shadow-none active:translate-x-1 active:translate-y-1 transition-all disabled:opacity-50 disabled:cursor-not-allowed"
+                className="w-full py-4 bg-gradient-to-r from-[#9586F2] to-[#F4E5A1] border-4 border-black rounded-lg font-black text-lg text-black hover:shadow-[4px_4px_0_0_rgba(0,0,0,1)] active:shadow-none active:translate-x-1 active:translate-y-1 transition-all disabled:opacity-50 disabled:cursor-not-allowed"
               >
                 {saving ? 'Saving...' : '💾 Save Preferences'}
               </button>

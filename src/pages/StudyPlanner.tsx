@@ -74,7 +74,7 @@ export default function StudyPlanner() {
       <div className="fixed inset-0 z-0">
         <ThreeDFallback fallbackColor="from-gold/5 to-pink/5">
           <GridScan
-            linesColor="#C9B458"
+            linesColor="#9586F2"
             scanColor="#C27BA0"
             scanOpacity={0.4}
             gridScale={0.12}
@@ -115,7 +115,7 @@ export default function StudyPlanner() {
               </Button>
               <Button
                 onClick={() => setIsImportModalOpen(true)}
-                className="bg-gradient-to-r from-[#C9B458] to-[#C27BA0] hover:opacity-90 text-white font-semibold"
+                className="bg-gradient-to-r from-[#9586F2] to-[#C27BA0] hover:opacity-90 text-white font-semibold"
               >
                 <Upload className="w-4 h-4 mr-2" />
                 Import Exams
@@ -147,7 +147,7 @@ export default function StudyPlanner() {
             <Button
               onClick={() => setIsImportModalOpen(true)}
               size="lg"
-              className="bg-gradient-to-r from-[#C9B458] to-[#C27BA0] hover:opacity-90 text-white font-bold text-lg px-8"
+              className="bg-gradient-to-r from-[#9586F2] to-[#C27BA0] hover:opacity-90 text-white font-bold text-lg px-8"
             >
               <Upload className="w-5 h-5 mr-3" />
               Import Exam Timetable
@@ -156,7 +156,7 @@ export default function StudyPlanner() {
         ) : (
           <Tabs defaultValue="calendar" className="space-y-8">
             <TabsList className="bg-white/5 border border-white/10 p-1">
-              <TabsTrigger value="calendar" className="data-[state=active]:bg-[#C9B458] data-[state=active]:text-black font-semibold">
+              <TabsTrigger value="calendar" className="data-[state=active]:bg-[#9586F2] data-[state=active]:text-black font-semibold">
                 <CalendarDays className="w-4 h-4 mr-2" />
                 Calendar View
               </TabsTrigger>
@@ -168,7 +168,7 @@ export default function StudyPlanner() {
                 <TrendingUp className="w-4 h-4 mr-2" />
                 Workload Heatmap
               </TabsTrigger>
-              <TabsTrigger value="deadlines" className="data-[state=active]:bg-[#C9B458] data-[state=active]:text-black font-semibold">
+              <TabsTrigger value="deadlines" className="data-[state=active]:bg-[#9586F2] data-[state=active]:text-black font-semibold">
                 <Target className="w-4 h-4 mr-2" />
                 Micro Deadlines
               </TabsTrigger>
@@ -181,15 +181,15 @@ export default function StudyPlanner() {
                 <motion.div
                   initial={{ opacity: 0, y: -10 }}
                   animate={{ opacity: 1, y: 0 }}
-                  className="bg-gradient-to-r from-[#C9B458]/20 via-[#C27BA0]/20 to-[#C9B458]/20 backdrop-blur-xl rounded-2xl p-6 border-2 border-[#C9B458]/30"
+                  className="bg-gradient-to-r from-[#9586F2]/20 via-[#C27BA0]/20 to-[#9586F2]/20 backdrop-blur-xl rounded-2xl p-6 border-2 border-[#9586F2]/30"
                 >
                   <div className="flex items-start gap-4">
-                    <div className="p-3 bg-gradient-to-br from-[#C9B458] to-[#C27BA0] rounded-xl">
+                    <div className="p-3 bg-gradient-to-br from-[#9586F2] to-[#C27BA0] rounded-xl">
                       <AlertCircle className="w-6 h-6 text-white" />
                     </div>
                     <div className="flex-1">
                       <h3 className="text-xl font-bold text-white mb-3 flex items-center gap-2">
-                        <Clock className="w-5 h-5 text-[#C9B458]" />
+                        <Clock className="w-5 h-5 text-[#9586F2]" />
                         Upcoming Exams - Next 7 Days
                       </h3>
                       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3">
@@ -198,14 +198,14 @@ export default function StudyPlanner() {
                             if (countdown.urgencyLevel === 'critical') return 'from-red-500/20 to-red-600/20 border-red-500';
                             if (countdown.urgencyLevel === 'urgent') return 'from-orange-500/20 to-orange-600/20 border-orange-500';
                             if (countdown.urgencyLevel === 'moderate') return 'from-yellow-500/20 to-yellow-600/20 border-yellow-500';
-                            return 'from-[#C9B458]/20 to-[#C27BA0]/20 border-[#C9B458]';
+                            return 'from-[#9586F2]/20 to-[#C27BA0]/20 border-[#9586F2]';
                           };
 
                           const getBadgeColor = () => {
                             if (countdown.urgencyLevel === 'critical') return 'bg-red-500';
                             if (countdown.urgencyLevel === 'urgent') return 'bg-orange-500';
                             if (countdown.urgencyLevel === 'moderate') return 'bg-yellow-500';
-                            return 'bg-[#C9B458]';
+                            return 'bg-[#9586F2]';
                           };
 
                           return (
@@ -268,7 +268,7 @@ export default function StudyPlanner() {
                       className="bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-xl rounded-2xl p-6 border border-white/10"
                     >
                       <div className="flex items-center gap-3 mb-4">
-                        <Sparkles className="w-5 h-5 text-[#C9B458]" />
+                        <Sparkles className="w-5 h-5 text-[#9586F2]" />
                         <h3 className="text-lg font-bold text-white">Daily Summary</h3>
                       </div>
                       <div className="space-y-4">

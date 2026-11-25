@@ -271,7 +271,7 @@ void main(){
 export const GridScan = ({
   sensitivity = 0.55,
   lineThickness = 1,
-  linesColor = '#FFD700',
+  linesColor = '#9586F2',
   scanColor = '#FF1493',
   scanOpacity = 0.6,
   gridScale = 0.1,

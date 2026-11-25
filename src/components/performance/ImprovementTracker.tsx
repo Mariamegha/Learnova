@@ -47,7 +47,7 @@ export default function ImprovementTracker({ student }: ImprovementTrackerProps)
         <div>
           <div className="flex items-center justify-between mb-3">
             <div className="flex items-center gap-2">
-              <Target className="w-5 h-5 text-[#C9B458]" />
+              <Target className="w-5 h-5 text-[#9586F2]" />
               <span className="font-bold text-white">Goal Progress</span>
             </div>
             <span className="text-sm text-gray-400">
@@ -79,9 +79,9 @@ export default function ImprovementTracker({ student }: ImprovementTrackerProps)
 
         <motion.div
           whileHover={{ scale: 1.03 }}
-          className="bg-gradient-to-br from-[#C9B458]/20 to-[#C9B458]/10 backdrop-blur-xl rounded-xl p-5 border border-[#C9B458]/30"
+          className="bg-gradient-to-br from-[#9586F2]/20 to-[#9586F2]/10 backdrop-blur-xl rounded-xl p-5 border border-[#9586F2]/30"
         >
-          <Award className="w-6 h-6 text-[#C9B458] mb-3" />
+          <Award className="w-6 h-6 text-[#9586F2] mb-3" />
           <div className="text-2xl font-black text-white mb-1">
             {student.achievements.length}
           </div>
@@ -101,7 +101,7 @@ export default function ImprovementTracker({ student }: ImprovementTrackerProps)
               transition={{ delay: index * 0.1 }}
               className="flex items-start gap-3"
             >
-              <div className="w-10 h-10 rounded-full bg-gradient-to-br from-[#C9B458]/30 to-[#C9B458]/10 flex items-center justify-center text-xl border border-[#C9B458]/30 flex-shrink-0">
+              <div className="w-10 h-10 rounded-full bg-gradient-to-br from-[#9586F2]/30 to-[#9586F2]/10 flex items-center justify-center text-xl border border-[#9586F2]/30 flex-shrink-0">
                 {achievement.icon}
               </div>
               <div className="flex-1 min-w-0">

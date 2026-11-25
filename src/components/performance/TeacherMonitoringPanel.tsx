@@ -44,7 +44,7 @@ export default function TeacherMonitoringPanel({
                   onClick={() => setSelectedTier(tier)}
                   className={`px-3 py-1.5 rounded-lg text-xs font-bold transition-all ${
                     selectedTier === tier
-                      ? 'bg-[#C9B458] text-black'
+                      ? 'bg-[#9586F2] text-black'
                       : 'bg-white/10 text-gray-400 hover:bg-white/20'
                   }`}
                 >

@@ -214,11 +214,11 @@ export function AITutorPanel({
 
   const themeColors = {
     gold: {
-      primary: 'bg-[#C9B458] text-black',
-      secondary: 'bg-[#C9B458]/20 text-[#C9B458]',
-      border: 'border-[#C9B458]',
-      text: 'text-[#C9B458]',
-      hover: 'hover:bg-[#C9B458]/80'
+      primary: 'bg-[#9586F2] text-black',
+      secondary: 'bg-[#9586F2]/20 text-[#9586F2]',
+      border: 'border-[#9586F2]',
+      text: 'text-[#9586F2]',
+      hover: 'hover:bg-[#9586F2]/80'
     },
     pink: {
       primary: 'bg-[#C27BA0] text-white',
@@ -345,7 +345,7 @@ export function AITutorPanel({
               <div className="space-y-3">
                 <div>
                   <label className="text-white font-black text-sm mb-2 block flex items-center gap-2">
-                    <Sparkles className="w-4 h-4 text-[#C9B458]" />
+                    <Sparkles className="w-4 h-4 text-[#9586F2]" />
                     PREFERENCE RULES
                   </label>
                   <p className="text-xs text-white/60 mb-2 font-medium">
@@ -355,7 +355,7 @@ export function AITutorPanel({
                     value={preferenceRules}
                     onChange={(e) => setPreferenceRules(e.target.value)}
                     placeholder="Answer as a helpful tutor. Use clear structure, examples, and professional tone..."
-                    className="w-full h-24 bg-white/10 border-2 border-white/20 rounded-lg p-3 text-white text-sm font-medium focus:outline-none focus:border-[#C9B458] resize-none"
+                    className="w-full h-24 bg-white/10 border-2 border-white/20 rounded-lg p-3 text-white text-sm font-medium focus:outline-none focus:border-[#9586F2] resize-none"
                   />
                 </div>
 
@@ -491,7 +491,7 @@ export function AITutorTrigger({
   label = 'Ask AI Tutor'
 }: AITutorTriggerProps) {
   const themeColors = {
-    gold: 'bg-[#C9B458] text-black hover:bg-[#C9B458]/80',
+    gold: 'bg-[#9586F2] text-black hover:bg-[#9586F2]/80',
     pink: 'bg-[#C27BA0] text-white hover:bg-[#C27BA0]/80',
     blue: 'bg-[#6DAEDB] text-black hover:bg-[#6DAEDB]/80'
   };

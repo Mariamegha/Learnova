@@ -23,12 +23,12 @@ export default function MotivationCard({ affirmation, size = 'large' }: Motivati
       className={`bg-gradient-to-br ${categoryColors[affirmation.category]} backdrop-blur-xl rounded-2xl p-6 border border-white/20 relative overflow-hidden group`}
     >
       {/* Glow effect */}
-      <div className="absolute inset-0 opacity-0 group-hover:opacity-20 transition-opacity duration-500 blur-2xl bg-gradient-to-br from-[#C9B458] to-[#C27BA0]" />
+      <div className="absolute inset-0 opacity-0 group-hover:opacity-20 transition-opacity duration-500 blur-2xl bg-gradient-to-br from-[#9586F2] to-[#C27BA0]" />
 
       <div className="relative z-10">
         <div className="flex items-start justify-between mb-4">
           <div className={`${size === 'large' ? 'text-5xl' : 'text-4xl'}`}>{affirmation.icon}</div>
-          <Sparkles className="w-5 h-5 text-[#C9B458]" />
+          <Sparkles className="w-5 h-5 text-[#9586F2]" />
         </div>
 
         <p

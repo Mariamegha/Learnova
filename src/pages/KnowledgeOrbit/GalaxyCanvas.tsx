@@ -99,7 +99,7 @@ export function GalaxyCanvas({ onNodeClick, selectedNode }: GalaxyCanvasProps) {
 
           {/* Lighting */}
           <ambientLight intensity={0.3} />
-          <pointLight position={[0, 20, 0]} intensity={1} color="#C9B458" />
+          <pointLight position={[0, 20, 0]} intensity={1} color="#9586F2" />
           <pointLight position={[35, 20, 0]} intensity={1} color="#6DAEDB" />
           <pointLight position={[-35, 20, 0]} intensity={1} color="#C27BA0" />
 

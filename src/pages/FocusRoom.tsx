@@ -89,7 +89,7 @@ export default function FocusRoom() {
       {/* LaserFlow Background */}
       <div className="fixed inset-0 z-0 opacity-80">
         <LaserFlow
-          color={mode === 'focus' ? '#FFD700' : '#FF1493'}
+          color={mode === 'focus' ? '#9586F2' : '#FF1493'}
           fogIntensity={1.2}
           fogScale={0.3}
           wispDensity={2.0}

@@ -11,7 +11,7 @@ export default function RecommendationFeed({ opportunities, onSelect }: Recommen
   return (
     <div className="bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-xl rounded-xl p-5 border border-white/10">
       <div className="flex items-center gap-2 mb-4">
-        <Sparkles className="w-5 h-5 text-[#C9B458]" />
+        <Sparkles className="w-5 h-5 text-[#9586F2]" />
         <h3 className="text-lg font-black text-white">Top Picks For You</h3>
       </div>
       <div className="space-y-3">
@@ -30,14 +30,14 @@ export default function RecommendationFeed({ opportunities, onSelect }: Recommen
                 style={{ backgroundColor: OPPORTUNITY_COLORS[opp.category] }}
               />
               <div className="flex-1 min-w-0">
-                <h4 className="text-sm font-bold text-white mb-1 line-clamp-1 group-hover:text-[#C9B458] transition-colors">
+                <h4 className="text-sm font-bold text-white mb-1 line-clamp-1 group-hover:text-[#9586F2] transition-colors">
                   {opp.title}
                 </h4>
                 <p className="text-xs text-gray-400 mb-2 line-clamp-1">{opp.provider}</p>
                 <div className="flex items-center gap-2">
                   <div className="flex items-center gap-1">
-                    <TrendingUp className="w-3 h-3 text-[#C9B458]" />
-                    <span className="text-xs font-bold text-[#C9B458]">{opp.matchScore}%</span>
+                    <TrendingUp className="w-3 h-3 text-[#9586F2]" />
+                    <span className="text-xs font-bold text-[#9586F2]">{opp.matchScore}%</span>
                   </div>
                   {opp.amount && (
                     <span className="text-xs text-gray-500">• {opp.amount}</span>

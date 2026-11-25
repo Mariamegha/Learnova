@@ -11,7 +11,7 @@ export default function CompassionChat({ messages }: CompassionChatProps) {
   return (
     <div className="bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-xl rounded-2xl p-6 border border-white/10 h-full flex flex-col">
       <div className="flex items-center gap-3 mb-6 pb-4 border-b border-white/10">
-        <div className="w-10 h-10 rounded-full bg-gradient-to-br from-[#C9B458] to-[#C27BA0] flex items-center justify-center">
+        <div className="w-10 h-10 rounded-full bg-gradient-to-br from-[#9586F2] to-[#C27BA0] flex items-center justify-center">
           <Sparkles className="w-5 h-5 text-white" />
         </div>
         <div>
@@ -39,12 +39,12 @@ export default function CompassionChat({ messages }: CompassionChatProps) {
                 className={`rounded-2xl p-4 ${
                   message.type === 'USER'
                     ? 'bg-gradient-to-br from-[#6DAEDB]/30 to-[#6DAEDB]/10 border border-[#6DAEDB]/30'
-                    : 'bg-gradient-to-br from-[#C9B458]/20 to-[#C27BA0]/10 border border-[#C9B458]/20'
+                    : 'bg-gradient-to-br from-[#9586F2]/20 to-[#C27BA0]/10 border border-[#9586F2]/20'
                 }`}
               >
                 <div className="flex items-start gap-2 mb-2">
                   {message.type === 'AI' ? (
-                    <Sparkles className="w-4 h-4 text-[#C9B458] mt-0.5 flex-shrink-0" />
+                    <Sparkles className="w-4 h-4 text-[#9586F2] mt-0.5 flex-shrink-0" />
                   ) : (
                     <User className="w-4 h-4 text-[#6DAEDB] mt-0.5 flex-shrink-0" />
                   )}

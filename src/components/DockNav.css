@@ -18,7 +18,7 @@
   gap: 0.75rem;
   border-radius: 1rem;
   background-color: #060010;
-  border: 2px solid #FFD700;
+  border: 2px solid #9586F2;
   padding: 0.5rem 0.75rem 0.75rem;
   box-shadow: 0 10px 40px rgba(255, 215, 0, 0.3);
   pointer-events: auto;
@@ -48,7 +48,7 @@
 
 .dock-item-active {
   background-color: #0B0B0D;
-  border-color: #FFD700;
+  border-color: #9586F2;
   box-shadow: 0 0 20px rgba(255, 215, 0, 0.6);
 }
 
@@ -65,13 +65,13 @@
   width: fit-content;
   white-space: nowrap;
   border-radius: 0.5rem;
-  border: 2px solid #FFD700;
+  border: 2px solid #9586F2;
   background-color: #060010;
   padding: 0.25rem 0.75rem;
   font-size: 0.875rem;
   font-weight: 700;
   text-transform: uppercase;
-  color: #FFD700;
+  color: #9586F2;
   transform: translateX(-50%);
   box-shadow: 0 4px 12px rgba(255, 215, 0, 0.3);
 }

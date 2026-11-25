@@ -117,7 +117,7 @@ export const MOCK_VR_COLLABORATORS: VRCollaborator[] = [
     id: 'user-3',
     name: 'Ananya Singh',
     avatar: '👩‍🔬',
-    color: '#C9B458',
+    color: '#9586F2',
     isOnline: true,
     currentTool: 'circle',
   },
@@ -173,7 +173,7 @@ export const MOCK_WHITEBOARD_STROKES: WhiteboardStroke[] = [
     userId: 'user-3',
     userName: 'Ananya Singh',
     tool: 'circle',
-    color: '#C9B458',
+    color: '#9586F2',
     points: [
       { x: 400, y: 250 },
       { x: 450, y: 300 },

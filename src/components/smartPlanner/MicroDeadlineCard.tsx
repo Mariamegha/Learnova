@@ -11,7 +11,7 @@ interface MicroDeadlineCardProps {
 export default function MicroDeadlineCard({ exam, daysRemaining }: MicroDeadlineCardProps) {
   const getUrgencyColor = () => {
     if (daysRemaining <= 3) return '#C27BA0'; // Pink - urgent
-    if (daysRemaining <= 7) return '#C9B458'; // Gold - soon
+    if (daysRemaining <= 7) return '#9586F2'; // Gold - soon
     return '#6DAEDB'; // Blue - comfortable
   };
 

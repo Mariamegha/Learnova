@@ -50,7 +50,7 @@ export default function MathematicsHub() {
       icon: Calculator,
       title: 'Interactive Tools',
       description: 'Use virtual whiteboards, 3D graphing calculators, and geometry tools',
-      color: 'text-[#C9B458]',
+      color: 'text-[#9586F2]',
     },
     {
       icon: Users,
@@ -68,7 +68,7 @@ export default function MathematicsHub() {
       icon: PenTool,
       title: 'Practice Problems',
       description: 'Solve problems together and share different solving approaches',
-      color: 'text-[#C9B458]',
+      color: 'text-[#9586F2]',
     },
     {
       icon: Lightbulb,
@@ -85,10 +85,10 @@ export default function MathematicsHub() {
   ];
 
   const topics = [
-    { name: 'Algebra', icon: '📐', color: 'bg-[#C9B458]/20 border-[#C9B458]/30' },
+    { name: 'Algebra', icon: '📐', color: 'bg-[#9586F2]/20 border-[#9586F2]/30' },
     { name: 'Calculus', icon: '∫', color: 'bg-[#C27BA0]/20 border-[#C27BA0]/30' },
     { name: 'Geometry', icon: '📊', color: 'bg-[#6DAEDB]/20 border-[#6DAEDB]/30' },
-    { name: 'Statistics', icon: '📈', color: 'bg-[#C9B458]/20 border-[#C9B458]/30' },
+    { name: 'Statistics', icon: '📈', color: 'bg-[#9586F2]/20 border-[#9586F2]/30' },
     { name: 'Trigonometry', icon: '📐', color: 'bg-[#C27BA0]/20 border-[#C27BA0]/30' },
     { name: 'Linear Algebra', icon: '🔢', color: 'bg-[#6DAEDB]/20 border-[#6DAEDB]/30' },
   ];
@@ -97,9 +97,9 @@ export default function MathematicsHub() {
     <div className="relative min-h-screen bg-[#0F1115] text-white pb-24">
       {/* GridScan Background */}
       <div className="fixed inset-0 z-0">
-        <ThreeDFallback fallbackColor="from-[#C9B458]/5 to-[#C27BA0]/5">
+        <ThreeDFallback fallbackColor="from-[#9586F2]/5 to-[#C27BA0]/5">
           <GridScan
-            linesColor="#C9B458"
+            linesColor="#9586F2"
             scanColor="#C27BA0"
             scanOpacity={0.3}
             gridScale={0.12}
@@ -118,15 +118,15 @@ export default function MathematicsHub() {
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
-          className="mb-12 border-b-4 border-[#C9B458] pb-8"
+          className="mb-12 border-b-4 border-[#9586F2] pb-8"
         >
           <div className="flex items-center gap-4 mb-4">
-            <div className="p-4 bg-gradient-to-br from-[#C9B458]/20 to-[#C27BA0]/20 backdrop-blur-xl rounded-2xl border-2 border-[#C9B458]/30">
-              <Calculator className="w-12 h-12 text-[#C9B458]" />
+            <div className="p-4 bg-gradient-to-br from-[#9586F2]/20 to-[#C27BA0]/20 backdrop-blur-xl rounded-2xl border-2 border-[#9586F2]/30">
+              <Calculator className="w-12 h-12 text-[#9586F2]" />
             </div>
             <div>
               <h1 className="text-6xl font-black uppercase">
-                <span className="text-[#C9B458]">Mathematics</span>
+                <span className="text-[#9586F2]">Mathematics</span>
                 <span className="text-[#C27BA0] ml-4">Hub</span>
               </h1>
               <p className="text-xl text-white/70 font-bold mt-2">
@@ -150,7 +150,7 @@ export default function MathematicsHub() {
               animate={{ opacity: 1, scale: 1 }}
               transition={{ delay: index * 0.1 }}
             >
-              <Card className="bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-xl border-white/10 hover:border-[#C9B458]/30 transition-all h-full">
+              <Card className="bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-xl border-white/10 hover:border-[#9586F2]/30 transition-all h-full">
                 <CardHeader className="pb-3">
                   <div className="flex items-center gap-3">
                     <div className={`p-2 bg-white/5 rounded-lg ${feature.color}`}>
@@ -178,18 +178,18 @@ export default function MathematicsHub() {
           transition={{ duration: 0.5, delay: 0.3 }}
           className="mb-8"
         >
-          <Card className="bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-xl border-2 border-[#C9B458]/30 overflow-hidden">
+          <Card className="bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-xl border-2 border-[#9586F2]/30 overflow-hidden">
             <CardHeader>
               <div className="flex items-center justify-between">
                 <div>
                   <CardTitle className="text-2xl font-black uppercase text-white flex items-center gap-2">
-                    <Video className="w-6 h-6 text-[#C9B458]" />
+                    <Video className="w-6 h-6 text-[#9586F2]" />
                     <TranslatedText text="Virtual Mathematics Classroom" />
                   </CardTitle>
                   <CardDescription className="text-white/70 mt-2">
                     {user?.name ? (
                       <>
-                        <TranslatedText text="Welcome" />, <span className="font-semibold text-[#C9B458]">{user.name}</span>! <TranslatedText text="Enter the immersive mathematics VR space below." />
+                        <TranslatedText text="Welcome" />, <span className="font-semibold text-[#9586F2]">{user.name}</span>! <TranslatedText text="Enter the immersive mathematics VR space below." />
                       </>
                     ) : (
                       <TranslatedText text="Enter the immersive mathematics VR space below." />
@@ -219,7 +219,7 @@ export default function MathematicsHub() {
                 <div className="absolute top-4 right-4 bg-black/80 backdrop-blur-sm rounded-lg p-3 border border-white/10">
                   <div className="flex flex-col gap-2 text-xs text-white/70">
                     <div className="flex items-center gap-2">
-                      <Globe className="w-3 h-3 text-[#C9B458]" />
+                      <Globe className="w-3 h-3 text-[#9586F2]" />
                       <span>WASD to move</span>
                     </div>
                     <div className="flex items-center gap-2">
@@ -243,7 +243,7 @@ export default function MathematicsHub() {
           <Card className="bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-xl border-white/10">
             <CardHeader>
               <CardTitle className="text-xl font-black uppercase text-white flex items-center gap-2">
-                <BookOpen className="w-5 h-5 text-[#C9B458]" />
+                <BookOpen className="w-5 h-5 text-[#9586F2]" />
                 <TranslatedText text="Mathematics Topics" />
               </CardTitle>
               <CardDescription className="text-white/60">
@@ -263,7 +263,7 @@ export default function MathematicsHub() {
                     className={`${topic.color} border-2 rounded-xl p-4 text-center hover:bg-white/10 transition-all group`}
                   >
                     <div className="text-3xl mb-2">{topic.icon}</div>
-                    <div className="font-bold text-white text-sm group-hover:text-[#C9B458] transition-colors">
+                    <div className="font-bold text-white text-sm group-hover:text-[#9586F2] transition-colors">
                       {topic.name}
                     </div>
                   </motion.button>
@@ -283,7 +283,7 @@ export default function MathematicsHub() {
             <Card className="bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-xl border-white/10 h-full">
               <CardHeader>
                 <CardTitle className="text-lg font-bold text-white flex items-center gap-2">
-                  <Users className="w-5 h-5 text-[#C9B458]" />
+                  <Users className="w-5 h-5 text-[#9586F2]" />
                   <TranslatedText text="Invite Study Partners" />
                 </CardTitle>
                 <CardDescription className="text-white/60">
@@ -293,7 +293,7 @@ export default function MathematicsHub() {
               <CardContent>
                 <div className="flex flex-col gap-3">
                   <div className="p-3 bg-black/40 rounded-lg border border-white/10 flex items-center gap-2">
-                    <span className="text-sm font-mono text-[#C9B458] break-all flex-1">
+                    <span className="text-sm font-mono text-[#9586F2] break-all flex-1">
                       {vrLink}
                     </span>
                   </div>
@@ -302,7 +302,7 @@ export default function MathematicsHub() {
                     className={`w-full font-bold ${
                       copied
                         ? 'bg-green-500 hover:bg-green-600'
-                        : 'bg-gradient-to-r from-[#C9B458] to-[#C27BA0] hover:opacity-90'
+                        : 'bg-gradient-to-r from-[#9586F2] to-[#C27BA0] hover:opacity-90'
                     }`}
                   >
                     {copied ? (
@@ -331,7 +331,7 @@ export default function MathematicsHub() {
             <Card className="bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-xl border-white/10 h-full">
               <CardHeader>
                 <CardTitle className="text-lg font-bold text-white flex items-center gap-2">
-                  <Lightbulb className="w-5 h-5 text-[#C9B458]" />
+                  <Lightbulb className="w-5 h-5 text-[#9586F2]" />
                   <TranslatedText text="Quick Start Guide" />
                 </CardTitle>
               </CardHeader>
@@ -347,8 +347,8 @@ export default function MathematicsHub() {
                   ].map((step, index) => (
                     <li key={index} className="flex items-start gap-3 text-white/70 text-sm group">
                       <div className="mt-0.5 shrink-0">
-                        <div className="w-6 h-6 rounded-lg bg-gradient-to-br from-[#C9B458]/20 to-[#C27BA0]/20 border border-[#C9B458]/30 flex items-center justify-center">
-                          <span className="text-xs font-black text-[#C9B458]">{index + 1}</span>
+                        <div className="w-6 h-6 rounded-lg bg-gradient-to-br from-[#9586F2]/20 to-[#C27BA0]/20 border border-[#9586F2]/30 flex items-center justify-center">
+                          <span className="text-xs font-black text-[#9586F2]">{index + 1}</span>
                         </div>
                       </div>
                       <span className="group-hover:text-white transition-colors">
@@ -369,10 +369,10 @@ export default function MathematicsHub() {
           transition={{ duration: 0.5, delay: 0.6 }}
           className="mt-6"
         >
-          <Card className="bg-gradient-to-r from-[#C9B458]/10 via-[#C27BA0]/10 to-[#6DAEDB]/10 backdrop-blur-xl border-2 border-[#C9B458]/20">
+          <Card className="bg-gradient-to-r from-[#9586F2]/10 via-[#C27BA0]/10 to-[#6DAEDB]/10 backdrop-blur-xl border-2 border-[#9586F2]/20">
             <CardContent className="p-6">
               <div className="flex items-start gap-4">
-                <div className="p-3 bg-gradient-to-br from-[#C9B458] to-[#C27BA0] rounded-xl shrink-0">
+                <div className="p-3 bg-gradient-to-br from-[#9586F2] to-[#C27BA0] rounded-xl shrink-0">
                   <Lightbulb className="w-6 h-6 text-white" />
                 </div>
                 <div className="flex-1">
@@ -381,7 +381,7 @@ export default function MathematicsHub() {
                   </h3>
                   <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-sm text-white/70">
                     <div className="flex items-start gap-2">
-                      <ChevronRight className="w-4 h-4 text-[#C9B458] shrink-0 mt-0.5" />
+                      <ChevronRight className="w-4 h-4 text-[#9586F2] shrink-0 mt-0.5" />
                       <span>Use the whiteboard tool to visualize complex equations and share your solving process</span>
                     </div>
                     <div className="flex items-start gap-2">
